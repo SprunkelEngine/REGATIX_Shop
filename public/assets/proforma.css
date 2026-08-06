@@ -1,0 +1,167 @@
+/* REGATIX Proforma – CSS (frei editierbar)
+   Tipp: Briefbogen als Hintergrund:
+   .page{ background: url('../images/regatixdummie.webp') no-repeat top left / 210mm 297mm; }
+*/
+
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* kleine Toolbar oben (nicht mitdrucken) */
+.toolbar{
+  max-width: 900px;
+  margin: 14px auto 0;
+  padding: 0 12px;
+  display:flex;
+  gap: 10px;
+  justify-content:flex-end;
+}
+.btn{
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  color: #111;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn:hover{ background: rgba(0,0,0,.03); }
+
+/* A4 Page */
+.page{
+  width: 210mm;
+  min-height: 297mm;
+  padding: 18mm 16mm 14mm 16mm;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Header */
+.top{
+  display:flex;
+  justify-content: space-between;
+  gap: 16mm;
+  align-items:flex-start;
+  margin-bottom: 10mm;
+}
+.title{ font-size: 22px; font-weight: 900; }
+.meta{ margin-top: 4mm; font-size: 12px; line-height: 1.35; }
+.meta .k{ color:#555; display:inline-block; min-width: 44px; }
+
+.right{
+  text-align: right;
+  font-size: 11px;
+  line-height: 1.35;
+  color:#333;
+}
+.sender__company{ font-weight: 900; }
+
+/* Boxes */
+.row{
+  display:flex;
+  gap: 10mm;
+  margin-bottom: 10mm;
+}
+.box{
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 8px 10px;
+  min-height: 32mm;
+}
+.box:last-child{ max-width: 78mm; }
+
+.label{
+  font-size: 11px;
+  font-weight: 900;
+  color:#444;
+  margin-bottom: 2mm;
+}
+.b{ font-size: 12px; line-height: 1.35; }
+.b.company{ font-weight: 900; }
+.b.small{ font-size: 11px; color:#444; margin-top: 2mm; }
+.sep{ color:#bbb; padding: 0 4px; }
+.note{ font-size: 11px; color:#333; }
+.small{ font-size: 10px; color:#666; }
+
+/* Table */
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.table thead th{
+  text-align:left;
+  padding: 8px 6px;
+  border-bottom: 2px solid #111;
+}
+.table tbody td{
+  padding: 7px 6px;
+  border-bottom: 1px solid #e6e6e6;
+  vertical-align: top;
+}
+.col-article{ width: 26mm; }
+.col-qty{ width: 16mm; }
+.col-price{ width: 22mm; }
+.col-sum{ width: 24mm; }
+.t-right{ text-align:right; }
+
+/* Totals */
+.totals{
+  display:flex;
+  justify-content:flex-end;
+  margin-top: 8mm;
+}
+.totals__box{
+  width: 70mm;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+.totals__box .r{
+  display:flex;
+  justify-content: space-between;
+  gap: 10mm;
+  padding: 3px 0;
+}
+.totals__box .grand{
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px solid #e6e6e6;
+  font-weight: 900;
+}
+
+.foot{
+  margin-top: 12mm;
+  display:flex;
+  justify-content: space-between;
+  gap: 10mm;
+}
+
+.warn{
+  margin-top: 8mm;
+  border: 1.5px solid rgba(255,77,77,.95);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255,77,77,.06);
+  font-size: 12px;
+}
+
+/* Print: hide toolbar + warnings if you want */
+@media print{
+  .noprint{ display:none !important; }
+  .toolbar{ display:none !important; }
+  body{ background:#fff; }
+  .page{ margin:0; }
+}

@@ -1,0 +1,1827 @@
+<?php
+declare(strict_types=1);
+
+session_start();
+
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
+header('Expires: 0');
+
+require_once __DIR__ . '/../src/Repository.php';
+
+function pv_key(string $s): string {
+  $s = trim($s);
+  if ($s === '') return '';
+  $s = preg_replace('~[^\pL\pN_\-]+~u', '', $s);
+  return $s ?: '';
+}
+function pv_lower(string $s): string {
+  return function_exists('mb_strtolower') ? mb_strtolower($s, 'UTF-8') : strtolower($s);
+}
+function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
+
+function pv_norm_key(string $s): string {
+  $s = preg_replace('/^\xEF\xBB\xBF/', '', $s);
+  $s = str_replace(["\xC2\xA0", "\u{00A0}"], ' ', $s);
+  $s = preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
+  $s = trim($s);
+  $s = preg_replace('~\s+~u', ' ', $s);
+  return pv_lower($s);
+}
+
+function pv_row_get(array $row, array $candidates): ?string {
+  $want = [];
+  foreach ($candidates as $c) {
+    $want[pv_norm_key((string)$c)] = true;
+  }
+
+  foreach ($row as $k => $v) {
+    if (!is_string($k) && !is_int($k)) continue;
+    $nk = pv_norm_key((string)$k);
+    if (isset($want[$nk])) {
+      $s = trim((string)$v);
+      return $s === '' ? null : $s;
+    }
+  }
+  return null;
+}
+
+function pv_labels_path(): string {
+  return __DIR__ . '/../config/product_labels.json';
+}
+function pv_load_labels(): array {
+  $path = pv_labels_path();
+  if (!is_file($path)) return [];
+  $raw = (string)file_get_contents($path);
+  $arr = json_decode($raw, true);
+  return is_array($arr) ? $arr : [];
+}
+
+function pv_visibility_path(): string {
+  return __DIR__ . '/../config/product_visibility.json';
+}
+function pv_load_visibility(): array {
+  $path = pv_visibility_path();
+  if (!is_file($path)) return [];
+  $raw = (string)file_get_contents($path);
+  $arr = json_decode($raw, true);
+  if (!is_array($arr)) return [];
+  if (isset($arr['visible']) && is_array($arr['visible'])) return $arr['visible'];
+  if (!empty($arr) && !isset($arr['visible'])) return $arr;
+  return [];
+}
+
+function pv_product_warn_path(): string {
+  return __DIR__ . '/../config/product_warn.json';
+}
+function pv_load_product_warn_map(): array {
+  $path = pv_product_warn_path();
+  if (!is_file($path)) return [];
+
+  $rawTxt = (string)file_get_contents($path);
+  $rawTxt = preg_replace('/^\xEF\xBB\xBF/', '', $rawTxt);
+  if (trim($rawTxt) === '') return [];
+
+  $raw = json_decode($rawTxt, true);
+  return is_array($raw) ? $raw : [];
+}
+function pv_boolish($v): ?bool {
+  if (is_bool($v)) return $v;
+  if (is_int($v) || is_float($v)) return ((float)$v) !== 0.0;
+  if (is_string($v)) {
+    $s = pv_lower(trim($v));
+    if ($s === '') return null;
+    if (in_array($s, ['1','true','yes','ja','on','an','enable','enabled'], true)) return true;
+    if (in_array($s, ['0','false','no','nein','off','aus','disable','disabled'], true)) return false;
+    return null;
+  }
+  return null;
+}
+function pv_warn_enabled_for_product(string $productKey, array $map, bool $default = false): bool {
+  $k = pv_key($productKey);
+  if ($k === '') return $default;
+
+  foreach (['product_warn','warn','products','map','data','items'] as $container) {
+    if (isset($map[$container]) && is_array($map[$container])) {
+      $map = $map[$container];
+      break;
+    }
+  }
+
+  if (array_key_exists($k, $map)) {
+    $b = pv_boolish($map[$k]);
+    return $b === null ? $default : $b;
+  }
+
+  $lk = pv_lower($k);
+  foreach ($map as $mk => $mv) {
+    if (!is_string($mk)) continue;
+    if (pv_lower(pv_key($mk)) === $lk) {
+      $b = pv_boolish($mv);
+      return $b === null ? $default : $b;
+    }
+  }
+
+  return $default;
+}
+
+function pv_products(): array {
+  $out = [];
+  $base = __DIR__ . '/../data/products';
+  if (!is_dir($base)) return $out;
+
+  $vis = pv_load_visibility();
+  $labelOverrides = pv_load_labels();
+
+  foreach (scandir($base) ?: [] as $d) {
+    if ($d === '.' || $d === '..') continue;
+    $path = $base . '/' . $d;
+    if (!is_dir($path)) continue;
+
+    $key = pv_key($d);
+    if ($key === '') continue;
+
+    if (isset($vis[$key]) && !$vis[$key]) continue;
+
+    $label = $key;
+    $vfile = $path . '/variants.json';
+    $isEckregal = false;
+
+    if (is_file($vfile)) {
+      $variantsStore = json_decode((string)file_get_contents($vfile), true);
+
+      $variants = $variantsStore;
+      if (is_array($variantsStore) && isset($variantsStore['variants']) && is_array($variantsStore['variants'])) {
+        $variants = $variantsStore['variants'];
+      }
+
+      if (!empty($variants[0]['Produktgruppe']) && !empty($variants[0]['Produktart'])) {
+        $label = trim((string)$variants[0]['Produktgruppe'] . ' ' . (string)$variants[0]['Produktart']);
+      } elseif (!empty($variants[0]['Produktart'])) {
+        $label = trim((string)$variants[0]['Produktart']);
+      }
+
+      $labelNorm = pv_lower(preg_replace('~\s+~u', ' ', trim((string)$label)));
+      if ($labelNorm === 'fachbodenregal grundregal') {
+        $label = 'Fachbodenregal';
+      }
+
+      if (isset($variants[0]['Produktart']) && stripos((string)$variants[0]['Produktart'], 'Eckregal') !== false) {
+        $isEckregal = true;
+      }
+    }
+
+    if ($isEckregal) continue;
+
+    if (isset($labelOverrides[$key]) && is_string($labelOverrides[$key]) && trim($labelOverrides[$key]) !== '') {
+      $label = trim($labelOverrides[$key]);
+    }
+
+    $out[$key] = $label;
+  }
+
+  return $out;
+}
+
+function pv_offers_path(): string {
+  $cands = [
+    __DIR__ . '/../data/offers/offers.json',
+    __DIR__ . '/../data/offers.json',
+    __DIR__ . '/../config/offers.json',
+    __DIR__ . '/../data/offers_store.json',
+    __DIR__ . '/../data/offers/offers_store.json',
+  ];
+  foreach ($cands as $p) {
+    if (is_file($p)) return $p;
+  }
+  return __DIR__ . '/../data/offers/offers.json';
+}
+
+function pv_load_offers_any(string &$usedPath = ''): array {
+  $path = pv_offers_path();
+  $usedPath = $path;
+  if (!is_file($path)) return [];
+  $raw = json_decode((string)file_get_contents($path), true);
+  if (!is_array($raw)) return [];
+
+  if (isset($raw['offers']) && is_array($raw['offers'])) $raw = $raw['offers'];
+
+  if (array_is_list($raw)) {
+    $out = [];
+    foreach ($raw as $o) {
+      if (!is_array($o)) continue;
+      $id = (string)($o['id'] ?? $o['offer_id'] ?? '');
+      if ($id === '') continue;
+      $out[$id] = $o;
+    }
+    return $out;
+  }
+
+  $out = [];
+  foreach ($raw as $k => $v) {
+    if (!is_array($v)) continue;
+    $id = (string)($v['id'] ?? $v['offer_id'] ?? $k);
+    if ($id === '') continue;
+    $out[$id] = $v;
+  }
+  return $out;
+}
+
+function pv_float_or_null($v): ?float {
+  if ($v === null) return null;
+  if (is_float($v) || is_int($v)) return (float)$v;
+  $s = trim((string)$v);
+  if ($s === '') return null;
+  $s = str_replace(['.', ' '], ['', ''], $s);
+  $s = str_replace(',', '.', $s);
+  return is_numeric($s) ? (float)$s : null;
+}
+
+function pv_money_fmt(float $v): string {
+  return number_format($v, 2, ',', '.') . ' €';
+}
+
+/* ===========================
+   Widerruf: Helpers
+   =========================== */
+
+function pv_csrf_token(): string {
+  if (empty($_SESSION['pv_csrf']) || !is_string($_SESSION['pv_csrf'])) {
+    $_SESSION['pv_csrf'] = bin2hex(random_bytes(16));
+  }
+  return $_SESSION['pv_csrf'];
+}
+
+function pv_post_str(string $key): string {
+  return trim((string)($_POST[$key] ?? ''));
+}
+
+function pv_withdrawal_dir(): string {
+  return __DIR__ . '/../data/withdrawals';
+}
+
+function pv_withdrawal_log_path(): string {
+  return pv_withdrawal_dir() . '/withdrawals.jsonl';
+}
+
+function pv_client_ip(): string {
+  $keys = ['HTTP_CF_CONNECTING_IP', 'HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR'];
+  foreach ($keys as $k) {
+    $v = trim((string)($_SERVER[$k] ?? ''));
+    if ($v === '') continue;
+    if ($k === 'HTTP_X_FORWARDED_FOR') {
+      $parts = array_map('trim', explode(',', $v));
+      return (string)($parts[0] ?? '');
+    }
+    return $v;
+  }
+  return '';
+}
+
+function pv_store_withdrawal_request(array $payload): bool {
+  $dir = pv_withdrawal_dir();
+  if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
+    return false;
+  }
+
+  $line = json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+  if (!is_string($line) || $line === '') return false;
+
+  return file_put_contents(pv_withdrawal_log_path(), $line . PHP_EOL, FILE_APPEND | LOCK_EX) !== false;
+}
+
+function pv_send_withdrawal_mail(array $payload): void {
+  $to = 'info@regatix.com';
+
+  $subject = 'Widerruf über Shop-Button';
+  $body =
+    "Es wurde ein Widerruf über den Shop ausgelöst.\n\n" .
+    "Zeitpunkt: " . ($payload['created_at'] ?? '') . "\n" .
+    "Name: " . ($payload['name'] ?? '') . "\n" .
+    "E-Mail: " . ($payload['email'] ?? '') . "\n" .
+    "Bestell-/Angebotsnummer: " . ($payload['order_ref'] ?? '') . "\n" .
+    "Produkt-Key: " . ($payload['product_key'] ?? '') . "\n" .
+    "Produkt-Label: " . ($payload['product_label'] ?? '') . "\n" .
+    "Artikelnummer: " . ($payload['article'] ?? '') . "\n" .
+    "Offer-ID: " . ($payload['offer_id'] ?? '') . "\n" .
+    "Seite: " . ($payload['page_url'] ?? '') . "\n" .
+    "IP: " . ($payload['ip'] ?? '') . "\n\n" .
+    "Nachricht:\n" . ($payload['message'] ?? '') . "\n";
+
+  $headers = [
+    'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=UTF-8',
+    'From: REGATIX Shop <no-reply@regatix.com>',
+    'Reply-To: ' . ($payload['email'] ?? 'info@regatix.com'),
+  ];
+
+  @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+}
+
+/* ===========================
+   Produktwechsel / Widerruf POST
+   =========================== */
+
+$withdrawalSuccess = '';
+$withdrawalError = '';
+$csrfToken = pv_csrf_token();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && (string)($_POST['action'] ?? '') === 'submit_withdrawal') {
+  $postedToken = (string)($_POST['csrf'] ?? '');
+  if (!hash_equals($csrfToken, $postedToken)) {
+    $withdrawalError = 'Die Anfrage konnte aus Sicherheitsgründen nicht verarbeitet werden. Bitte Seite neu laden und erneut versuchen.';
+  } else {
+    $name         = pv_post_str('wd_name');
+    $email        = pv_post_str('wd_email');
+    $orderRef     = pv_post_str('wd_order_ref');
+    $message      = pv_post_str('wd_message');
+    $productKeyIn = pv_key(pv_post_str('wd_product_key'));
+    $productLabel = pv_post_str('wd_product_label');
+    $article      = pv_post_str('wd_article');
+    $offerIdIn    = pv_post_str('wd_offer_id');
+    $pageUrl      = pv_post_str('wd_page_url');
+    $confirm      = (string)($_POST['wd_confirm'] ?? '') === '1';
+
+    if ($name === '') {
+      $withdrawalError = 'Bitte einen Namen angeben.';
+    } elseif ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $withdrawalError = 'Bitte eine gültige E-Mail-Adresse angeben.';
+    } elseif (!$confirm) {
+      $withdrawalError = 'Bitte bestätigen, dass du den Widerruf absenden möchtest.';
+    } else {
+      $payload = [
+        'id'            => 'wd_' . date('Ymd_His') . '_' . bin2hex(random_bytes(4)),
+        'created_at'    => date('c'),
+        'name'          => $name,
+        'email'         => $email,
+        'order_ref'     => $orderRef,
+        'message'       => $message,
+        'product_key'   => $productKeyIn,
+        'product_label' => $productLabel,
+        'article'       => $article,
+        'offer_id'      => $offerIdIn,
+        'page_url'      => $pageUrl,
+        'ip'            => pv_client_ip(),
+        'user_agent'    => (string)($_SERVER['HTTP_USER_AGENT'] ?? ''),
+      ];
+
+      if (!pv_store_withdrawal_request($payload)) {
+        $withdrawalError = 'Der Widerruf konnte nicht gespeichert werden. Bitte prüfen, ob ../data/withdrawals beschreibbar ist.';
+      } else {
+        pv_send_withdrawal_mail($payload);
+        $withdrawalSuccess = 'Dein Widerruf wurde erfasst. Wir melden uns an ' . h($email) . '.';
+      }
+    }
+  }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && (string)($_POST['action'] ?? '') === 'set_product') {
+  $_SESSION['pv_product'] = pv_key((string)($_POST['product'] ?? ''));
+  header('Location: index.php');
+  exit;
+}
+
+$products = pv_products();
+
+$productsByLower = [];
+foreach ($products as $k => $_label) {
+  $productsByLower[pv_lower((string)$k)] = (string)$k;
+}
+function pv_canon_product(string $in, array $map): string {
+  $k = pv_key($in);
+  if ($k === '') return '';
+  $lk = pv_lower($k);
+  return $map[$lk] ?? '';
+}
+
+$defaultKey = null;
+foreach ($products as $k => $v) {
+  if (stripos($v, 'Fachbodenregal') !== false) { $defaultKey = $k; break; }
+}
+if ($defaultKey === null) {
+  reset($products);
+  $defaultKey = key($products);
+}
+
+$getKey = isset($_GET['product']) ? pv_canon_product((string)$_GET['product'], $productsByLower) : '';
+if ($getKey !== '') {
+  $productKey = $getKey;
+  $_SESSION['pv_product'] = $productKey;
+} else {
+  $sessKey = pv_canon_product((string)($_SESSION['pv_product'] ?? ''), $productsByLower);
+  if ($sessKey !== '') {
+    $productKey = $sessKey;
+  } else {
+    $productKey = (string)$defaultKey;
+    $_SESSION['pv_product'] = $productKey;
+  }
+}
+
+$offerId = trim((string)($_GET['offer'] ?? ''));
+$offerArticle = trim((string)($_GET['article'] ?? ''));
+$offerData = null;
+$offerGross = null;
+$offerNet = null;
+$listGross = null;
+$listNet = null;
+$offersUsedPath = '';
+
+$repo = new PV\Repository(__DIR__ . '/../config/config.json', $productKey);
+$boot = $repo->bootstrap();
+
+if ($offerId !== '') {
+  $offers = pv_load_offers_any($offersUsedPath);
+  if (isset($offers[$offerId]) && is_array($offers[$offerId])) {
+    $offerData = $offers[$offerId];
+
+    $oProductRaw = (string)($offerData['product'] ?? $offerData['product_key'] ?? '');
+    $oProduct = pv_canon_product($oProductRaw, $productsByLower);
+
+    if ($oProduct !== '' && isset($products[$oProduct])) {
+      $productKey = $oProduct;
+      $_SESSION['pv_product'] = $productKey;
+
+      $repo = new PV\Repository(__DIR__ . '/../config/config.json', $productKey);
+      $boot = $repo->bootstrap();
+    }
+
+    $oArticle = trim((string)($offerData['article'] ?? $offerData['sku'] ?? $offerData['Artikelnummer'] ?? ''));
+    if ($offerArticle === '' && $oArticle !== '') $offerArticle = $oArticle;
+
+    $offerGross = pv_float_or_null($offerData['price_gross'] ?? $offerData['offer_price_gross'] ?? $offerData['gross'] ?? null);
+    $offerNet   = pv_float_or_null($offerData['price_net'] ?? $offerData['offer_price_net'] ?? $offerData['net'] ?? null);
+
+    if (!empty($boot['variants']) && $offerArticle !== '') {
+      $pk = (string)($boot['config']['variant']['primary_key'] ?? 'Artikelnummer');
+      $priceGrossKey = (string)($boot['config']['variant']['price_gross'] ?? 'mit MwSt. €');
+      $priceNetKey   = (string)($boot['config']['variant']['price_net'] ?? 'ohne MwSt. €');
+
+      foreach ($boot['variants'] as $v) {
+        if (!is_array($v)) continue;
+        if ((string)($v[$pk] ?? '') !== $offerArticle) continue;
+        $listGross = pv_float_or_null($v[$priceGrossKey] ?? null);
+        $listNet   = pv_float_or_null($v[$priceNetKey] ?? null);
+        break;
+      }
+    }
+  }
+}
+
+$title = (string)($boot['content']['product']['title'] ?? '');
+if ($title === '') {
+  $v0t = $boot['variants'][0] ?? [];
+  $pg = pv_row_get($v0t, ['Produktgruppe','produktgruppe','Produktgruppe ','Produkt-Gruppe','Gruppe']) ?? '';
+  $pa = pv_row_get($v0t, ['Produktart','produktart','Produktart ','Art']) ?? '';
+  $title = trim($pg . ' ' . $pa);
+  if ($title === '') $title = (string)($boot['config']['ui']['brand_title'] ?? 'Produktkonfigurator');
+}
+
+$currentLabel = $products[$productKey] ?? $productKey;
+
+$warnMapProducts = pv_load_product_warn_map();
+$warnEnabled = pv_warn_enabled_for_product($productKey, $warnMapProducts, false);
+$hideWarn = !$warnEnabled;
+
+$hideInfo = false;
+
+?><!doctype html>
+<html lang="de">
+<head>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W5WRQLFN');</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REGATIX SHOP | <?= h($title) ?></title>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#000000;
+      --muted:rgba(0,0,0,.65);
+      --border:rgba(0,0,0,.14);
+      --accent:#95bf20;
+      --shadow:0 8px 22px rgba(0,0,0,.08);
+      --field-bg: rgba(0,0,0,.03);
+      --soft: rgba(0,0,0,.02);
+      --btn-grad-a: rgba(149,191,32,.18);
+      --btn-grad-b: rgba(0,0,0,.02);
+      --danger:#b42318;
+      --danger-bg:rgba(180,35,24,.08);
+      --success:#027a48;
+      --success-bg:rgba(2,122,72,.08);
+    }
+
+    body.layout-pro{
+      --bg:#0f1115;
+      --card:#151922;
+      --text:#f2f4f8;
+      --muted:rgba(255,255,255,.70);
+      --border:rgba(255,255,255,.16);
+      --shadow:0 10px 26px rgba(0,0,0,.55);
+      --field-bg: rgba(255,255,255,.06);
+      --soft: rgba(255,255,255,.05);
+      --btn-grad-a: rgba(149,191,32,.22);
+      --btn-grad-b: rgba(255,255,255,.04);
+      --danger-bg:rgba(180,35,24,.16);
+      --success-bg:rgba(2,122,72,.18);
+    }
+
+    body{ background: var(--bg) !important; color: var(--text); }
+
+    select, input[type="number"], input[type="text"], input[type="email"], textarea{
+      background: var(--field-bg) !important;
+      color: var(--text) !important;
+      border-color: var(--border) !important;
+    }
+
+    .card{ background: var(--card) !important; box-shadow: var(--shadow); }
+
+    .btn{
+      background: linear-gradient(135deg, var(--btn-grad-a), var(--btn-grad-b)) !important;
+    }
+    .btn:hover{ border-color: rgba(149,191,32,.55) !important; }
+
+    .hero, .thumb, .kv-row{ background: var(--soft) !important; }
+
+    .pill-toggle{
+      height:38px; padding:0 14px; border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--field-bg);
+      color:var(--text);
+      cursor:pointer;
+      display:inline-flex; align-items:center; gap:8px;
+      text-decoration:none; white-space:nowrap;
+    }
+    .pill-select{
+      height:38px; padding:0 14px; border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--field-bg);
+      color:var(--text);
+      cursor:pointer;
+      min-width:220px;
+    }
+    .price-net{ font-size:13px; color: var(--muted) !important; }
+
+    .notice{
+      margin:0 0 12px 0;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      line-height:1.45;
+    }
+    .notice--error{
+      border-color:rgba(180,35,24,.35);
+      background:var(--danger-bg);
+      color:var(--text);
+    }
+    .notice--success{
+      border-color:rgba(2,122,72,.35);
+      background:var(--success-bg);
+      color:var(--text);
+    }
+
+    select.pv-native-select{
+      position:absolute !important;
+      left:-9999px !important;
+      width:1px !important;
+      height:1px !important;
+      opacity:0 !important;
+      pointer-events:none !important;
+    }
+
+    .pv-select{
+      position:relative;
+      display:inline-block;
+      width:100%;
+      max-width:100%;
+    }
+    .pv-select.pv-select--pill{ min-width:220px; }
+    .pv-select__btn{
+      width:100%;
+      height:38px;
+      padding:0 14px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--field-bg);
+      color:var(--text);
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      text-align:left;
+      user-select:none;
+    }
+    .pv-select__btn:focus{
+      outline:2px solid rgba(149,191,32,.35);
+      outline-offset:2px;
+    }
+    .pv-select__chev{
+      width:0; height:0;
+      border-left:5px solid transparent;
+      border-right:5px solid transparent;
+      border-top:6px solid currentColor;
+      opacity:.75;
+      flex:0 0 auto;
+    }
+    .pv-select__menu{
+      position:absolute;
+      top:calc(100% + 6px);
+      left:0;
+      right:0;
+      z-index:9999;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow: var(--shadow);
+      padding:6px;
+      margin:0;
+      list-style:none;
+      max-height:320px;
+      overflow:auto;
+      display:none;
+    }
+    .pv-select.is-open .pv-select__menu{ display:block; }
+
+    .pv-select__opt{
+      padding:10px 10px;
+      border-radius:10px;
+      cursor:pointer;
+      line-height:1.2;
+    }
+    .pv-select__opt[aria-selected="true"]{
+      background:rgba(149,191,32,.18);
+      border:1px solid rgba(149,191,32,.35);
+    }
+    .pv-select__opt:hover{
+      background:rgba(0,0,0,.06);
+    }
+    body.layout-pro .pv-select__opt:hover{
+      background:rgba(255,255,255,.07);
+    }
+
+    .wd-modal{
+      position:fixed;
+      inset:0;
+      z-index:10050;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:rgba(0,0,0,.55);
+      backdrop-filter: blur(2px);
+    }
+    .wd-modal.is-open{
+      display:flex;
+    }
+    .wd-dialog{
+      width:min(760px, 100%);
+      max-height:calc(100vh - 36px);
+      overflow:auto;
+      background:var(--card);
+      color:var(--text);
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+    .wd-head{
+      padding:18px 20px 10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .wd-title{
+      font-size:20px;
+      font-weight:700;
+      line-height:1.2;
+    }
+    .wd-close{
+      border:1px solid var(--border);
+      background:var(--field-bg);
+      color:var(--text);
+      border-radius:999px;
+      width:38px;
+      height:38px;
+      cursor:pointer;
+      font-size:20px;
+      line-height:1;
+    }
+    .wd-body{
+      padding:0 20px 20px;
+    }
+    .wd-help{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+      margin:0 0 16px 0;
+    }
+    .wd-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    .wd-field{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .wd-field--full{
+      grid-column:1 / -1;
+    }
+    .wd-field label{
+      font-size:14px;
+      font-weight:600;
+    }
+    .wd-field input,
+    .wd-field textarea{
+      width:100%;
+      border:1px solid var(--border);
+      border-radius:12px;
+      min-height:42px;
+      padding:10px 12px;
+      font:inherit;
+      resize:vertical;
+    }
+    .wd-check{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      margin-top:8px;
+      font-size:14px;
+      line-height:1.5;
+    }
+    .wd-actions{
+      display:flex;
+      gap:10px;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .wd-btn{
+      min-height:42px;
+      padding:0 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:var(--field-bg);
+      color:var(--text);
+      cursor:pointer;
+      font:inherit;
+    }
+    .wd-btn--primary{
+      border-color:rgba(149,191,32,.55);
+      background:linear-gradient(135deg, var(--btn-grad-a), var(--btn-grad-b));
+    }
+
+    @media (max-width: 720px){
+      .wd-grid{ grid-template-columns:1fr; }
+    }
+
+    @media (hover:hover) and (pointer:fine){
+      .pv-select.pv-open-on-hover:hover .pv-select__menu{ display:block; }
+      .pv-select.pv-open-on-hover:hover{ z-index:9999; }
+      .pv-select.pv-open-on-hover:hover .pv-select__btn{
+        border-color: rgba(149,191,32,.55);
+      }
+    }
+  </style>
+</head>
+
+<body
+  data-hide-info="<?= $hideInfo ? '1' : '0' ?>"
+  data-product-key="<?= h($productKey) ?>"
+  data-product-label="<?= h($currentLabel) ?>"
+>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5WRQLFN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="logo">
+  <div class="logostage">
+    <div id="logologo">
+      <a href="https://regatix.com" title="Zurück zur Homepage">
+        <img alt="" src="https://www.regatix.com/media/regatixshoplogo.png" />
+      </a>
+
+      <div id="regatixoben">
+        <a href="https://regatix.com" title="Zurück zur Homepage">
+          <img alt="" src="https://www.regatix.com/media/REGATIX/SHOP_zeigt_nach_links.png" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <div class="h-title"><?= h($title) ?></div>
+        <div class="small">Produkt: <strong><?= h($currentLabel) ?></strong></div>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+        <form method="post" style="margin:0">
+          <input type="hidden" name="action" value="set_product">
+          <select class="pill-select" name="product" onchange="this.form.submit()" title="Produkt wählen">
+            <?php foreach ($products as $k => $label): ?>
+              <option value="<?= h($k) ?>" <?= ($k === $productKey ? 'selected' : '') ?>><?= h($label) ?></option>
+            <?php endforeach; ?>
+          </select>
+        </form>
+        <a class="pill-toggle" href="cart.php" title="Warenkorb öffnen">Warenkorb <span id="pv_cart_badge" class="pv-badge" hidden></span></a>
+<a class="pill-toggle" target="_blank" href="withdraw.php?product=<?= h($productKey) ?>&article=<?= h($offerArticle) ?>&offer=<?= h($offerId) ?>">
+        Vertrag widerrufen
+        </a>
+        <button class="pill-toggle" id="pv_layout_toggle" type="button" title="Layout umschalten">Layout: Hell</button>
+      </div>
+    </div>
+
+    <?php if ($withdrawalError !== ''): ?>
+      <div class="notice notice--error"><?= h($withdrawalError) ?></div>
+    <?php endif; ?>
+
+    <?php if ($withdrawalSuccess !== ''): ?>
+      <div class="notice notice--success"><?= $withdrawalSuccess ?></div>
+    <?php endif; ?>
+
+    <div id="pv_error" class="small"></div>
+
+    <?php if (empty($boot['variants'])): ?>
+      <div class="card">
+        <div class="card-b">
+          <div class="card-title">Keine Varianten gefunden</div>
+          <div class="small" style="margin-top:6px">
+            Für dieses Produkt sind noch keine Daten importiert.
+            Bitte im Admin den Import ausführen (oder anderes Produkt wählen).
+          </div>
+        </div>
+      </div>
+      <div style="height:12px"></div>
+    <?php endif; ?>
+
+    <div class="card">
+      <div class="card-h">
+        <div class="card-title">Konfiguration</div>
+      </div>
+      <div class="card-b">
+        <div class="grid">
+          <div>
+            <div class="hero" id="pv_hero"></div>
+            <div class="thumbs" id="pv_thumbs"></div>
+
+            <div class="hr"></div>
+
+            <div class="card" id="pv_info_card" style="border-radius:var(--radius2)">
+              <div class="card-h"><div class="card-title">Infotext</div></div>
+              <div class="card-b">
+                <div class="info" id="pv_info_html"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="form" id="pv_dims"></div>
+            <div class="prices">
+              <div class="price-gross" id="pv_price_gross">—</div>
+              <div class="price-net" id="pv_price_net"></div>
+            </div>
+            <div style="margin-top:12px">
+              <label>Menge</label>
+              <input type="number" min="1" step="1" id="pv_qty" value="1">
+            </div>
+            <div class="hr"></div>
+            <div class="card" style="border-radius:var(--radius2)">
+              <div class="card-h"><div class="card-title">Infodaten</div></div>
+              <div class="card-b">
+                <div class="kv" id="pv_info_fields"></div>
+              </div>
+            </div>
+            <div style="height:12px"></div>
+
+            <?php
+              $partialBase = __DIR__ . '/partials';
+              if ($hideWarn) {
+                require $partialBase . '/warn_off.php';
+              } else {
+                require $partialBase . '/warn_on.php';
+              }
+            ?>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wd-modal<?= $withdrawalError !== '' ? ' is-open' : '' ?>" id="wd_modal" aria-hidden="<?= $withdrawalError !== '' ? 'false' : 'true' ?>">
+    <div class="wd-dialog" role="dialog" aria-modal="true" aria-labelledby="wd_title">
+      <div class="wd-head">
+        <div>
+          <div class="wd-title" id="wd_title">Vertrag widerrufen</div>
+          <p class="wd-help">
+            Hier kann eine Widerrufserklärung elektronisch übermittelt werden. Produkt, Artikelnummer und aktuelle Seite werden automatisch mitgesendet.
+          </p>
+        </div>
+        <button type="button" class="wd-close" id="wd_close" aria-label="Fenster schließen">×</button>
+      </div>
+
+      <div class="wd-body">
+        <form method="post" id="wd_form">
+          <input type="hidden" name="action" value="submit_withdrawal">
+          <input type="hidden" name="csrf" value="<?= h($csrfToken) ?>">
+          <input type="hidden" name="wd_product_key" id="wd_product_key" value="<?= h($productKey) ?>">
+          <input type="hidden" name="wd_product_label" id="wd_product_label" value="<?= h($currentLabel) ?>">
+          <input type="hidden" name="wd_article" id="wd_article" value="<?= h($offerArticle) ?>">
+          <input type="hidden" name="wd_offer_id" id="wd_offer_id" value="<?= h($offerId) ?>">
+          <input type="hidden" name="wd_page_url" id="wd_page_url" value="">
+
+          <div class="wd-grid">
+            <div class="wd-field">
+              <label for="wd_name">Name *</label>
+              <input type="text" id="wd_name" name="wd_name" required value="<?= h(pv_post_str('wd_name')) ?>">
+            </div>
+
+            <div class="wd-field">
+              <label for="wd_email">E-Mail *</label>
+              <input type="email" id="wd_email" name="wd_email" required value="<?= h(pv_post_str('wd_email')) ?>">
+            </div>
+
+            <div class="wd-field wd-field--full">
+              <label for="wd_order_ref">Bestell- oder Angebotsnummer</label>
+              <input type="text" id="wd_order_ref" name="wd_order_ref" value="<?= h(pv_post_str('wd_order_ref')) ?>">
+            </div>
+
+            <div class="wd-field wd-field--full">
+              <label for="wd_message">Nachricht</label>
+              <textarea id="wd_message" name="wd_message" rows="5" placeholder="Optional: z. B. weitere Angaben zum widerrufenen Vertrag."><?= h(pv_post_str('wd_message')) ?></textarea>
+            </div>
+          </div>
+
+          <label class="wd-check">
+            <input type="checkbox" name="wd_confirm" value="1" <?= ((string)($_POST['wd_confirm'] ?? '') === '1') ? 'checked' : '' ?>>
+            <span>Ich möchte meine Widerrufserklärung elektronisch absenden.</span>
+          </label>
+
+          <div class="wd-actions">
+            <button type="button" class="wd-btn" id="wd_cancel">Abbrechen</button>
+            <button type="submit" class="wd-btn wd-btn--primary">Widerruf absenden</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+ <div id="footer"><p>REGATIX Betriebseinrichtungen GmbH &bull; Porschestra&szlig;e 9 &bull; 74360 Ilsfeld &bull; Telefon: 07062 - 23 902 - 0 &bull; E-Mail: info@regatix.com<br />
+    Montag - Donnerstag: 08:00 - 12:00 Uhr | 13:00 - 17:00 Uhr &bull; Freitag:08:00 - 12:00 Uhr | 13:00 - 16:30 Uhr&nbsp; | <br><a href="https://www.regatix.com/pages/start/impressum.php" target="_blank">Impressum</a> | <a href="https://www.regatix.com/pages/start/datenschutz.php" target="_blank">Datenschutz</a> | <a href="https://www.regatix.com/pages/start/versandbedingungen.php" target="_blank">Versandbedingungen</a> | <a href="https://www.regatix.com/pages/start/widerrufsrecht.php" target="_blank">Widerrufsrecht</a> |  <a href="https://www.regatix.com/pages/start/shop-bedingungen.php" target="_blank">SHOP Bedingungen</a> | <a class="pill-toggle"target="_blank" href="withdraw.php?product=<?= h($productKey) ?>&article=<?= h($offerArticle) ?>&offer=<?= h($offerId) ?>">
+    Vertrag widerrufen
+    </a> </p>
+  </div>
+
+  <script>
+  (function(){
+    const KEY = 'pv_layout';
+    const btn = document.getElementById('pv_layout_toggle');
+    if(!btn) return;
+
+    function apply(mode){
+      const dark = (mode === 'dark');
+      document.body.classList.toggle('layout-pro', dark);
+      btn.textContent = 'Layout: ' + (dark ? 'Dunkel' : 'Hell');
+      btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    }
+
+    let mode = localStorage.getItem(KEY);
+    if(mode !== 'dark' && mode !== 'light'){
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      mode = prefersDark ? 'dark' : 'light';
+    }
+    apply(mode);
+
+    btn.addEventListener('click', function(){
+      const nowDark = document.body.classList.contains('layout-pro');
+      mode = nowDark ? 'light' : 'dark';
+      localStorage.setItem(KEY, mode);
+      apply(mode);
+    });
+  })();
+  </script>
+
+  <script>
+  (function(){
+    const IS_DESKTOP_HOVER = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+    function closeAll(except){
+      document.querySelectorAll('.pv-select.is-open').forEach(el=>{
+        if(except && el === except) return;
+        el.classList.remove('is-open');
+        const btn = el.querySelector('.pv-select__btn');
+        if(btn) btn.setAttribute('aria-expanded','false');
+      });
+    }
+
+    function fireChange(select){
+      try{
+        const ev = new Event('change', {bubbles:true});
+        select.dispatchEvent(ev);
+      }catch(e){
+        const ev = document.createEvent('Event');
+        ev.initEvent('change', true, true);
+        select.dispatchEvent(ev);
+      }
+    }
+
+    function enhanceSelect(select){
+      if(!(select instanceof HTMLSelectElement)) return;
+      if(select.dataset.pvEnhanced === '1') return;
+      if(select.closest('.pv-select')) return;
+
+      if(select.multiple) return;
+      if(select.size && select.size > 1) return;
+
+      select.dataset.pvEnhanced = '1';
+
+      const isPill = select.classList.contains('pill-select');
+
+      const wrap = document.createElement('div');
+      wrap.className = 'pv-select' + (IS_DESKTOP_HOVER ? ' pv-open-on-hover' : '') + (isPill ? ' pv-select--pill' : '');
+      wrap.setAttribute('data-pv-select', '1');
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'pv-select__btn';
+      btn.setAttribute('aria-haspopup', 'listbox');
+      btn.setAttribute('aria-expanded', 'false');
+
+      const labelSpan = document.createElement('span');
+      labelSpan.className = 'pv-select__label';
+
+      const chev = document.createElement('span');
+      chev.className = 'pv-select__chev';
+      chev.setAttribute('aria-hidden','true');
+
+      btn.appendChild(labelSpan);
+      btn.appendChild(chev);
+
+      const menu = document.createElement('ul');
+      menu.className = 'pv-select__menu';
+      menu.setAttribute('role','listbox');
+
+      select.classList.add('pv-native-select');
+
+      const parent = select.parentNode;
+      parent.insertBefore(wrap, select);
+      wrap.appendChild(select);
+      wrap.appendChild(btn);
+      wrap.appendChild(menu);
+
+      function currentOptionText(){
+        const opt = select.options[select.selectedIndex];
+        return opt ? (opt.textContent || opt.label || '') : '—';
+      }
+
+      function rebuildOptions(){
+        menu.innerHTML = '';
+        Array.from(select.options).forEach((opt, idx)=>{
+          const li = document.createElement('li');
+          li.className = 'pv-select__opt';
+          li.setAttribute('role','option');
+          li.setAttribute('data-value', opt.value);
+          li.setAttribute('data-index', String(idx));
+          li.setAttribute('aria-selected', opt.selected ? 'true' : 'false');
+          li.textContent = opt.textContent || opt.label || opt.value;
+
+          if(opt.disabled){
+            li.style.opacity = '0.55';
+            li.style.pointerEvents = 'none';
+          }
+
+          li.addEventListener('mousedown', function(e){
+            e.preventDefault();
+          });
+
+          li.addEventListener('click', function(){
+            select.selectedIndex = idx;
+            labelSpan.textContent = currentOptionText();
+            rebuildOptions();
+            closeAll();
+            fireChange(select);
+          });
+
+          menu.appendChild(li);
+        });
+
+        labelSpan.textContent = currentOptionText();
+      }
+
+      rebuildOptions();
+
+      function open(){
+        closeAll(wrap);
+        wrap.classList.add('is-open');
+        btn.setAttribute('aria-expanded','true');
+      }
+      function close(){
+        wrap.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+      }
+      function toggle(){
+        if(wrap.classList.contains('is-open')) close();
+        else open();
+      }
+
+      if(IS_DESKTOP_HOVER){
+        wrap.addEventListener('mouseenter', function(){ open(); });
+        wrap.addEventListener('mouseleave', function(){ close(); });
+      }
+
+      btn.addEventListener('click', function(){ toggle(); });
+
+      btn.addEventListener('keydown', function(e){
+        const key = e.key;
+        if(key === 'Enter' || key === ' '){
+          e.preventDefault();
+          toggle();
+        } else if(key === 'ArrowDown'){
+          e.preventDefault();
+          open();
+          select.selectedIndex = Math.min(select.selectedIndex + 1, select.options.length - 1);
+          labelSpan.textContent = currentOptionText();
+          rebuildOptions();
+          fireChange(select);
+        } else if(key === 'ArrowUp'){
+          e.preventDefault();
+          open();
+          select.selectedIndex = Math.max(select.selectedIndex - 1, 0);
+          labelSpan.textContent = currentOptionText();
+          rebuildOptions();
+          fireChange(select);
+        } else if(key === 'Escape'){
+          e.preventDefault();
+          close();
+        }
+      });
+
+      select.addEventListener('change', function(){
+        labelSpan.textContent = currentOptionText();
+        rebuildOptions();
+      });
+
+      document.addEventListener('mousedown', function(e){
+        if(!wrap.contains(e.target)) close();
+      });
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') close();
+      });
+    }
+
+    function enhanceAll(root){
+      (root || document).querySelectorAll('select').forEach(enhanceSelect);
+    }
+
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', function(){ enhanceAll(document); });
+    }else{
+      enhanceAll(document);
+    }
+
+    const mo = new MutationObserver(function(muts){
+      for(const m of muts){
+        if(m.type !== 'childList') continue;
+        m.addedNodes.forEach(node=>{
+          if(!(node instanceof Element)) return;
+          if(node.tagName === 'SELECT') enhanceSelect(node);
+          else {
+            const sels = node.querySelectorAll ? node.querySelectorAll('select') : [];
+            sels.forEach(enhanceSelect);
+          }
+        });
+      }
+    });
+    mo.observe(document.documentElement, {subtree:true, childList:true});
+  })();
+  </script>
+
+  <script>
+    window.PV_BOOTSTRAP = <?= json_encode($boot, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
+    window.PV_CURRENT_PRODUCT_KEY = <?= json_encode($productKey, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
+    window.PV_CURRENT_PRODUCT_LABEL = <?= json_encode($currentLabel, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
+    window.PV_OFFER_ARTICLE = <?= json_encode($offerArticle, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
+    window.PV_OFFER_ID = <?= json_encode($offerId, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
+  </script>
+
+  <script src="assets/app.js?v=<?= @filemtime(__DIR__ . '/assets/app.js') ?: time() ?>"></script>
+
+  <script>
+  (function(){
+    function norm(s){
+      return String(s == null ? '' : s)
+        .replace(/\u00A0/g, ' ')
+        .replace(/[\u200B-\u200D\uFEFF]/g, '')
+        .trim()
+        .toLowerCase();
+    }
+
+    function compact(s){
+      return norm(s).replace(/[\s\-_]+/g, '');
+    }
+
+    function isPalettenregalProduct(){
+      const body = document.body;
+      const key = body ? (body.getAttribute('data-product-key') || '') : '';
+      const label = body ? (body.getAttribute('data-product-label') || '') : '';
+      const title = document.querySelector('.h-title') ? document.querySelector('.h-title').textContent : '';
+      const all = compact(key + ' ' + label + ' ' + title);
+      return all.indexOf('palettenregal') !== -1 || all.indexOf('palettenregalgrundregal') !== -1;
+    }
+
+    if(!isPalettenregalProduct()) return;
+
+    const boot = window.PV_BOOTSTRAP || {};
+    const variants = Array.isArray(boot.variants) ? boot.variants : [];
+    if(!variants.length) return;
+
+    const dimsWrap = document.getElementById('pv_dims');
+    const infoWrap = document.getElementById('pv_info_fields');
+    const priceGrossEl = document.getElementById('pv_price_gross');
+    const priceNetEl = document.getElementById('pv_price_net');
+    const heroEl = document.getElementById('pv_hero');
+    const thumbsEl = document.getElementById('pv_thumbs');
+
+    if(!dimsWrap) return;
+
+    const variantCfg = (boot.config && boot.config.variant) ? boot.config.variant : {};
+    const priceGrossKey = String(variantCfg.price_gross || 'mit MwSt. €');
+    const priceNetKey = String(variantCfg.price_net || 'ohne MwSt. €');
+    const primaryKey = String(variantCfg.primary_key || 'Artikelnummer');
+
+    const FIELD_ORDER = [
+      { label: 'Produkt Art', candidates: ['Produkt Art', 'Produktart', 'Produkt-Art', 'Art'] },
+      { label: 'Feldanzahl', candidates: ['Feldanzahl', 'Feld Anzahl', 'Felder', 'Feldzahl'] },
+      { label: 'Ebenen', candidates: ['Ebenen', 'Ebene', 'Anzahl Ebenen'] },
+      { label: 'Platz Kg', candidates: ['Platz Kg', 'Platz KG', 'Platz kg', 'Platzlast Kg', 'Platzlast KG', 'Fachlast Kg', 'Fachlast KG'] },
+      { label: 'Nennhöhe', candidates: ['Nennhöhe', 'Nennhoehe', 'Höhe', 'Hoehe'] },
+      { label: 'Nenntiefe', candidates: ['Nenntiefe', 'Tiefe'] },
+      { label: 'Nennlänge', candidates: ['Nennlänge', 'Nennlaenge', 'Nennbreite', 'Breite', 'Länge', 'Laenge'] }
+    ];
+
+    function getValue(row, candidates){
+      if(!row || typeof row !== 'object') return '';
+      const wanted = {};
+      candidates.forEach(function(c){
+        wanted[norm(c)] = true;
+      });
+
+      for(const k in row){
+        if(!Object.prototype.hasOwnProperty.call(row, k)) continue;
+        if(wanted[norm(k)]){
+          const v = String(row[k] == null ? '' : row[k]).trim();
+          if(v !== '') return v;
+        }
+      }
+      return '';
+    }
+
+    function getActualKeyFromRow(row, candidates){
+      if(!row || typeof row !== 'object') return '';
+      const wanted = {};
+      candidates.forEach(function(c){
+        wanted[norm(c)] = true;
+      });
+
+      for(const k in row){
+        if(!Object.prototype.hasOwnProperty.call(row, k)) continue;
+        if(wanted[norm(k)]) return k;
+      }
+      return '';
+    }
+
+    function money(v){
+      const n = parseFloat(String(v).replace(/\./g, '').replace(',', '.'));
+      if(!isFinite(n)) return '';
+      return n.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' €';
+    }
+
+    const resolvedFields = FIELD_ORDER
+      .map(function(def){
+        let actualKey = '';
+        for(const row of variants){
+          actualKey = getActualKeyFromRow(row, def.candidates);
+          if(actualKey) break;
+        }
+        return {
+          label: def.label,
+          key: actualKey,
+          candidates: def.candidates.slice()
+        };
+      })
+      .filter(function(f){
+        return !!f.key;
+      });
+
+    if(!resolvedFields.length) return;
+
+    const state = {
+      selected: {},
+      variant: null
+    };
+
+    function escapeHtml(s){
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function uniqueValues(rows, field, currentSelections, fieldIndex){
+      const out = [];
+      const seen = {};
+
+      rows.forEach(function(row){
+        for(let i = 0; i < fieldIndex; i++){
+          const prevField = resolvedFields[i];
+          const selectedVal = currentSelections[prevField.label];
+          if(selectedVal && String(row[prevField.key] ?? '').trim() !== selectedVal){
+            return;
+          }
+        }
+
+        const value = String(row[field.key] ?? '').trim();
+        if(!value) return;
+
+        const key = value.toLowerCase();
+        if(seen[key]) return;
+        seen[key] = true;
+        out.push(value);
+      });
+
+      return out;
+    }
+
+    function filterVariantsBySelection(selectionMap){
+      return variants.filter(function(row){
+        return resolvedFields.every(function(field){
+          const selVal = selectionMap[field.label];
+          if(!selVal) return true;
+          return String(row[field.key] ?? '').trim() === selVal;
+        });
+      });
+    }
+
+    function findBestVariant(selectionMap){
+      const exact = filterVariantsBySelection(selectionMap);
+      if(exact.length) return exact[0];
+
+      let best = null;
+      let bestScore = -1;
+
+      variants.forEach(function(row){
+        let score = 0;
+        resolvedFields.forEach(function(field){
+          const selVal = selectionMap[field.label];
+          if(selVal && String(row[field.key] ?? '').trim() === selVal){
+            score++;
+          }
+        });
+        if(score > bestScore){
+          best = row;
+          bestScore = score;
+        }
+      });
+
+      return best || variants[0];
+    }
+
+    function renderInfoRows(row){
+      if(!infoWrap || !row) return;
+      infoWrap.innerHTML = '';
+
+      const added = {};
+
+      function addRow(label, value){
+        const lv = String(value == null ? '' : value).trim();
+        if(!lv) return;
+        const nk = norm(label);
+        if(added[nk]) return;
+        added[nk] = true;
+
+        const line = document.createElement('div');
+        line.className = 'kv-row';
+
+        const k = document.createElement('div');
+        k.className = 'kv-k';
+        k.textContent = label;
+
+        const v = document.createElement('div');
+        v.className = 'kv-v';
+        v.textContent = lv;
+
+        line.appendChild(k);
+        line.appendChild(v);
+        infoWrap.appendChild(line);
+      }
+
+      addRow('Artikelnummer', row[primaryKey] ?? '');
+      resolvedFields.forEach(function(field){
+        addRow(field.label, row[field.key] ?? '');
+      });
+
+      for(const key in row){
+        if(!Object.prototype.hasOwnProperty.call(row, key)) continue;
+        if(norm(key) === norm(primaryKey)) continue;
+        if(norm(key) === norm(priceGrossKey)) continue;
+        if(norm(key) === norm(priceNetKey)) continue;
+        addRow(key, row[key]);
+      }
+    }
+
+    function renderPrices(row){
+      if(!row) return;
+      if(priceGrossEl){
+        const gross = String(row[priceGrossKey] ?? '').trim();
+        priceGrossEl.textContent = gross !== '' ? (gross.indexOf('€') !== -1 ? gross : money(gross)) : '—';
+      }
+      if(priceNetEl){
+        const net = String(row[priceNetKey] ?? '').trim();
+        priceNetEl.textContent = net !== '' ? ('zzgl. MwSt.: ' + (net.indexOf('€') !== -1 ? net : money(net))) : '';
+      }
+    }
+
+    function findImageValues(row){
+      if(!row || typeof row !== 'object') return [];
+      const candidates = ['Bild', 'Bilder', 'Bild 1', 'Bild1', 'Image', 'Images', 'Foto', 'Fotos', 'gallery', 'image'];
+      for(const key in row){
+        if(!Object.prototype.hasOwnProperty.call(row, key)) continue;
+        const n = norm(key);
+        const matched = candidates.some(function(c){ return n === norm(c); });
+        if(!matched) continue;
+
+        const raw = String(row[key] == null ? '' : row[key]).trim();
+        if(!raw) continue;
+
+        return raw
+          .split(/[\n\r;,|]+/)
+          .map(function(v){ return v.trim(); })
+          .filter(Boolean);
+      }
+      return [];
+    }
+
+    function renderImages(row){
+      if(!heroEl || !thumbsEl) return;
+
+      const images = findImageValues(row);
+      heroEl.innerHTML = '';
+      thumbsEl.innerHTML = '';
+
+      if(!images.length) return;
+
+      const main = document.createElement('img');
+      main.src = images[0];
+      main.alt = '';
+      main.style.maxWidth = '100%';
+      main.style.display = 'block';
+      main.style.margin = '0 auto';
+      heroEl.appendChild(main);
+
+      images.forEach(function(src){
+        const t = document.createElement('img');
+        t.src = src;
+        t.alt = '';
+        t.className = 'thumb';
+        t.style.cursor = 'pointer';
+        t.addEventListener('click', function(){
+          main.src = src;
+        });
+        thumbsEl.appendChild(t);
+      });
+    }
+
+    function buildSelect(field, fieldIndex){
+      const wrap = document.createElement('div');
+      wrap.className = 'field';
+
+      const label = document.createElement('label');
+      label.setAttribute('for', 'pv_paletten_' + fieldIndex);
+      label.textContent = field.label;
+
+      const select = document.createElement('select');
+      select.id = 'pv_paletten_' + fieldIndex;
+      select.name = field.label;
+      select.setAttribute('data-pv-paletten-field', field.label);
+
+      const opts = uniqueValues(variants, field, state.selected, fieldIndex);
+
+      const ph = document.createElement('option');
+      ph.value = '';
+      ph.textContent = 'Bitte wählen';
+      select.appendChild(ph);
+
+      opts.forEach(function(value){
+        const opt = document.createElement('option');
+        opt.value = value;
+        opt.textContent = value;
+        if(state.selected[field.label] === value) opt.selected = true;
+        select.appendChild(opt);
+      });
+
+      if(state.selected[field.label] && !opts.includes(state.selected[field.label])){
+        state.selected[field.label] = '';
+      }
+      if(!state.selected[field.label] && opts.length === 1){
+        state.selected[field.label] = opts[0];
+        select.value = opts[0];
+      }
+
+      select.addEventListener('change', function(){
+        state.selected[field.label] = select.value || '';
+
+        let clear = false;
+        resolvedFields.forEach(function(f){
+          if(clear) state.selected[f.label] = '';
+          if(f.label === field.label) clear = true;
+        });
+
+        renderForm();
+        updateVariant();
+      });
+
+      wrap.appendChild(label);
+      wrap.appendChild(select);
+      return wrap;
+    }
+
+    function renderForm(){
+      dimsWrap.innerHTML = '';
+      resolvedFields.forEach(function(field, index){
+        dimsWrap.appendChild(buildSelect(field, index));
+      });
+    }
+
+    function updateVariant(){
+      const selected = {};
+      resolvedFields.forEach(function(field){
+        const sel = dimsWrap.querySelector('select[data-pv-paletten-field="' + field.label.replace(/"/g, '\\"') + '"]');
+        selected[field.label] = sel ? (sel.value || '') : (state.selected[field.label] || '');
+      });
+
+      state.selected = selected;
+      state.variant = findBestVariant(state.selected);
+
+      if(state.variant){
+        renderInfoRows(state.variant);
+        renderPrices(state.variant);
+        renderImages(state.variant);
+        window.PV_CURRENT_VARIANT = state.variant;
+        window.currentVariant = state.variant;
+      }
+
+      document.dispatchEvent(new Event('pv:variant-changed'));
+    }
+
+    function initDefaultSelection(){
+      const article = String(window.PV_OFFER_ARTICLE || '').trim();
+      let startVariant = null;
+
+      if(article){
+        startVariant = variants.find(function(v){
+          return String(v[primaryKey] ?? '').trim() === article;
+        }) || null;
+      }
+
+      if(!startVariant) startVariant = variants[0];
+
+      resolvedFields.forEach(function(field){
+        state.selected[field.label] = String(startVariant[field.key] ?? '').trim();
+      });
+    }
+
+    function run(){
+      initDefaultSelection();
+      renderForm();
+      updateVariant();
+    }
+
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+
+    setTimeout(run, 100);
+    setTimeout(run, 500);
+  })();
+  </script>
+
+  <script>
+  (function(){
+    const modal = document.getElementById('wd_modal');
+    const openBtns = [document.getElementById('pv_withdrawal_open'), document.getElementById('pv_withdrawal_open_footer')].filter(Boolean);
+    const closeBtn = document.getElementById('wd_close');
+    const cancelBtn = document.getElementById('wd_cancel');
+    const body = document.body;
+
+    const fProductKey = document.getElementById('wd_product_key');
+    const fProductLabel = document.getElementById('wd_product_label');
+    const fArticle = document.getElementById('wd_article');
+    const fOfferId = document.getElementById('wd_offer_id');
+    const fPageUrl = document.getElementById('wd_page_url');
+
+    if(!modal) return;
+
+    function norm(s){
+      return String(s == null ? '' : s)
+        .replace(/\u00A0/g, ' ')
+        .replace(/[\u200B-\u200D\uFEFF]/g, '')
+        .trim()
+        .toLowerCase();
+    }
+
+    function rowGet(row, candidates){
+      if(!row || typeof row !== 'object') return '';
+      const wanted = {};
+      candidates.forEach(c => wanted[norm(c)] = true);
+      for(const k in row){
+        if(!Object.prototype.hasOwnProperty.call(row, k)) continue;
+        if(wanted[norm(k)]){
+          const v = String(row[k] == null ? '' : row[k]).trim();
+          if(v !== '') return v;
+        }
+      }
+      return '';
+    }
+
+    function getPrimaryKeyName(){
+      const boot = window.PV_BOOTSTRAP || {};
+      const cfg = (boot && boot.config && boot.config.variant) ? boot.config.variant : {};
+      return String(cfg.primary_key || 'Artikelnummer');
+    }
+
+    function getVariants(){
+      const boot = window.PV_BOOTSTRAP || {};
+      return Array.isArray(boot.variants) ? boot.variants : [];
+    }
+
+    function getCurrentSelectedCriteria(){
+      const criteria = {};
+      const dims = document.getElementById('pv_dims');
+      if(!dims) return criteria;
+
+      dims.querySelectorAll('select').forEach(function(sel){
+        const value = (sel.value || '').trim();
+        if(value === '') return;
+
+        let key = (sel.getAttribute('name') || '').trim();
+
+        if(!key){
+          const id = sel.id || '';
+          if(id){
+            const labelByFor = dims.querySelector('label[for="' + CSS.escape(id) + '"]');
+            if(labelByFor) key = (labelByFor.textContent || '').trim();
+          }
+        }
+
+        if(!key){
+          const parent = sel.closest('label');
+          if(parent) key = (parent.textContent || '').trim();
+        }
+
+        if(!key){
+          const prev = sel.previousElementSibling;
+          if(prev && prev.tagName === 'LABEL'){
+            key = (prev.textContent || '').trim();
+          }
+        }
+
+        if(key) criteria[key] = value;
+      });
+
+      return criteria;
+    }
+
+    function findVariantByCurrentSelection(){
+      const variants = getVariants();
+      if(!variants.length) return null;
+
+      if(window.PV_CURRENT_VARIANT && typeof window.PV_CURRENT_VARIANT === 'object'){
+        return window.PV_CURRENT_VARIANT;
+      }
+
+      const pk = getPrimaryKeyName();
+      const criteria = getCurrentSelectedCriteria();
+
+      const explicitArticle =
+        (window.PV_OFFER_ARTICLE || '').trim() ||
+        (fArticle && fArticle.value ? fArticle.value.trim() : '');
+
+      if(explicitArticle){
+        const foundByPk = variants.find(v => String(v && v[pk] != null ? v[pk] : '').trim() === explicitArticle);
+        if(foundByPk) return foundByPk;
+      }
+
+      const criterionKeys = Object.keys(criteria);
+      if(criterionKeys.length){
+        let best = null;
+        let bestScore = -1;
+
+        variants.forEach(function(v){
+          if(!v || typeof v !== 'object') return;
+          let score = 0;
+          let mismatch = false;
+
+          criterionKeys.forEach(function(selKey){
+            const selVal = String(criteria[selKey] == null ? '' : criteria[selKey]).trim();
+            if(selVal === '') return;
+
+            for(const vk in v){
+              if(!Object.prototype.hasOwnProperty.call(v, vk)) continue;
+              if(norm(vk) !== norm(selKey)) continue;
+
+              if(norm(String(v[vk] == null ? '' : v[vk])) === norm(selVal)){
+                score++;
+              } else {
+                mismatch = true;
+              }
+              break;
+            }
+          });
+
+          if(!mismatch && score > bestScore){
+            best = v;
+            bestScore = score;
+          }
+        });
+
+        if(best) return best;
+      }
+
+      return variants[0] || null;
+    }
+
+    function getCurrentArticleNumber(){
+      const pk = getPrimaryKeyName();
+      const variant = findVariantByCurrentSelection();
+      if(!variant) return '';
+      return rowGet(variant, [pk, 'Artikelnummer', 'artikelnummer', 'Artikelnr.', 'ArtNr', 'SKU', 'sku']);
+    }
+
+    function syncWithdrawalFields(){
+      if(fProductKey) fProductKey.value = body ? (body.getAttribute('data-product-key') || '') : '';
+      if(fProductLabel) fProductLabel.value = body ? (body.getAttribute('data-product-label') || '') : '';
+      if(fArticle) fArticle.value = getCurrentArticleNumber() || (window.PV_OFFER_ARTICLE || '');
+      if(fOfferId) fOfferId.value = window.PV_OFFER_ID || '';
+      if(fPageUrl) fPageUrl.value = window.location.href;
+    }
+
+    function openModal(){
+      syncWithdrawalFields();
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      const firstInput = document.getElementById('wd_name');
+      if(firstInput) setTimeout(() => firstInput.focus(), 10);
+    }
+
+    function closeModal(){
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    openBtns.forEach(btn => btn.addEventListener('click', openModal));
+    if(closeBtn) closeBtn.addEventListener('click', closeModal);
+    if(cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    const dimsWrap = document.getElementById('pv_dims');
+    if(dimsWrap){
+      dimsWrap.addEventListener('change', syncWithdrawalFields, true);
+      new MutationObserver(syncWithdrawalFields).observe(dimsWrap, { childList:true, subtree:true });
+    }
+
+    const infoWrap = document.getElementById('pv_info_fields');
+    if(infoWrap){
+      new MutationObserver(syncWithdrawalFields).observe(infoWrap, { childList:true, subtree:true, characterData:true });
+    }
+
+    document.addEventListener('pv:variant-changed', syncWithdrawalFields);
+    window.addEventListener('load', syncWithdrawalFields);
+    setTimeout(syncWithdrawalFields, 200);
+    setTimeout(syncWithdrawalFields, 900);
+  })();
+  </script>
+
+</body>
+</html>

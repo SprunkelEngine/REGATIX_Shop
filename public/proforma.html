@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proforma Rechnung</title>
+  <link rel="stylesheet" href="assets/proforma.css">
+</head>
+<body>
+  <!--
+    ✅ REGATIX Proforma – frei editierbar
+    -----------------------------------
+    Diese Datei ist das Template. Du kannst Layout/Markup/CSS frei anpassen.
+
+    Wichtig: Bitte die data-pv-* Attribute an den Platzhaltern behalten,
+    damit das System die Werte automatisch einsetzt.
+
+    Daten kommen aus localStorage:
+      - Warenkorb:  pv_cart_v1
+      - Kundendaten: pv_customer_v1 (wird im Checkout automatisch mitgeschrieben)
+
+    Wenn du die Struktur ändern willst:
+      - data-pv-text="..." = Textplatzhalter
+      - data-pv-html="..." = HTML-Platzhalter
+      - <tbody data-pv-items> wird mit Positionen gefüllt
+  -->
+
+  <main class="page">
+    <header class="top">
+      <div class="left">
+        <div class="title">Proforma-Rechnung</div>
+        <div class="meta">
+          <div><span class="k">Nr.</span> <span class="v" data-pv-text="invoice_no">—</span></div>
+          <div><span class="k">Datum</span> <span class="v" data-pv-text="date_pretty">—</span></div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="sender__company" ><p><img alt="" height="51" src="https://www.regatix.com/media/Logos/rlogo270.png" width="320" /></p></div>
+ 
+      </div>
+    </header>
+
+    <section class="row">
+      <div class="box">
+        <div class="label">Kunde</div>
+        <div class="addr">
+          <div class="b company" data-pv-text="customer.company">—</div>
+          <div class="b" data-pv-text="customer.name">—</div>
+          <div class="b" data-pv-text="customer.street">—</div>
+          <div class="b" data-pv-text="customer.zip_city">—</div>
+          <div class="b" data-pv-text="customer.country">—</div>
+          <div class="b small"><span data-pv-text="customer.email">—</span><span class="sep"> · </span><span data-pv-text="customer.phone">—</span></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label">Hinweis</div>
+        <div class="note" data-pv-html="note_html">
+          <p>Dies ist eine Proforma-Rechnung (Vorschau). Zahlungsbestätigung erhalten Sie von REGATIX. Dieser Beleg berechtigt nicht zum Vorsteuerabzug. </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="positions">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col-article">Art.-Nr.</th>
+            <th>Artikelbezeichnung</th>
+            <th class="col-qty">Menge</th>
+            <th class="col-price">Preis</th>
+            <th class="col-sum">Betrag</th>
+          </tr>
+        </thead>
+        <tbody data-pv-items>
+          <!-- rows inserted by JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="totals">
+      <div class="totals__box">
+        <div class="r"><div>Netto</div><div class="t-right" data-pv-text="totals.net">—</div></div>
+        <div class="r"><div>MwSt (<span data-pv-text="vat_percent">19</span>%)</div><div class="t-right" data-pv-text="totals.vat">—</div></div>
+        <div class="r grand"><div>Brutto</div><div class="t-right" data-pv-text="totals.gross">—</div></div>
+      </div>
+    </section><br>
+<hr>
+    <footer class="foot">
+      <div class="small">REGATIX Betriebseinrichtungen GmbH
+        Porschestraße 9 • 74360 Ilsfeld<br>
+        Telefon: 07062 - 23 902 - 0
+        E-Mail: info@regatix.com</div>
+      <div class="small">Zum Drucken: Browser → Drucken → „Als PDF speichern“</div>
+    </footer>
+
+    <div class="warn" id="pv_warn" style="display:none"></div>
+  </main>
+
+  <script src="assets/proforma_fill.js"></script>
+  <script>
+  (function(){
+    function parseEUR(txt){
+      txt = String(txt || '').trim();
+      if (!txt) return 0;
+      let s = txt.replace(/[^\d,.\-]/g, '');
+      if (s.includes(',') && s.includes('.')) s = s.replace(/\./g, '').replace(',', '.');
+      else s = s.replace(',', '.');
+      const n = parseFloat(s);
+      return isFinite(n) ? n : 0;
+    }
+  
+    function formatEUR(n){
+      n = Number(n);
+      if (!isFinite(n)) n = 0;
+      return n.toFixed(2).replace('.', ',') + ' €';
+    }
+  
+    function readFreight(){
+      try{
+        const raw = localStorage.getItem('pv_freight_v1');
+        if (!raw) return {active:false,gross:0,net:0,zone:'',meta:'',pickup:false};
+        const d = JSON.parse(raw);
+        return {
+          active: !!d.active,
+          gross: Number(d.gross||0)||0,
+          net:   Number(d.net||0)||0,
+          zone:  String(d.zone||''),
+          meta:  String(d.meta||''),
+          pickup: !!d.pickup
+        };
+      }catch(e){
+        return {active:false,gross:0,net:0,zone:'',meta:'',pickup:false};
+      }
+    }
+  
+    function insertOrUpdateFreightRow(freight){
+      const box = document.querySelector('.totals__box');
+      if (!box) return;
+  
+      let row = document.getElementById('pv_totals_freight_row');
+      if (!row) {
+        row = document.createElement('div');
+        row.id = 'pv_totals_freight_row';
+        row.className = 'r';
+        row.innerHTML = `<div>Frachtkosten (brutto)</div><div class="t-right" id="pv_totals_freight_val">—</div>`;
+  
+        // vor der "grand" row einfügen
+        const grand = box.querySelector('.r.grand');
+        if (grand) box.insertBefore(row, grand);
+        else box.appendChild(row);
+      }
+  
+      row.style.display = (freight.active && freight.gross > 0) ? '' : 'none';
+      const val = document.getElementById('pv_totals_freight_val');
+      if (val) val.textContent = formatEUR(freight.gross);
+    }
+  
+    function applyFreightToTotals(freight){
+      // Proforma Fill setzt die Werte (totals.net/vat/gross) erst nach Laden,
+      // deshalb "stabil" warten + ggf. erneut anwenden.
+      const netEl   = document.querySelector('[data-pv-text="totals.net"]');
+      const vatEl   = document.querySelector('[data-pv-text="totals.vat"]');
+      const grossEl = document.querySelector('[data-pv-text="totals.gross"]');
+  
+      if (!netEl || !vatEl || !grossEl) return false;
+  
+      const baseNet   = parseEUR(netEl.textContent);
+      const baseVat   = parseEUR(vatEl.textContent);
+      const baseGross = parseEUR(grossEl.textContent);
+  
+      // Falls Abholung oder keine Fracht -> nur Zeile ausblenden, Totals unverändert lassen
+      if (!freight.active || freight.gross <= 0) {
+        insertOrUpdateFreightRow({active:false,gross:0,net:0});
+        return true;
+      }
+  
+      // Frachtsteueranteil aus gross-net (robust, unabhängig von VAT-% Anzeige)
+      const freightVat = Math.max(0, (freight.gross || 0) - (freight.net || 0));
+  
+      netEl.textContent   = formatEUR(baseNet + freight.net);
+      vatEl.textContent   = formatEUR(baseVat + freightVat);
+      grossEl.textContent = formatEUR(baseGross + freight.gross);
+  
+      insertOrUpdateFreightRow(freight);
+      return true;
+    }
+  
+    function run(){
+      const freight = readFreight();
+      // Pickup => active false behandeln
+      if (freight.pickup) freight.active = false;
+  
+      // mehrfach versuchen (weil proforma_fill.js async füllt)
+      let tries = 0;
+      const timer = setInterval(() => {
+        tries++;
+        const ok = applyFreightToTotals(freight);
+        if (ok || tries > 20) clearInterval(timer);
+      }, 150);
+    }
+  
+    // nach DOM Ready starten
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+  </script>
+
+</body>
+</html>

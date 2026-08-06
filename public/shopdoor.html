@@ -1,0 +1,223 @@
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<title></title>
+<style type="text/css">:root{
+	--green:#96bd1f;
+	--green-soft:#d7e4b8;
+	--text:#0b1400;
+  }
+body h3{
+	  font: 16px "Lucida Grande", Lucida, Verdana, sans-serif;
+  }
+  
+
+  .tile-grid{
+	display:grid;
+	gap:16px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	margin-top: 24px;
+  }
+
+  .tile{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	aspect-ratio: 1 / 1;
+
+	background:var(--green);
+	border-radius:16px;
+	text-decoration:none;
+	color:var(--text);
+	font:600 18px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+	transition: background-color 220ms ease, box-shadow 220ms ease;
+	box-shadow: 0 8px 24px rgba(0,0,0,.12);
+	outline: none;
+  }
+
+  .tile:hover,
+  .tile:focus-visible{
+	background:var(--green-soft);
+	box-shadow: 0 14px 34px rgba(0,0,0,.18);
+  }
+
+  @media (max-width: 240px){
+	.tile-grid{
+	  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	}
+  }
+
+  .hint{
+	font:600 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	color: rgba(0,0,0,.7);
+	margin-top: 10px;
+  }
+
+  /* ===== MODAL ===== */
+  .modal{
+	position: fixed;
+	inset: 0;
+	display: none;
+	z-index: 9999;
+  }
+  .modal.is-open{ display:block; }
+
+  .modal__backdrop{
+	position:absolute;
+	inset:0;
+	background: rgba(0,0,0,.55);
+  }
+
+  .modal__dialog{
+	position: relative;
+	max-width: 720px;
+	margin: 10vh auto;
+	background: var(--green-soft);
+	color: var(--text);
+	border-radius: 18px;
+	padding: 28px 24px;
+	box-shadow: 0 18px 60px rgba(0,0,0,.25);
+	border: 3px solid var(--green);
+  }
+
+  .modal__title{
+	margin: 0 36px 10px 0;
+	font: 800 22px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  .modal__text{
+	margin: 0;
+	font: 600 18px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  .modal__close{
+	position:absolute;
+	top: 10px;
+	right: 12px;
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 10px;
+	background: var(--green);
+	color: white;
+	font-size: 26px;
+	line-height: 1;
+	cursor: pointer;
+  }
+  .modal__close:hover{ filter: brightness(.9); }
+
+  @media (max-width: 520px){
+	.modal__dialog{ margin: 8vh 14px; }
+  }
+</style>
+
+<!-- Kacheln werden per JS befüllt -->
+<div class="tile-grid" id="product_tiles"></div>
+<div class="hint" id="product_hint" style="display:none"></div>
+
+<!-- Modal (bleibt drin – falls du später “in Vorbereitung” verwenden willst) -->
+<div aria-hidden="true" class="modal" id="angebot">
+  <div class="modal__backdrop" data-close="">&nbsp;</div>
+  <div aria-labelledby="angebot-title" aria-modal="true" class="modal__dialog" role="dialog">
+	<button aria-label="Schließen" class="modal__close" data-close="" type="button">&times;</button>
+	<h2 class="modal__title" id="angebot-title">Artikel ist in Vorbereitung.</h2>
+	<p class="modal__text">Bitte frage Sie per Telefon oder E-Mail nach und erhalten Sie ihr persönliches Angebot.</p>
+  </div>
+</div>
+
+<p>&nbsp;</p>
+<hr />
+<h3>Wählen Sie die Produktgruppe aus die Sie interessiert. Sie werden direkt zur Produkgruppe im Shop geleitet. Im Shop können Sie die Produktgruppen weiterhin auswählen und Ihre Bestellung aufgeben. REGATIX© - das Regal für alle Fälle!</h3>
+<hr />
+<p>&nbsp;</p>
+
+<script>
+(function () {
+  // ✅ Endpoint, der nur "sichtbar + aktiv" liefert
+  const API_BASE = 'https://regatix.shop/public/api/products_public.php';
+  // ✅ Cache-Buster gegen Proxy/Browser-Zwischencache
+  const API = API_BASE + '?r=' + Date.now();
+
+  const grid = document.getElementById('product_tiles');
+  const hint = document.getElementById('product_hint');
+
+  function showHint(text){
+	hint.style.display = 'block';
+	hint.textContent = text;
+  }
+
+ function makeTile(p){
+   const a = document.createElement('a');
+   a.className = 'tile';
+   a.href = p.url;
+   a.target = '_blank';
+   a.rel = 'noopener noreferrer';
+   a.textContent = p.label || p.key;
+   return a;
+ }
+
+
+  async function loadProducts(){
+	try{
+	  showHint('Lade Produktgruppen …');
+	  const res = await fetch(API, { cache: 'no-store' });
+	  if(!res.ok) throw new Error('HTTP ' + res.status);
+
+	  const data = await res.json();
+	  const items = (data && data.products) ? data.products : [];
+
+	  grid.innerHTML = '';
+	  if(!items.length){
+		showHint('Aktuell sind keine aktiven Produktgruppen sichtbar.');
+		return;
+	  }
+
+	  hint.style.display = 'none';
+	  items.forEach(p => grid.appendChild(makeTile(p)));
+	} catch(e){
+	  showHint('Produktgruppen konnten nicht geladen werden (' + (e && e.message ? e.message : 'Fehler') + ').');
+	}
+  }
+
+  loadProducts();
+
+  // Modal logic (bleibt)
+  const openers = document.querySelectorAll('[data-open-modal]');
+  const closeSel = '[data-close]';
+
+  function openModal(modal){
+	if(!modal) return;
+	modal.classList.add('is-open');
+	modal.setAttribute('aria-hidden','false');
+	const btn = modal.querySelector('.modal__close');
+	if(btn) btn.focus();
+	document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(modal){
+	if(!modal) return;
+	modal.classList.remove('is-open');
+	modal.setAttribute('aria-hidden','true');
+	document.body.style.overflow = '';
+  }
+
+  openers.forEach(el => {
+	el.addEventListener('click', (e) => {
+	  e.preventDefault();
+	  const id = el.getAttribute('data-open-modal');
+	  openModal(document.getElementById(id));
+	});
+  });
+
+  document.addEventListener('click', (e) => {
+	const modal = e.target.closest('.modal');
+	if(!modal) return;
+	if(e.target.matches(closeSel)) closeModal(modal);
+  });
+
+  document.addEventListener('keydown', (e) => {
+	if(e.key !== 'Escape') return;
+	const modal = document.querySelector('.modal.is-open');
+	if(modal) closeModal(modal);
+  });
+})();
+</script>

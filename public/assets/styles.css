@@ -1,0 +1,476 @@
+/* @override 
+	https://regatix.app/public/assets/styles.css
+	https://regatix.shop/assets/styles.css
+	https://regatix.shop/public/assets/styles.css */
+
+:root{
+  --bg:#0b0e14;
+  --card:#121827;
+  --muted:#9ab0c7;
+  --text:#e8f0ff;
+  --border:rgba(255,255,255,.10);
+  --accent:#76a7ff;
+  --danger:#ff4d4d;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --radius:18px;
+  --radius2:14px;
+  --max:1100px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 30% 0%, rgba(118,167,255,.18), transparent 55%),
+              radial-gradient(1200px 600px at 70% 0%, rgba(118,255,214,.08), transparent 55%),
+              var(--bg);
+}
+
+.logostage{max-width:var(--max); margin: -39px auto 0; padding:26px 18px 60px}
+
+.container{max-width:var(--max); margin:0 auto; padding:26px 18px 60px}
+a{color:inherit}
+.header{display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:14px}
+.h-title{font-weight:800; font-size:20px}
+.h-sub{color:var(--muted); font-size:13px; margin-top:4px}
+.btn{
+  height:38px; padding:0 14px; border-radius:12px; border:1px solid var(--border);
+  background:linear-gradient(135deg, rgba(118,167,255,.18), rgba(0,0,0,.25));
+  color:var(--text); cursor:pointer; display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+}
+.btn:hover{border-color:rgba(118,167,255,.35)}
+.btn:disabled{opacity:.45; cursor:not-allowed}
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.03);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.card-h{padding:14px 16px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; gap:10px}
+.card-title{font-weight:800}
+.card-b{padding:16px}
+.grid{display:grid; grid-template-columns:1.1fr .9fr; gap:14px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+
+.hero{
+  min-height:260px;
+  border:1px solid var(--border);
+  border-radius:var(--radius2);
+  background:rgba(0,0,0,.25);
+  overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.hero img{width:100%; height:100%; object-fit:cover; display:block}
+.thumbs{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+.thumb{
+  width:72px; height:56px; border-radius:12px;
+  border:1px solid var(--border);
+  overflow:hidden; background:rgba(0,0,0,.20);
+  cursor:pointer;
+}
+.thumb img{width:100%; height:100%; object-fit:cover; display:block}
+
+.form{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+@media(max-width:680px){.form{grid-template-columns:1fr}}
+label{font-size:12px; color:var(--muted); display:block; margin-bottom:6px}
+select, input[type="number"]{
+  width:100%; height:40px; padding:0 12px;
+  border-radius:12px; border:1px solid var(--border);
+  background:rgba(0,0,0,.25); color:var(--text);
+  outline:none;
+}
+.prices{display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; margin-top:12px}
+.price-gross{font-size:26px; font-weight:900}
+.price-net{font-size:13px; color:rgba(232,240,255,.55)} /* hellgrau */
+.small{font-size:12px; color:var(--muted)}
+.hr{height:1px; background:var(--border); margin:14px 0}
+.kv{display:grid; grid-template-columns: 1fr; gap:8px}
+.kv-row{display:flex; justify-content:space-between; gap:12px; padding:8px 10px; border:1px solid var(--border); border-radius:12px; background:rgba(0,0,0,.18)}
+.kv-row .k{color:var(--muted); font-size:12px}
+.kv-row .v{font-weight:700}
+
+.info{line-height:1.55}
+.info p{margin:0 0 10px}
+
+
+div#pv_cart_only_box.warn{
+	background-color: rgba(149, 189, 31, 0.33);
+	border-style: solid;
+	border-color: #95bd1f;
+	margin: 0;
+	padding: 0;
+}
+
+div#pv_cart_only_box.warn div.warn-top div.tri svg{
+	display: none;
+}
+button#pv_add_to_cart_alt.btn{
+	font-size: 20px;
+	width: 300px;
+	margin-left: -30px;
+	background-color: transparent;
+	border-style: none;
+}
+
+
+.warn{
+  border:2px solid rgba(255,77,77,.85);
+  border-radius:var(--radius2);
+  background:rgba(255,77,77,.08);
+  padding:12px;
+}
+.warn-top{display:flex; gap:10px; align-items:flex-start}
+.tri{
+  width:22px; height:22px; flex:0 0 22px;
+  margin-top:2px;
+}
+.tri svg{display:block}
+.warn h4{margin:0; font-size:14px}
+.warn .small{color:rgba(255,220,220,.85)}
+.warn .kv-row{border-color:rgba(255,77,77,.35); background:rgba(0,0,0,.12)}
+
+.footer-note{margin-top:14px; color:var(--muted); font-size:12px}
+
+/* Cart badge (quantity indicator) */
+.pv-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:18px;
+  height:18px;
+  padding:0 6px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  line-height:1;
+}
+div#logo{
+	background-color: #95be20;
+	height: 120px;
+	text-align: center;
+	color: white;
+	font-size: 45px;
+}
+div#logo img{
+	margin-top: 0;
+	margin-right: 20px;
+	position: relative;
+	top: 11px;
+}
+div#footer{
+	background-color: #95be20;
+	padding-top: 5px;
+	color: white;
+	text-align: center;
+	height: auto;
+	padding-bottom: 5px;
+}
+div#regatixoben img{
+	position: absolute;
+	right: 2px;
+	width: 114px !important;
+	height: 200px;
+}
+
+div#logologo img{
+	width: 38%;
+	margin-top: 15px;
+}
+ body div.box a.home-btn{
+ 	background-color: #95bd1f;
+ }
+ 
+ div#footer p{
+ 	color: white;
+ }
+/* @group responsive */
+
+    @media (min-width: 120px) and (max-width: 480px) {
+      /* Styles for smaller mobiles */
+	  
+	  	   div#modal_register.modal div.modal-content{
+	   	height: 90%;
+	   	overflow: auto;
+	  	   }
+ div#logologo img{
+	width: 75%;
+	margin-top: 28px;
+ 	float: left;
+ 	margin-left: 10px;
+ }
+ 
+ div#regatixoben img{
+	position: absolute;
+ 	width: 57px !important;
+	height: 100px;
+ 	top: -11px;
+ }
+ 
+ body div.container div.header div form select.pill-select{
+ 	position: relative;
+ }
+ 
+ div#footer{
+	background-color: #95be20;
+	height: auto !important;
+	padding-top: 5px;
+	color: white;
+	text-align: center;
+ 	padding-bottom: 5px;
+ }
+ 
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      /* Styles for mobiles */
+ div#logologo img{
+	width: 75%;
+	margin-top: 15px;
+ 	float: left;
+ 	margin-left: 10px;
+ }
+ 
+ div#regatixoben img{
+	position: absolute;
+ 	width: 57px !important;
+	height: 100px;
+ 	top: -4px;
+ }
+ 
+ body div.container div.header div form select.pill-select{
+ 	position: relative;
+ }
+ 
+ div#footer{
+	background-color: #95be20;
+	height: auto !important;
+	padding-top: 5px;
+	color: white;
+	text-align: center;
+ 	padding-bottom: 5px;
+ }
+ 
+ 	   div#modal_register.modal div.modal-content{
+	   	height: 90%;
+	   	overflow: auto;
+ 	   }
+
+    }
+
+    @media (min-width: 769px) and (max-width: 1279px) {
+      /* Styles for tablets */
+	  
+	   div#modal_register.modal div.modal-content{
+	   	height: 90%;
+	   	overflow: auto;
+	   }
+
+ div#logologo img{
+	width: 65%;
+	margin-top: 8px;
+ 	float: left;
+ 	margin-left: 10px;
+ }
+ 
+ div#regatixoben img{
+	position: absolute;
+ 	width: 57px !important;
+	height: 100px;
+ 	top: -4px;
+ }
+ 
+ body div.container div.header div form select.pill-select{
+ 	position: relative;
+ }
+ 
+ div#footer{
+	background-color: #95be20;
+	height: auto !important;
+	padding-top: 5px;
+	color: white;
+	text-align: center;
+ 	padding-bottom: 5px;
+ }
+    }
+
+    @media (min-width: 1279px) and (max-width: 2400px) {
+      /* Styles for desktop */
+	  
+	  div#modal_register.modal div.modal-content{
+	   	height: 90%;
+	   	overflow: auto;
+	  	   }
+ div#logologo img{
+	width: 600px;
+	margin-top: 15px;
+ 	float: left;
+ 	margin-left: 10px;
+ }
+ 
+ div#regatixoben img{
+	position: absolute;
+ 	width: 57px !important;
+	height: 100px;
+ 	top: -4px;
+ }
+ 
+ body div.container div.header div form select.pill-select{
+ 	position: relative;
+ }
+ 
+ div#footer{
+	background-color: #95be20;
+	height: auto !important;
+	padding-top: 5px;
+	color: white;
+	text-align: center;
+ 	padding-bottom: 5px;
+ }
+    }
+
+    @media (min-width: 2400px)   {
+      /* Styles for megascreen */
+  div#logologo img{
+	width: 700px;
+	margin-top: 15px;
+ 	float: left;
+ 	margin-left: 10px;
+  }
+ 
+ div#regatixoben img{
+	position: absolute;
+ 	width: 57px !important;
+	height: 100px;
+ 	top: -4px;
+ }
+ 
+ body div.container div.header div form select.pill-select{
+ 	position: relative;
+ }
+ 
+ 
+ div#footer{
+	background-color: #95be20;
+	height: auto !important;
+	padding-top: 5px;
+	color: white;
+	text-align: center;
+ 	padding-bottom: 5px;
+ }
+    }
+
+ /* @end */
+
+body div.container div.card h2{
+ 	font-family: "Lucida Grande", Lucida, Verdana, sans-serif!important;
+ }
+ 
+ body div.container div.pv-bottom-grid div.footer-note div.card div.card-b div button.btn{
+ 	
+ }
+ 
+ body div.container div.pv-bottom-grid div.footer-note div.card div.card-b div span{
+ 	width: 75%;
+ 	font-weight: bold;
+ }
+ 
+ 
+ #logo .tt{
+   position: relative;
+   display: inline-block;   /* hält sich exakt an die Bildgröße */
+   vertical-align: top;     /* verhindert Baseline-Sprünge */
+ }
+ 
+ /* Tooltip-Box */
+ #logo .tt::after{
+   content: attr(data-tooltip);
+   position: absolute;
+   left: 50%;
+   bottom: 100%;
+   transform: translateX(-50%);
+   margin-bottom: 10px;
+ 
+   background: #ffeb3b;
+   color: #111;
+   font-size: 16px;
+   line-height: 1.2;
+   padding: 8px 12px;
+   border-radius: 6px;
+   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+   white-space: nowrap;
+ 
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;   /* wichtig: beeinflusst Hover nicht */
+   z-index: 9999;
+ }
+ 
+ /* Pfeil */
+ #logo .tt::before{
+   content: "";
+   position: absolute;
+   left: 50%;
+   bottom: 100%;
+   transform: translateX(-50%);
+   margin-bottom: 2px;
+ 
+   border: 8px solid transparent;
+   border-top-color: #ffeb3b;
+ 
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+   z-index: 9999;
+   padding-top: 10px;
+ }
+ 
+ #logo .tt:hover::after,
+ #logo .tt:hover::before{
+   opacity: 1;
+   visibility: visible;
+ }
+body div.container div.card div.card-b div.grid div div.warn div.warn-top div div.small{
+	color: black;
+}
+
+
+div#manage_products.card div.card-b table.pv-table tbody tr td form input{
+	border: 1px solid silver;
+	font-size: 14px;
+	padding: 4px;
+	background-color: white!important;
+}
+
+div#manage_products.card div.card-b table.pv-table tbody tr td form button.btn{
+	margin-left: 10px;
+}
+       .pv-select__menu{
+	   	left:0;
+      right:0;
+      z-index:9999;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow: var(--shadow);
+	   	margin:0;
+      list-style:none;
+      max-height:320px;
+      overflow:auto;
+	   	position: relative;
+	   	top: 0px!important;
+	   }
+	   
+	   
+	   input#reg_type_company{
+	   	margin-top: 10px;
+	margin-left: 70px;
+	   	width: 10px;
+	   }
+	   
+	   input#reg_type_private{
+	   	width: 10px;
+	   	margin-top: 10px;
+	   }
