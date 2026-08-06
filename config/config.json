@@ -1,0 +1,101 @@
+{
+    "import": {
+        "csv_path": "data/variants.csv",
+        "json_path": "data/variants.json",
+        "delimiter": "auto",
+        "encoding": "auto",
+        "vat_rate": 0.19
+    },
+    "security": {
+        "import_token": "Regatix2026!",
+        "admin_token": "Regatix2026!"
+    },
+    "ui": {
+        "brand_title": "Produktkonfigurator",
+        "currency": "EUR",
+        "net_label": "ohne MwSt.",
+        "gross_label": "mit MwSt.",
+        "placeholder_image": "regatixdummie.webp"
+    },
+    "variant": {
+        "primary_key": "Artiklnummer",
+        "dimensions": [
+            {
+                "key": "Ebenen",
+                "label": "Ebenen"
+            },
+            {
+                "key": "Nennhöhe mm",
+                "label": "Nennhöhe (Höhe)"
+            },
+            {
+                "key": "Nenntiefe mm",
+                "label": "Nenntiefe (Tiefe Regalfach)"
+            },
+            {
+                "key": "Nennlänge mm",
+                "label": "Nennlänge (Länge Regalfach)"
+            }
+        ],
+        "price_gross": "mit MwSt. €",
+        "price_net": "ohne MwSt. €",
+        "quantity_default": 1
+    },
+    "display": {
+        "infotext_fields": [
+            {
+                "key": "Artiklnummer",
+                "label": "Artikelnummer"
+            },
+            {
+                "key": "Material",
+                "label": "Material"
+            },
+            {
+                "key": "Nennhöhe mm",
+                "label": "Nennhöhe (Höhe)"
+            },
+            {
+                "key": "Nenntiefe mm",
+                "label": "Nenntiefe (Tiefe Regalfach)"
+            },
+            {
+                "key": "Nennlänge mm",
+                "label": "Nennlänge (Länge Regalfach)"
+            },
+            {
+                "key": "Gewicht kg",
+                "label": "Gewicht (kg)"
+            }
+        ],
+        "warning_fields": [
+            {
+                "key": "Höhe mm",
+                "label": "lichte Höhe"
+            },
+            {
+                "key": "lichte Breite mm",
+                "label": "lichte Breite"
+            },
+            {
+                "key": "Achsmaß mm",
+                "label": "Achsmaß"
+            }
+        ]
+    },
+    "shop": {
+        "contact_email": "shop@regatix.shop",
+        "email": "shop@regatix.shop",
+        "dev_order_email": "shop@regatix.shop",
+        "dev_order_from": "shop@regatix.shop",
+        "paypal": {
+            "enabled": true,
+            "mode": "live",
+            "client_id_live": "AYV9w-ysGPSyZO0LmH2H_9Bd8T6yJnG7iSpployjKD9o4oqOsyK4FDGQnesJB7ceuIg1S5kfNksGqfzt",
+            "client_secret_live": "EIm2i7-bKy3zXsTxGjTSQbopn18PvZebLsu7o91A3TE7uSOGWpyS1c5FxP9hQmo4uYjNXxrJuzNOm7J0",
+            "client_id_sandbox": "AZi25Sk2i8tejIBznQt17lofMY1jWKtv376-3HFeegAvUWQApOEw883t5LXXXiaRIRQ0ZeiTIDI_wlOw",
+            "client_secret_sandbox": "EBAkQKINdUYM7XHub6jTKNPDy2qzW6OuPz0LKyG56WCMrIdT9hst-TJzAK33qvl49_JR8iyWEg1uk22c",
+            "debug": true
+        }
+    }
+}

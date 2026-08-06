@@ -1,0 +1,73 @@
+[
+    {
+        "code": "MH-30691",
+        "type": "percent",
+        "value": 15,
+        "active": true,
+        "expires": "2026-12-31",
+        "min_gross_eur": 0,
+        "note": "1. Kunde Onlineshop neu",
+        "excluded_products": []
+    },
+    {
+        "code": "STAMMKUNDE_31032",
+        "type": "percent",
+        "value": 1,
+        "active": true,
+        "expires": "",
+        "min_gross_eur": 10,
+        "note": "Stammkunde: Vorkasse (Überweisung) = Versand auf Rechnung !!",
+        "excluded_products": []
+    },
+    {
+        "code": "DANKE_31142",
+        "type": "percent",
+        "value": 15,
+        "active": true,
+        "expires": "2026-06-30",
+        "min_gross_eur": 0,
+        "note": "Danke Hebebühne gebraucht",
+        "excluded_products": []
+    },
+    {
+        "code": "TEAM_REGATIX",
+        "type": "percent",
+        "value": 10,
+        "active": true,
+        "expires": "2026-06-30",
+        "min_gross_eur": 0,
+        "note": "Stamm-& Neukundenaktion - Besuche Außendienst",
+        "excluded_products": [
+            "Sonderposten"
+        ]
+    },
+    {
+        "code": "DERREGATIX",
+        "type": "percent",
+        "value": 25,
+        "active": true,
+        "expires": "2026-31-12",
+        "min_gross_eur": 0,
+        "note": "Der REGATIX Rabatt",
+        "excluded_products": [
+            "Sonderposten"
+        ]
+    },
+    {
+        "code": "IDEEN_LOESUNGEN_REGATIX",
+        "type": "percent",
+        "value": 10,
+        "active": true,
+        "expires": "",
+        "min_gross_eur": 100,
+        "note": "Kleinanzeigen Anfrage",
+        "excluded_products": [
+            "Edelstahlregale",
+            "EdelstahlregaleZubehör",
+            "FachbodenregaleZubehör",
+            "PalettenregaleZubehör",
+            "Palettenregale_V2",
+            "Sonderposten"
+        ]
+    }
+]
