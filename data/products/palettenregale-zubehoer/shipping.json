@@ -1,0 +1,15 @@
+{
+    "enabled": true,
+    "presets": [
+        {
+            "key": "standard",
+            "label": "Standard",
+            "cost": 0
+        }
+    ],
+    "default": {
+        "mode": "preset",
+        "preset_key": "standard",
+        "cost": 0
+    }
+}

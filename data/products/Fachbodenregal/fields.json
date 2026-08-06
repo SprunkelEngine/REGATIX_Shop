@@ -1,0 +1,60 @@
+{
+    "overrides": [
+        {
+            "key": "Ebenen",
+            "label": "Ebenen",
+            "type": "text"
+        },
+        {
+            "key": "Material",
+            "label": "Material",
+            "type": "text"
+        },
+        {
+            "key": "Nennhöhe mm",
+            "label": "Nennhöhe mm",
+            "type": "text"
+        },
+        {
+            "key": "Nenntiefe mm",
+            "label": "Nenntiefe mm",
+            "type": "text"
+        },
+        {
+            "key": "Nennlänge mm",
+            "label": "Nennlänge mm",
+            "type": "text"
+        },
+        {
+            "key": "Gewicht kg",
+            "label": "Gewicht kg",
+            "type": "text"
+        },
+        {
+            "key": "lichte Breite mm",
+            "label": "lichte Breite mm",
+            "type": "text"
+        },
+        {
+            "key": "Achsmaß mm",
+            "label": "Achsmaß mm",
+            "type": "text"
+        },
+        {
+            "key": "ohne MwSt. €",
+            "label": "ohne MwSt. €",
+            "type": "text"
+        },
+        {
+            "key": "mit MwSt. €",
+            "label": "mit MwSt. €",
+            "type": "text"
+        },
+        {
+            "key": "Verfügbarkeit",
+            "label": "Verfügbarkeit",
+            "type": "text"
+        }
+    ],
+    "free_text": []
+}

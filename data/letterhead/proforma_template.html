@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proforma {{invoice_no}}</title>
+  <link rel="stylesheet" href="proforma_template.css">
+</head>
+<body>
+  <!--
+    REGATIX Proforma HTML Template
+    =============================
+    Du kannst dieses HTML & CSS frei optisch anpassen.
+    Der Renderer ersetzt Platzhalter im Format {{name}} und kann Listen mit {{#items}}...{{/items}} wiederholen.
+
+    Verfügbare Platzhalter (Top-Level):
+      {{invoice_no}}
+      {{date_iso}}              (ISO, z.B. 2025-12-21)
+      {{date_pretty}}           (de-DE, z.B. 21.12.2025)
+      {{vat_rate_percent}}      (z.B. 19)
+
+    Kunde:
+      {{customer_company}}
+      {{customer_name}}
+      {{customer_street}}
+      {{customer_zip_city}}
+      {{customer_country}}
+      {{customer_email}}
+      {{customer_phone}}
+
+    Summen (formatiert, EUR):
+      {{total_net}}
+      {{total_vat}}
+      {{total_gross}}
+
+    Liste items:
+      {{#items}}
+        {{article}}
+        {{description}}
+        {{qty}}
+        {{unit_price}}
+        {{line_total}}
+      {{/items}}
+
+    Hinweistext (optional):
+      {{note_html}}   (als HTML, wird unescaped eingesetzt)
+  -->
+
+  <main class="page">
+    <header class="header">
+      <div class="doc-title">
+        <div class="h1">Proforma-Rechnung</div>
+        <div class="meta">
+          <div><span class="k">Nr.</span> <span class="v">{{invoice_no}}</span></div>
+          <div><span class="k">Datum</span> <span class="v">{{date_pretty}}</span></div>
+        </div>
+      </div>
+
+      <div class="sender">
+        <div class="sender__line sender__company">REGATIX</div>
+        <div class="sender__line">sprunkel.net</div>
+        <div class="sender__line">info@sprunkel.net</div>
+      </div>
+    </header>
+
+    <section class="address-row">
+      <div class="customer">
+        <div class="label">Kunde</div>
+        <div class="box">
+          <div class="b company">{{customer_company}}</div>
+          <div class="b">{{customer_name}}</div>
+          <div class="b">{{customer_street}}</div>
+          <div class="b">{{customer_zip_city}}</div>
+          <div class="b">{{customer_country}}</div>
+          <div class="b small">
+            {{customer_email}}<span class="sep"> · </span>{{customer_phone}}
+          </div>
+        </div>
+      </div>
+
+      <div class="docinfo">
+        <div class="label">Hinweis</div>
+        <div class="box note">
+          {{{note_html}}}
+        </div>
+      </div>
+    </section>
+
+    <section class="positions">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col-article">Art.-Nr.</th>
+            <th>Artikelbezeichnung</th>
+            <th class="col-qty">Menge</th>
+            <th class="col-price">Preis</th>
+            <th class="col-sum">Betrag</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#items}}
+          <tr>
+            <td class="mono">{{article}}</td>
+            <td>{{description}}</td>
+            <td class="t-right">{{qty}}</td>
+            <td class="t-right">{{unit_price}}</td>
+            <td class="t-right">{{line_total}}</td>
+          </tr>
+          {{/items}}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="totals">
+      <div class="totals__box">
+        <div class="row"><div>Netto</div><div class="t-right">{{total_net}}</div></div>
+        <div class="row"><div>MwSt ({{vat_rate_percent}}%)</div><div class="t-right">{{total_vat}}</div></div>
+        <div class="row grand"><div>Brutto</div><div class="t-right">{{total_gross}}</div></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>Dies ist eine Proforma-Rechnung (Vorschau). Zahlung erst nach finaler Bestätigung.</div>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "fields": [
+        {
+            "key": "Produktart",
+            "label": "Produktart"
+        },
+        {
+            "key": "Artiklnummer",
+            "label": "Artiklnummer"
+        },
+        {
+            "key": "Ebenen",
+            "label": "Ebenen"
+        },
+        {
+            "key": "mit MwSt",
+            "label": "mit MwSt. €"
+        },
+        {
+            "key": "Nennhöhe mm",
+            "label": "Nennhöhe (Höhe)"
+        },
+        {
+            "key": "Nennlänge mm",
+            "label": "Nennlänge (Länge Regalfach)"
+        },
+        {
+            "key": "Nenntiefe mm",
+            "label": "Nenntiefe (Tiefe Regalfach)"
+        },
+        {
+            "key": "ohne MwSt",
+            "label": "ohne MwSt. €"
+        }
+    ]
+}

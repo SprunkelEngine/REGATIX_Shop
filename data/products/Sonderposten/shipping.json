@@ -1,0 +1,15 @@
+{
+    "enabled": false,
+    "presets": [
+        {
+            "key": "sonderfracht",
+            "label": "Sonderfracht",
+            "cost": 69
+        }
+    ],
+    "default": {
+        "mode": "preset",
+        "preset_key": "sonderfracht",
+        "cost": 0
+    }
+}

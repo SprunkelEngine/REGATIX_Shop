@@ -1,0 +1,125 @@
+/* REGATIX Proforma HTML Template CSS
+   Du kannst alles hier optisch anpassen.
+*/
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+}
+.page{
+  width: 210mm;
+  min-height: 297mm;
+  padding: 18mm 16mm 14mm 16mm;
+}
+
+.h1{
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.header{
+  display:flex;
+  justify-content: space-between;
+  gap: 16mm;
+  align-items:flex-start;
+  margin-bottom: 10mm;
+}
+.meta{
+  margin-top: 4mm;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.meta .k{ color:#555; display:inline-block; min-width: 44px; }
+.sender{
+  text-align:right;
+  font-size: 11px;
+  line-height: 1.35;
+  color:#333;
+}
+.sender__company{ font-weight: 700; }
+
+.address-row{
+  display:flex;
+  gap: 10mm;
+  margin-bottom: 10mm;
+}
+.customer{ flex: 1; }
+.docinfo{ width: 72mm; }
+.label{
+  font-size: 11px;
+  font-weight: 700;
+  color:#444;
+  margin-bottom: 2mm;
+}
+.box{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+  min-height: 32mm;
+}
+.box.note{
+  min-height: 32mm;
+  font-size: 11px;
+  color:#333;
+}
+.b{ font-size: 12px; line-height: 1.35; }
+.b.company{ font-weight: 800; }
+.b.small{ font-size: 11px; color:#444; margin-top: 2mm; }
+.sep{ color:#bbb; padding: 0 4px; }
+.mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.table thead th{
+  text-align:left;
+  padding: 8px 6px;
+  border-bottom: 2px solid #111;
+}
+.table tbody td{
+  padding: 7px 6px;
+  border-bottom: 1px solid #e6e6e6;
+  vertical-align: top;
+}
+.col-article{ width: 26mm; }
+.col-qty{ width: 16mm; }
+.col-price{ width: 22mm; }
+.col-sum{ width: 24mm; }
+.t-right{ text-align:right; }
+
+.totals{
+  display:flex;
+  justify-content:flex-end;
+  margin-top: 8mm;
+}
+.totals__box{
+  width: 70mm;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+.totals__box .row{
+  display:flex;
+  justify-content: space-between;
+  gap: 10mm;
+  padding: 3px 0;
+}
+.totals__box .grand{
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px solid #e6e6e6;
+  font-weight: 800;
+}
+
+.footer{
+  margin-top: 12mm;
+  font-size: 10px;
+  color:#666;
+}

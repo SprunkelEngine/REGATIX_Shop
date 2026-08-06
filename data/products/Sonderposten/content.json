@@ -1,0 +1,217 @@
+{
+    "product": {
+        "title": "Sonderposten",
+        "info_html": ""
+    },
+    "articles": {
+        "wwww": {
+            "info_html": "",
+            "overrides": {
+                "Ebenen": "2",
+                "Material": "",
+                "Nennhöhe mm": "4500",
+                "Nenntiefe mm": "6500",
+                "Nennlänge mm": "5400",
+                "Gewicht kg": "",
+                "lichte Breite mm": "",
+                "Achsmaß mm": "",
+                "ohne MwSt. €": "5000",
+                "mit MwSt. €": "5950",
+                "Verfügbarkeit": "nach Rücksprache",
+                "Lieferumfang": "",
+                "Gebraucht": "",
+                "beschreibung_frei": ""
+            },
+            "images": []
+        },
+        "sopo2": {
+            "info_html": "",
+            "images": [
+                "Sonderposten/sopo2/Gegromario.png"
+            ],
+            "overrides": {
+                "Ebenen": "Gut gebraucht",
+                "Material": "",
+                "Nennhöhe mm": "Nennhöhe",
+                "Nenntiefe mm": "",
+                "Nennlänge mm": "",
+                "Gewicht kg": "",
+                "lichte Breite mm": "",
+                "Achsmaß mm": "",
+                "ohne MwSt. €": "",
+                "mit MwSt. €": "",
+                "Verfügbarkeit": ""
+            }
+        },
+        "Geschossanlage": {
+            "info_html": "<p><strong>Gebrauchte Geschossanlage aus dem REGATIX Lager:</strong></p>\r\n\r\n<p>Wir bauen um und eine unserer betriebseigenen Geschossanlagen muss daf&uuml;r weichen.</p>\r\n\r\n<p>Die Geschossanlage ist in altersentsprechendem Zustand und wird bei der Demontage vom&nbsp;<strong>REGATIX&nbsp;</strong>Montageleiter selbst nochmal durchgesehen.</p>\r\n\r\n<p>Die Geschossanlage wird ohne die blaue Treppe und mit 100cm breiten Etagenfluren abgegeben. Der Geschossanlage liegt einiges an Zubeh&ouml;r und Ersatzteilen bei. Auf Wunsch kann eine neue Treppe und weiteres Zubeh&ouml;r direkt bei uns erworben werden.</p>\r\n\r\n<p>Der Verkauf der Anlage erfolgt Versandkostenfrei/Frachtfrei ab&nbsp;<strong>REGATIX&nbsp;</strong>Ilsfeld.</p>\r\n\r\n<p><strong>Die Geschossanlage ist nur einmal vorhanden, das Angebot gilt nur f&uuml;r diese eine gebrauchte Anlage!!</strong></p>",
+            "overrides": {
+                "Ebenen": "Gebraucht",
+                "Material": "",
+                "Nennhöhe mm": "4500",
+                "Nenntiefe mm": "6500",
+                "Nennlänge mm": "5400",
+                "Gewicht kg": "",
+                "lichte Breite mm": "6500",
+                "Achsmaß mm": "5400",
+                "ohne MwSt. €": "5000",
+                "mit MwSt. €": "5950",
+                "Verfügbarkeit": "nach Rücksprache",
+                "Lieferumfang": "nach Absprache",
+                "Gebraucht": "gut gebraucht",
+                "Höhe mm": "4500",
+                "Tiefe mm": "330",
+                "Breite mm": "974",
+                "beschreibung_frei": "Beschreibung",
+                "Zustand": "",
+                "Frachtkosten": "126.00"
+            },
+            "images": [
+                "Sonderposten/Geschossanlage/Bild11AnsichtUnten.jpeg",
+                "Sonderposten/Geschossanlage/Bild10AnsichtOben.jpeg",
+                "Sonderposten/Geschossanlage/Bild1vorne.jpeg",
+                "Sonderposten/Geschossanlage/Bild2schr__glinks.jpeg",
+                "Sonderposten/Geschossanlage/Bild31ersterGangUnten.jpeg",
+                "Sonderposten/Geschossanlage/Bild4BreiteLinks.jpeg",
+                "Sonderposten/Geschossanlage/Bild5BreiteMitte.jpeg",
+                "Sonderposten/Geschossanlage/Bild6BreiteRechts.jpeg",
+                "Sonderposten/Geschossanlage/Bild7Fachl__ngenUntenRechts.jpeg",
+                "Sonderposten/Geschossanlage/Bild8AussparungObenRechts.jpeg",
+                "Sonderposten/Geschossanlage/Bild9Fachboeden.jpeg"
+            ]
+        },
+        "57574-100-050-LBS": {
+            "images": [
+                "Sonderposten/57574-100-050-LBS/Bank1.webp",
+                "Sonderposten/57574-100-050-LBS/Bank2.webp",
+                "Sonderposten/57574-100-050-LBS/Bank3.webp"
+            ],
+            "info_html": "<p><strong>REGATIX Sitzbank</strong></p>\r\n\r\n<ul>\r\n\t<li>stabiles fest verschwei&szlig;tes Quadratrohrgestell 30/2</li>\r\n\t<li>3 Sitzbankleisten einseitig</li>\r\n\t<li>Gestell in RAL 7035 lichtgrau</li>\r\n</ul>\r\n\r\n<p>Der Verkauf der Bank erfolgt erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Die Sitzbank ist nur einmal vorhanden, das Angebot gilt nur f&uuml;r diese eine Sitzbank aus dem&nbsp;<strong>REGATIX&nbsp;</strong>Ausstellungsraum<strong>&nbsp;</strong>&nbsp;!!</p>"
+        },
+        "STGF303006B": {
+            "images": [
+                "Sonderposten/STGF303006B/GrundregalHoch.webp",
+                "Sonderposten/STGF303006B/WeitspannQuer1.webp",
+                "Sonderposten/STGF303006B/zerlegtHoch1.webp",
+                "Sonderposten/STGF303006B/Bsp_Hoch1.webp",
+                "Sonderposten/STGF303006B/Bsp_Hoch2.webp"
+            ],
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Grundregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>"
+        },
+        "STAF303006B": {
+            "images": [
+                "Sonderposten/STAF303006B/AnbauregalHoch.webp",
+                "Sonderposten/STAF303006B/Bsp_Hoch1.webp",
+                "Sonderposten/STAF303006B/Bsp_Hoch2.webp",
+                "Sonderposten/STAF303006B/WeitspannQuer1.webp",
+                "Sonderposten/STAF303006B/zerlegtHoch1.webp"
+            ],
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Anbauregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<p><strong>Hinweis: Dieses Produkt ist nur in Kombination mit einem Grundregal verwendbar und nicht freistehend.</strong></p>\r\n\r\n<p><strong>REGATIX</strong>&nbsp;Anbauregale k&ouml;nnen sowohl linksseitig, als auch rechtsseitig an bestehende Grund- oder Anbauregale angebaut werden.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>"
+        },
+        "STGF302710B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Grundregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STGF302710B/GrundregalHoch.webp",
+                "Sonderposten/STGF302710B/WeitspannQuer1.webp",
+                "Sonderposten/STGF302710B/zerlegtHoch1.webp",
+                "Sonderposten/STGF302710B/Bsp_Hoch1.webp",
+                "Sonderposten/STGF302710B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STGF303010B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Grundregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STGF303010B/GrundregalHoch.webp",
+                "Sonderposten/STGF303010B/WeitspannQuer1.webp",
+                "Sonderposten/STGF303010B/zerlegtHoch1.webp",
+                "Sonderposten/STGF303010B/Bsp_Hoch1.webp",
+                "Sonderposten/STGF303010B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STGF302706B": {
+            "images": [
+                "Sonderposten/STGF302706B/GrundregalHoch.webp",
+                "Sonderposten/STGF302706B/WeitspannQuer1.webp",
+                "Sonderposten/STGF302706B/zerlegtHoch1.webp",
+                "Sonderposten/STGF302706B/Bsp_Hoch1.webp",
+                "Sonderposten/STGF302706B/Bsp_Hoch2.webp"
+            ],
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Grundregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>\r\n"
+        },
+        "STGF303004B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Grundregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>\r\n",
+            "images": [
+                "Sonderposten/STGF303004B/GrundregalHoch.webp",
+                "Sonderposten/STGF303004B/WeitspannQuer1.webp",
+                "Sonderposten/STGF303004B/zerlegtHoch1.webp",
+                "Sonderposten/STGF303004B/Bsp_Hoch1.webp",
+                "Sonderposten/STGF303004B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STGF302704B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Grundregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STGF302704B/GrundregalHoch.webp",
+                "Sonderposten/STGF302704B/WeitspannQuer1.webp",
+                "Sonderposten/STGF302704B/zerlegtHoch1.webp",
+                "Sonderposten/STGF302704B/Bsp_Hoch1.webp",
+                "Sonderposten/STGF302704B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STAF302704B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Anbauregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<p><strong>Hinweis: Dieses Produkt ist nur in Kombination mit einem Grundregal verwendbar und nicht freistehend.</strong></p>\r\n\r\n<p><strong>REGATIX</strong>&nbsp;Anbauregale k&ouml;nnen sowohl linksseitig, als auch rechtsseitig an bestehende Grund- oder Anbauregale angebaut werden.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STAF302704B/AnbauregalHoch.webp",
+                "Sonderposten/STAF302704B/WeitspannQuer1.webp",
+                "Sonderposten/STAF302704B/zerlegtHoch1.webp",
+                "Sonderposten/STAF302704B/Bsp_Hoch1.webp",
+                "Sonderposten/STAF302704B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STAF303004B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Anbauregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<p><strong>Hinweis: Dieses Produkt ist nur in Kombination mit einem Grundregal verwendbar und nicht freistehend.</strong></p>\r\n\r\n<p><strong>REGATIX</strong>&nbsp;Anbauregale k&ouml;nnen sowohl linksseitig, als auch rechtsseitig an bestehende Grund- oder Anbauregale angebaut werden.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STAF303004B/AnbauregalHoch.webp",
+                "Sonderposten/STAF303004B/WeitspannQuer1.webp",
+                "Sonderposten/STAF303004B/zerlegtHoch1.webp",
+                "Sonderposten/STAF303004B/Bsp_Hoch1.webp",
+                "Sonderposten/STAF303004B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STAF302706B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Anbauregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<p><strong>Hinweis: Dieses Produkt ist nur in Kombination mit einem Grundregal verwendbar und nicht freistehend.</strong></p>\r\n\r\n<p><strong>REGATIX</strong>&nbsp;Anbauregale k&ouml;nnen sowohl linksseitig, als auch rechtsseitig an bestehende Grund- oder Anbauregale angebaut werden.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STAF302706B/AnbauregalHoch.webp",
+                "Sonderposten/STAF302706B/WeitspannQuer1.webp",
+                "Sonderposten/STAF302706B/zerlegtHoch1.webp",
+                "Sonderposten/STAF302706B/Bsp_Hoch1.webp",
+                "Sonderposten/STAF302706B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STAF302710B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Anbauregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<p><strong>Hinweis: Dieses Produkt ist nur in Kombination mit einem Grundregal verwendbar und nicht freistehend.</strong></p>\r\n\r\n<p><strong>REGATIX</strong>&nbsp;Anbauregale k&ouml;nnen sowohl linksseitig, als auch rechtsseitig an bestehende Grund- oder Anbauregale angebaut werden.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STAF302710B/AnbauregalHoch.webp",
+                "Sonderposten/STAF302710B/WeitspannQuer1.webp",
+                "Sonderposten/STAF302710B/zerlegtHoch1.webp",
+                "Sonderposten/STAF302710B/Bsp_Hoch1.webp",
+                "Sonderposten/STAF302710B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STAF303010B": {
+            "info_html": "<p><strong>REGATIX S-Strong Weitspann-Anbauregal mit Lackfehlern</strong></p>\r\n\r\n<ul>\r\n\t<li>Lackfehler -&gt; Lackiernasen oder unterschiedliche Farbgebung der Bauteile!!</li>\r\n\t<li>3 Ebenen mit Bodenpaneelen</li>\r\n</ul>\r\n\r\n<p>Ein Weitspannregal ist die ideale Wahl, wenn hohe Tragkraft, robuste Verarbeitung und maximale Flexibilit&auml;t im Lager gefragt sind. Das Weitspannregal S-Strong bietet eine besonders stabile Konstruktion aus lackiertem Stahlblech und eignet sich perfekt f&uuml;r Lagerr&auml;ume, Werkst&auml;tten und Produktionsbereiche. Dank der gepr&uuml;ften Qualit&auml;t und der Zertifizierung durch den T&Uuml;V nach DGUV Regel 108-007 erhalten Sie ein langlebiges Regalsystem, das f&uuml;r Sicherheit und dauerhafte Belastbarkeit steht.</p>\r\n\r\n<p>Durch das 50-mm Raster lassen sich die Tr&auml;ger des Weitspannregals flexibel in der H&ouml;he positionieren. So k&ouml;nnen unterschiedliche Regalebenen sauber strukturiert und f&uuml;r verschieden grosse G&uuml;ter genutzt werden.</p>\r\n\r\n<h3>Ihr Vorteil: maximale Stabilit&auml;t und hohe Flexibilit&auml;t</h3>\r\n\r\n<p>Das Weitspannregal S-Strong kombiniert starke Traglasten, variable Nutzung und langlebige Materialqualit&auml;t. Es ist die optimale L&ouml;sung f&uuml;r alle Unternehmen, die ein zuverl&auml;ssiges, modular erweiterbares und sicherheitsgepr&uuml;ftes Regalsystem f&uuml;r ihr Lager suchen.</p>\r\n\r\n<p><strong>Hinweis: Dieses Produkt ist nur in Kombination mit einem Grundregal verwendbar und nicht freistehend.</strong></p>\r\n\r\n<p><strong>REGATIX</strong>&nbsp;Anbauregale k&ouml;nnen sowohl linksseitig, als auch rechtsseitig an bestehende Grund- oder Anbauregale angebaut werden.</p>\r\n\r\n<hr />\r\n<p>Der Verkauf der Weitspannregale erfolgt Versandkostenfrei/Frachtfrei&nbsp; ab&nbsp;REGATIX Ilsfeld.</p>\r\n\r\n<p>Beschr&auml;nkte Verf&uuml;gbarkeit, im Einzelfall kann Ihre Bestellung storniert werden!</p>",
+            "images": [
+                "Sonderposten/STAF303010B/AnbauregalHoch.webp",
+                "Sonderposten/STAF303010B/WeitspannQuer1.webp",
+                "Sonderposten/STAF303010B/zerlegtHoch1.webp",
+                "Sonderposten/STAF303010B/Bsp_Hoch1.webp",
+                "Sonderposten/STAF303010B/Bsp_Hoch2.webp"
+            ]
+        },
+        "STGF251504": {
+            "images": [
+                "Sonderposten/STGF251504/S-Strong_Grundregal_Frontal_Hoch1.webp"
+            ]
+        }
+    }
+}

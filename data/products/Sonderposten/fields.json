@@ -1,0 +1,40 @@
+{
+    "fields": [
+        {
+            "key": "Produktart",
+            "label": "Produktart"
+        },
+        {
+            "key": "Artiklnummer",
+            "label": "Artiklnummer"
+        },
+        {
+            "key": "Nennhöhe mm",
+            "label": "Höhe"
+        },
+        {
+            "key": "Nennlänge mm",
+            "label": "Länge"
+        },
+        {
+            "key": "mit MwSt",
+            "label": "mit MwSt. €"
+        },
+        {
+            "key": "ohne MwSt",
+            "label": "ohne MwSt. €"
+        },
+        {
+            "key": "Produkt Art",
+            "label": "Produkt Art"
+        },
+        {
+            "key": "Nenntiefe mm",
+            "label": "Tiefe"
+        },
+        {
+            "key": "Ebenen",
+            "label": "Zustand"
+        }
+    ]
+}

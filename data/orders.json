@@ -1,0 +1,5884 @@
+[
+    {
+        "id": "20260113-181655-230698",
+        "created_at": "2026-01-13T18:16:55+01:00",
+        "created_at_local": "13.01.2026 18:16",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 2121.2999999999997,
+            "gross_before": 2524.32,
+            "net_after": 2121.2999999999997,
+            "gross_after": 2524.32,
+            "vat_rate": 0.19
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "Deutschland",
+            "note": ""
+        },
+        "items": [
+            {
+                "key": "EC210930-6R|Produktart=Eckregal rechts|Ebenen=6|Nennhöhe mm=2100|Nenntiefe mm=320|Nennlänge mm=900",
+                "article": "EC210930-6R",
+                "title": "Fachbodenregal",
+                "selection": {
+                    "Produktart": "Eckregal rechts",
+                    "Ebenen": "6",
+                    "Nennhöhe mm": "2100",
+                    "Nenntiefe mm": "320",
+                    "Nennlänge mm": "900"
+                },
+                "selection_text": "Produktart: Eckregal rechts · Ebenen: 6 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 9,
+                "price_gross_unit": 280.48,
+                "price_net_unit": 235.7
+            }
+        ]
+    },
+    {
+        "id": "20260113-183027-a06f22",
+        "created_at": "2026-01-13T18:30:27+01:00",
+        "created_at_local": "13.01.2026 18:30",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 2374.2,
+            "gross_before": 2825.2799999999997,
+            "net_after": 2374.2,
+            "gross_after": 2825.2799999999997,
+            "vat_rate": 0.19,
+            "items_sum_net": 2374.2,
+            "items_sum_gross": 2825.2799999999997
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "Deutschland",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "EC240980-6R",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Eckregal rechts · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 800 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 6,
+                "price_net_unit": 395.7,
+                "price_gross_unit": 470.88,
+                "sum_net": 2374.2,
+                "sum_gross": 2825.2799999999997
+            }
+        ]
+    },
+    {
+        "id": "20260113-190531-ee8546",
+        "created_at": "2026-01-13T19:05:31+01:00",
+        "created_at_local": "13.01.2026 19:05",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "NEUEHOMEPAGE",
+            "gross": 328.86
+        },
+        "totals": {
+            "net_before": 1842.3,
+            "gross_before": 2192.4,
+            "net_after": 1565.9470588235295,
+            "gross_after": 1863.54,
+            "vat_rate": 0.19,
+            "items_sum_net": 1842.3,
+            "items_sum_gross": 2192.4
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "Deutschland",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 18,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 1842.3,
+                "sum_gross": 2192.4
+            }
+        ]
+    },
+    {
+        "id": "20260113-213305-fee5c4",
+        "created_at": "2026-01-13T21:33:05+01:00",
+        "created_at_local": "13.01.2026 21:33",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 304.29,
+            "gross_before": 362.1,
+            "net_after": 304.29,
+            "gross_after": 362.1,
+            "vat_rate": 0.19,
+            "items_sum_net": 304.29,
+            "items_sum_gross": 362.1
+        },
+        "customer": {
+            "company": "",
+            "first_name": "bernd",
+            "last_name": "gaudecki",
+            "name": "bernd gaudecki",
+            "email": "bernd.gaudecki@gmail.com",
+            "street": "mühlstr. 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "Deutschland",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST211880-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 800 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 1,
+                "price_net_unit": 304.29,
+                "price_gross_unit": 362.1,
+                "sum_net": 304.29,
+                "sum_gross": 362.1
+            }
+        ]
+    },
+    {
+        "id": "20260113-213622-9a2ed0",
+        "created_at": "2026-01-13T21:36:22+01:00",
+        "created_at_local": "13.01.2026 21:36",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "items_sum_net": 102.35,
+            "items_sum_gross": 121.8
+        },
+        "customer": {
+            "company": "",
+            "first_name": "bernd",
+            "last_name": "gaudecki",
+            "name": "bernd gaudecki",
+            "email": "bernd.gaudecki@gmail.com",
+            "street": "mühlstr. 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "Deutschland",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260114-170604-897d55",
+        "created_at": "2026-01-14T17:06:04+01:00",
+        "created_at_local": "14.01.2026 17:06",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 0.1,
+            "gross_before": 0.12,
+            "net_after": 0.1,
+            "gross_after": 0.12,
+            "vat_rate": 0.19,
+            "items_sum_net": 0.1,
+            "items_sum_gross": 0.12
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "Deutschland",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "123456",
+                "title": "",
+                "selection_text": "Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 0.1,
+                "price_gross_unit": 0.12,
+                "sum_net": 0.1,
+                "sum_gross": 0.12
+            }
+        ]
+    },
+    {
+        "id": "20260114-171117-b903ad",
+        "created_at": "2026-01-14T17:11:17+01:00",
+        "created_at_local": "14.01.2026 17:11",
+        "payment": {
+            "key": "-",
+            "label": "-"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 2456.1,
+            "gross_before": 2922.8,
+            "net_after": 2456.1,
+            "gross_after": 2922.8,
+            "vat_rate": 0.19,
+            "items_sum_net": 2456.1,
+            "items_sum_gross": 2922.8
+        },
+        "customer": {
+            "company": "",
+            "first_name": "",
+            "last_name": "",
+            "name": "Kunde",
+            "email": "mhs_ffm@icloud.com",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 11,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 1125.85,
+                "sum_gross": 1339.8
+            },
+            {
+                "article": "ST201580-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 800 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 5,
+                "price_net_unit": 266.05,
+                "price_gross_unit": 316.6,
+                "sum_net": 1330.25,
+                "sum_gross": 1583
+            }
+        ]
+    },
+    {
+        "id": "20260115-023853-00186b",
+        "created_at": "2026-01-15T02:38:53+01:00",
+        "created_at_local": "15.01.2026 02:38",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 1601.6999999999998,
+            "gross_before": 1906,
+            "net_after": 1601.6999999999998,
+            "gross_after": 1906,
+            "vat_rate": 0.19,
+            "items_sum_net": 1601.6999999999998,
+            "items_sum_gross": 1906
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST241530-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 10,
+                "price_net_unit": 160.17,
+                "price_gross_unit": 190.6,
+                "sum_net": 1601.6999999999998,
+                "sum_gross": 1906
+            }
+        ]
+    },
+    {
+        "id": "20260115-023934-d4b910",
+        "created_at": "2026-01-15T02:39:34+01:00",
+        "created_at_local": "15.01.2026 02:39",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_before": 1601.6999999999998,
+            "gross_before": 1906,
+            "net_after": 1601.6999999999998,
+            "gross_after": 1906,
+            "vat_rate": 0.19,
+            "items_sum_net": 1601.6999999999998,
+            "items_sum_gross": 1906
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST241530-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 10,
+                "price_net_unit": 160.17,
+                "price_gross_unit": 190.6,
+                "sum_net": 1601.6999999999998,
+                "sum_gross": 1906
+            }
+        ]
+    },
+    {
+        "id": "20260115-025038-2e70ab",
+        "created_at": "2026-01-15T02:50:38+01:00",
+        "created_at_local": "15.01.2026 02:50",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "net_before_items_only": 1601.6999999999998,
+            "gross_before_items_only": 1906,
+            "net_before": 1643.2999999999997,
+            "gross_before": 1955.5,
+            "net_after": 1643.2999999999997,
+            "gross_after": 1955.5,
+            "vat_rate": 0.19,
+            "items_sum_net": 1601.6999999999998,
+            "items_sum_gross": 1906
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST241530-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 10,
+                "price_net_unit": 160.17,
+                "price_gross_unit": 190.6,
+                "sum_net": 1601.6999999999998,
+                "sum_gross": 1906
+            },
+            {
+                "article": "FREIGHT",
+                "title": "Frachtkosten",
+                "selection_text": "Versandzone A",
+                "quantity": 1,
+                "price_net_unit": 41.6,
+                "price_gross_unit": 49.5,
+                "sum_net": 41.6,
+                "sum_gross": 49.5
+            }
+        ]
+    },
+    {
+        "id": "20260115-025114-c9defb",
+        "created_at": "2026-01-15T02:51:14+01:00",
+        "created_at_local": "15.01.2026 02:51",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "net_before_items_only": 1601.6999999999998,
+            "gross_before_items_only": 1906,
+            "net_before": 1601.6999999999998,
+            "gross_before": 1906,
+            "net_after": 1601.6999999999998,
+            "gross_after": 1906,
+            "vat_rate": 0.19,
+            "items_sum_net": 1601.6999999999998,
+            "items_sum_gross": 1906
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST241530-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 10,
+                "price_net_unit": 160.17,
+                "price_gross_unit": 190.6,
+                "sum_net": 1601.6999999999998,
+                "sum_gross": 1906
+            }
+        ]
+    },
+    {
+        "id": "20260115-025557-18000e",
+        "created_at": "2026-01-15T02:55:57+01:00",
+        "created_at_local": "15.01.2026 02:55",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_goods_before": 1601.6999999999998,
+            "gross_goods_before": 1906,
+            "net_before": 1643.2999999999997,
+            "gross_before": 1955.5,
+            "net_after": 1643.2999999999997,
+            "gross_after": 1955.5,
+            "vat_rate": 0.19,
+            "items_sum_net": 1601.6999999999998,
+            "items_sum_gross": 1906
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST241530-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 10,
+                "price_net_unit": 160.17,
+                "price_gross_unit": 190.6,
+                "sum_net": 1601.6999999999998,
+                "sum_gross": 1906
+            }
+        ]
+    },
+    {
+        "id": "20260115-033013-8094bd",
+        "created_at": "2026-01-15T03:30:13+01:00",
+        "created_at_local": "15.01.2026 03:30",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_goods_before": 1535.25,
+            "gross_goods_before": 1827,
+            "net_before": 1576.85,
+            "gross_before": 1876.5,
+            "net_after": 1576.85,
+            "gross_after": 1876.5,
+            "vat_rate": 0.19,
+            "items_sum_net": 1535.25,
+            "items_sum_gross": 1827
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 15,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 1535.25,
+                "sum_gross": 1827
+            }
+        ]
+    },
+    {
+        "id": "20260115-033235-39a2e8",
+        "created_at": "2026-01-15T03:32:35+01:00",
+        "created_at_local": "15.01.2026 03:32",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0
+        },
+        "totals": {
+            "net_goods_before": 1535.25,
+            "gross_goods_before": 1827,
+            "net_before": 1576.85,
+            "gross_before": 1876.5,
+            "net_after": 1576.85,
+            "gross_after": 1876.5,
+            "vat_rate": 0.19,
+            "items_sum_net": 1535.25,
+            "items_sum_gross": 1827
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 15,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 1535.25,
+                "sum_gross": 1827
+            }
+        ]
+    },
+    {
+        "id": "20260115-035912-aa3715",
+        "created_at": "2026-01-15T03:59:12+01:00",
+        "created_at_local": "15.01.2026 03:59",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 1531.74,
+            "items_gross_before": 1822.7999999999997,
+            "items_net_after": 1531.74,
+            "items_gross_after": 1822.7999999999997,
+            "net_before": 1573.34,
+            "gross_before": 1872.2999999999997,
+            "net_after": 1573.34,
+            "gross_after": 1872.2999999999997,
+            "vat_rate": 0.19,
+            "vat_after": 298.9599999999998
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": true,
+            "company": "",
+            "phone": "",
+            "first_name": "sssss",
+            "last_name": "ssss",
+            "street": "advaDVadvsDV",
+            "zip": "60486",
+            "city": "Frankfurt",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200930-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 14,
+                "price_net_unit": 109.41,
+                "price_gross_unit": 130.2,
+                "sum_net": 1531.74,
+                "sum_gross": 1822.7999999999997
+            }
+        ]
+    },
+    {
+        "id": "20260115-040543-7d9d26",
+        "created_at": "2026-01-15T04:05:43+01:00",
+        "created_at_local": "15.01.2026 04:05",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 1531.74,
+            "items_gross_before": 1822.7999999999997,
+            "items_net_after": 1531.74,
+            "items_gross_after": 1822.7999999999997,
+            "net_before": 1573.34,
+            "gross_before": 1872.2999999999997,
+            "net_after": 1573.34,
+            "gross_after": 1872.2999999999997,
+            "vat_rate": 0.19,
+            "vat_after": 298.9599999999998
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200930-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 14,
+                "price_net_unit": 109.41,
+                "price_gross_unit": 130.2,
+                "sum_net": 1531.74,
+                "sum_gross": 1822.7999999999997
+            }
+        ]
+    },
+    {
+        "id": "20260115-040557-52a2fd",
+        "created_at": "2026-01-15T04:05:57+01:00",
+        "created_at_local": "15.01.2026 04:05",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 1531.74,
+            "items_gross_before": 1822.7999999999997,
+            "items_net_after": 1531.74,
+            "items_gross_after": 1822.7999999999997,
+            "net_before": 1531.74,
+            "gross_before": 1822.7999999999997,
+            "net_after": 1531.74,
+            "gross_after": 1822.7999999999997,
+            "vat_rate": 0.19,
+            "vat_after": 291.0599999999997
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200930-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 14,
+                "price_net_unit": 109.41,
+                "price_gross_unit": 130.2,
+                "sum_net": 1531.74,
+                "sum_gross": 1822.7999999999997
+            }
+        ]
+    },
+    {
+        "id": "20260115-041835-3637b1",
+        "created_at": "2026-01-15T04:18:35+01:00",
+        "created_at_local": "15.01.2026 04:18",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 1531.74,
+            "items_gross_before": 1822.7999999999997,
+            "items_net_after": 1531.74,
+            "items_gross_after": 1822.7999999999997,
+            "net_before": 1573.34,
+            "gross_before": 1872.2999999999997,
+            "net_after": 1573.34,
+            "gross_after": 1872.2999999999997,
+            "vat_rate": 0.19,
+            "vat_after": 298.9599999999998
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200930-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 14,
+                "price_net_unit": 109.41,
+                "price_gross_unit": 130.2,
+                "sum_net": 1531.74,
+                "sum_gross": 1822.7999999999997
+            }
+        ]
+    },
+    {
+        "id": "20260115-150503-da59e8",
+        "created_at": "2026-01-15T15:05:03+01:00",
+        "created_at_local": "15.01.2026 15:05",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 69.5,
+            "net": 58.4,
+            "zone": "Versandzone C"
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 160.75,
+            "gross_before": 191.3,
+            "net_after": 160.75,
+            "gross_after": 191.3,
+            "vat_rate": 0.19,
+            "vat_after": 30.55000000000001
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": true,
+            "company": "",
+            "phone": "",
+            "first_name": "wss",
+            "last_name": "sss",
+            "street": "sss",
+            "zip": "01067",
+            "city": "Dresden",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260116-215734-984e13",
+        "created_at": "2026-01-16T21:57:34+01:00",
+        "created_at_local": "16.01.2026 21:57",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 1739.9499999999998,
+            "items_gross_before": 2070.6,
+            "items_net_after": 1739.9499999999998,
+            "items_gross_after": 2070.6,
+            "net_before": 1781.5499999999997,
+            "gross_before": 2120.1,
+            "net_after": 1781.5499999999997,
+            "gross_after": 2120.1,
+            "vat_rate": 0.19,
+            "vat_after": 338.5500000000002
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 17,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 1739.9499999999998,
+                "sum_gross": 2070.6
+            }
+        ]
+    },
+    {
+        "id": "20260119-162102-1841c9",
+        "created_at": "2026-01-19T16:21:02+01:00",
+        "created_at_local": "19.01.2026 16:21",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 141.6,
+            "items_gross_before": 168.5,
+            "items_net_after": 141.6,
+            "items_gross_after": 168.5,
+            "net_before": 183.2,
+            "gross_before": 218,
+            "net_after": 183.2,
+            "gross_after": 218,
+            "vat_rate": 0.19,
+            "vat_after": 34.80000000000001
+        },
+        "customer": {
+            "company": "Metallgestaltung",
+            "first_name": "Martial",
+            "last_name": "Herbst",
+            "name": "Martial Herbst",
+            "email": "martialherbst@web.de",
+            "street": "Maad, 12-1, 12-1",
+            "zip": "71717",
+            "city": "Beilstein",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201350-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 141.6,
+                "price_gross_unit": 168.5,
+                "sum_net": 141.6,
+                "sum_gross": 168.5
+            }
+        ]
+    },
+    {
+        "id": "20260122-125545-c88a2e",
+        "created_at": "2026-01-22T12:55:45+01:00",
+        "created_at_local": "22.01.2026 12:55",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 708.56,
+            "items_gross_before": 843.2,
+            "items_net_after": 708.56,
+            "items_gross_after": 843.2,
+            "net_before": 750.16,
+            "gross_before": 892.7,
+            "net_after": 750.16,
+            "gross_after": 892.7,
+            "vat_rate": 0.19,
+            "vat_after": 142.54000000000008
+        },
+        "customer": {
+            "company": "Engel GmbH Wäschereitechnik",
+            "first_name": "Silvie",
+            "last_name": "Engel",
+            "name": "Silvie Engel",
+            "email": "silvieengel@gmail.com",
+            "street": "Im Grämeracker 16",
+            "zip": "79249",
+            "city": "Merzhausen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST211650-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1650",
+                "quantity": 4,
+                "price_net_unit": 177.14,
+                "price_gross_unit": 210.8,
+                "sum_net": 708.56,
+                "sum_gross": 843.2
+            }
+        ]
+    },
+    {
+        "id": "20260125-133932-625db0",
+        "created_at": "2026-01-25T13:39:32+01:00",
+        "created_at_local": "25.01.2026 13:39",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 68.15,
+            "items_gross_before": 81.1,
+            "items_net_after": 68.15,
+            "items_gross_after": 81.1,
+            "net_before": 68.15,
+            "gross_before": 81.1,
+            "net_after": 68.15,
+            "gross_after": 81.1,
+            "vat_rate": 0.19,
+            "vat_after": 12.949999999999989
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mikesprunkel@googlemail.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240931-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 68.15,
+                "price_gross_unit": 81.1,
+                "sum_net": 68.15,
+                "sum_gross": 81.1
+            }
+        ]
+    },
+    {
+        "id": "20260125-134620-dd15d2",
+        "created_at": "2026-01-25T13:46:20+01:00",
+        "created_at_local": "25.01.2026 13:46",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mikesprunkel@googlemail.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260125-134656-53c99d",
+        "created_at": "2026-01-25T13:46:56+01:00",
+        "created_at_local": "25.01.2026 13:46",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260125-135453-584b2f",
+        "created_at": "2026-01-25T13:54:53+01:00",
+        "created_at_local": "25.01.2026 13:54",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mikesprunkel@googlemail.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260125-135636-c68d59",
+        "created_at": "2026-01-25T13:56:36+01:00",
+        "created_at_local": "25.01.2026 13:56",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mikesprunkelfrankfurt@gmail.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260125-140750-8354c3",
+        "created_at": "2026-01-25T14:07:50+01:00",
+        "created_at_local": "25.01.2026 14:07",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 0.1,
+            "items_gross_before": 0.12,
+            "items_net_after": 0.1,
+            "items_gross_after": 0.12,
+            "net_before": 0.1,
+            "gross_before": 0.12,
+            "net_after": 0.1,
+            "gross_after": 0.12,
+            "vat_rate": 0.19,
+            "vat_after": 0.01999999999999999
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "ziegler@regatix.com",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": "Testbestellung bzgl. Bestelleingang!!"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "123456",
+                "title": "",
+                "selection_text": "Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 0.1,
+                "price_gross_unit": 0.12,
+                "sum_net": 0.1,
+                "sum_gross": 0.12
+            }
+        ]
+    },
+    {
+        "id": "20260127-081013-f5ce49",
+        "created_at": "2026-01-27T08:10:13+01:00",
+        "created_at_local": "27.01.2026 08:10",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 59.5,
+            "net": 50,
+            "zone": "Versandzone B"
+        },
+        "totals": {
+            "items_net_before": 690.6899999999999,
+            "items_gross_before": 821.9,
+            "items_net_after": 690.6899999999999,
+            "items_gross_after": 821.9,
+            "net_before": 740.6899999999999,
+            "gross_before": 881.4,
+            "net_after": 740.6899999999999,
+            "gross_after": 881.4,
+            "vat_rate": 0.19,
+            "vat_after": 140.71000000000004
+        },
+        "customer": {
+            "company": "Polystone Chemical GmbH",
+            "first_name": "Cornel",
+            "last_name": "Bruhin",
+            "name": "Cornel Bruhin",
+            "email": "einkauf@polystone-chemical.de",
+            "street": "In den Krummenäckern 6",
+            "zip": "66440",
+            "city": "Blieskastel",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": true,
+            "company": "Polystone Chemical GmbH",
+            "phone": "",
+            "first_name": "Martin",
+            "last_name": "Schaum",
+            "street": "In den Krummenäckern 10",
+            "zip": "66440",
+            "city": "Blieskastel",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241250-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 167.65,
+                "price_gross_unit": 199.5,
+                "sum_net": 167.65,
+                "sum_gross": 199.5
+            },
+            {
+                "article": "ST241251-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 4,
+                "price_net_unit": 130.76,
+                "price_gross_unit": 155.6,
+                "sum_net": 523.04,
+                "sum_gross": 622.4
+            }
+        ]
+    },
+    {
+        "id": "20260127-173224-2b1ec9",
+        "created_at": "2026-01-27T17:32:24+01:00",
+        "created_at_local": "27.01.2026 17:32",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 1010.26,
+            "items_gross_before": 1202.1999999999998,
+            "items_net_after": 1010.26,
+            "items_gross_after": 1202.1999999999998,
+            "net_before": 1051.86,
+            "gross_before": 1251.6999999999998,
+            "net_after": 1051.86,
+            "gross_after": 1251.6999999999998,
+            "vat_rate": 0.19,
+            "vat_after": 199.83999999999992
+        },
+        "customer": {
+            "company": "Sickinger Bad und Heizsysteme GmbH",
+            "first_name": "Franz-Michael",
+            "last_name": "Sickinger",
+            "name": "Franz-Michael Sickinger",
+            "email": "info@sickinger-baeder.de",
+            "street": "Im Etzental 54",
+            "zip": "72379",
+            "city": "72379 Hechingen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST211540-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 131.85,
+                "price_gross_unit": 156.9,
+                "sum_net": 131.85,
+                "sum_gross": 156.9
+            },
+            {
+                "article": "ST210941-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 69.92,
+                "price_gross_unit": 83.2,
+                "sum_net": 69.92,
+                "sum_gross": 83.2
+            },
+            {
+                "article": "EC210930-4L",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Eckregal links · Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 187.9,
+                "price_gross_unit": 223.6,
+                "sum_net": 187.9,
+                "sum_gross": 223.6
+            },
+            {
+                "article": "ST211550-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 145.21,
+                "price_gross_unit": 172.8,
+                "sum_net": 145.21,
+                "sum_gross": 172.8
+            },
+            {
+                "article": "ST211250-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 128.49,
+                "price_gross_unit": 152.9,
+                "sum_net": 128.49,
+                "sum_gross": 152.9
+            },
+            {
+                "article": "ST210940-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 101.93,
+                "price_gross_unit": 121.3,
+                "sum_net": 101.93,
+                "sum_gross": 121.3
+            },
+            {
+                "article": "ST201540-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 128.74,
+                "price_gross_unit": 153.2,
+                "sum_net": 128.74,
+                "sum_gross": 153.2
+            },
+            {
+                "article": "ST201050-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 1,
+                "price_net_unit": 116.22,
+                "price_gross_unit": 138.3,
+                "sum_net": 116.22,
+                "sum_gross": 138.3
+            }
+        ]
+    },
+    {
+        "id": "20260128-073522-b4d710",
+        "created_at": "2026-01-28T07:35:22+01:00",
+        "created_at_local": "28.01.2026 07:35",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "JZ-31032",
+            "gross": 0.0012,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 0.1,
+            "items_gross_before": 0.12,
+            "items_net_after": 0.09899159663865546,
+            "items_gross_after": 0.11879999999999999,
+            "net_before": 41.7,
+            "gross_before": 49.62,
+            "net_after": 41.698991596638656,
+            "gross_after": 49.6188,
+            "vat_rate": 0.19,
+            "vat_after": 7.919808403361344
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "johannes_ziegler@yahoo.de",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "123456",
+                "title": "",
+                "selection_text": "Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 0.1,
+                "price_gross_unit": 0.12,
+                "sum_net": 0.1,
+                "sum_gross": 0.12
+            }
+        ]
+    },
+    {
+        "id": "20260128-162156-089ca4",
+        "created_at": "2026-01-28T16:21:56+01:00",
+        "created_at_local": "28.01.2026 16:21",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "JZ-31032",
+            "gross": 1,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 101.50966386554622,
+            "items_gross_after": 120.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 101.50966386554622,
+            "gross_after": 120.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.29033613445378
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260128-162509-dad74a",
+        "created_at": "2026-01-28T16:25:09+01:00",
+        "created_at_local": "28.01.2026 16:25",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "JZ-31032",
+            "gross": 1,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 1535.25,
+            "items_gross_before": 1827,
+            "items_net_after": 1534.4096638655462,
+            "items_gross_after": 1826,
+            "net_before": 1535.25,
+            "gross_before": 1827,
+            "net_after": 1534.4096638655462,
+            "gross_after": 1826,
+            "vat_rate": 0.19,
+            "vat_after": 291.59033613445376
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 15,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 1535.25,
+                "sum_gross": 1827
+            }
+        ]
+    },
+    {
+        "id": "20260128-162936-882a5b",
+        "created_at": "2026-01-28T16:29:36+01:00",
+        "created_at_local": "28.01.2026 16:29",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "JZ-31032",
+            "gross": 0.12,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 0.1,
+            "items_gross_before": 0.12,
+            "items_net_after": 0,
+            "items_gross_after": 0,
+            "net_before": 41.7,
+            "gross_before": 49.62,
+            "net_after": 41.6,
+            "gross_after": 49.5,
+            "vat_rate": 0.19,
+            "vat_after": 7.899999999999999
+        },
+        "customer": {
+            "company": "REGATIX",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "johannes_ziegler@yahoo.de",
+            "street": "Buchstraße 44",
+            "zip": "74321",
+            "city": "Bietigheim-Bissingen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "123456",
+                "title": "",
+                "selection_text": "Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 0.1,
+                "price_gross_unit": 0.12,
+                "sum_net": 0.1,
+                "sum_gross": 0.12
+            }
+        ]
+    },
+    {
+        "id": "20260128-163600-9258ca",
+        "created_at": "2026-01-28T16:36:00+01:00",
+        "created_at_local": "28.01.2026 16:36",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 0.1,
+            "items_gross_before": 0.12,
+            "items_net_after": 0.1,
+            "items_gross_after": 0.12,
+            "net_before": 41.7,
+            "gross_before": 49.62,
+            "net_after": 41.7,
+            "gross_after": 49.62,
+            "vat_rate": 0.19,
+            "vat_after": 7.919999999999995
+        },
+        "customer": {
+            "company": "REGATIX",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "johannes_ziegler@yahoo.de",
+            "street": "Buchstraße 44",
+            "zip": "74321",
+            "city": "Bietigheim-Bissingen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "123456",
+                "title": "",
+                "selection_text": "Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 0.1,
+                "price_gross_unit": 0.12,
+                "sum_net": 0.1,
+                "sum_gross": 0.12
+            }
+        ]
+    },
+    {
+        "id": "20260128-163642-92e943",
+        "created_at": "2026-01-28T16:36:42+01:00",
+        "created_at_local": "28.01.2026 16:36",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "STAMMKUNDE_31032",
+            "gross": 0.0012,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 0.1,
+            "items_gross_before": 0.12,
+            "items_net_after": 0.09899159663865546,
+            "items_gross_after": 0.11879999999999999,
+            "net_before": 41.7,
+            "gross_before": 49.62,
+            "net_after": 41.698991596638656,
+            "gross_after": 49.6188,
+            "vat_rate": 0.19,
+            "vat_after": 7.919808403361344
+        },
+        "customer": {
+            "company": "REGATIX",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "johannes_ziegler@yahoo.de",
+            "street": "Buchstraße 44",
+            "zip": "74321",
+            "city": "Bietigheim-Bissingen",
+            "country": "DE",
+            "note": "Kauf auf Rechnung"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "123456",
+                "title": "",
+                "selection_text": "Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 0.1,
+                "price_gross_unit": 0.12,
+                "sum_net": 0.1,
+                "sum_gross": 0.12
+            }
+        ]
+    },
+    {
+        "id": "20260129-101605-573e9b",
+        "created_at": "2026-01-29T10:16:05+01:00",
+        "created_at_local": "29.01.2026 10:16",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 2,
+            "items_gross_before": 2.4,
+            "items_net_after": 2,
+            "items_gross_after": 2.4,
+            "net_before": 43.6,
+            "gross_before": 51.9,
+            "net_after": 43.6,
+            "gross_after": 51.9,
+            "vat_rate": 0.19,
+            "vat_after": 8.299999999999997
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "johannes_ziegler@yahoo.de",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "123456",
+                "title": "",
+                "selection_text": "Ebenen: 4 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 20,
+                "price_net_unit": 0.1,
+                "price_gross_unit": 0.12,
+                "sum_net": 2,
+                "sum_gross": 2.4
+            }
+        ]
+    },
+    {
+        "id": "20260129-103017-4b7bea",
+        "created_at": "2026-01-29T10:30:17+01:00",
+        "created_at_local": "29.01.2026 10:30",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 324.03218487395,
+            "items_gross_before": 385.6,
+            "items_net_after": 324.03218487395,
+            "items_gross_after": 385.6,
+            "net_before": 365.63218487395,
+            "gross_before": 435.1,
+            "net_after": 365.63218487395,
+            "gross_after": 435.1,
+            "vat_rate": 0.19,
+            "vat_after": 69.46781512605003
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "johannes_ziegler@yahoo.de",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201360-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 168.57,
+                "price_gross_unit": 200.6,
+                "sum_net": 168.57,
+                "sum_gross": 200.6
+            },
+            {
+                "article": "ST201360-5",
+                "title": "ST201360-5",
+                "selection_text": "",
+                "quantity": 1,
+                "price_net_unit": 155.46218487395,
+                "price_gross_unit": 185,
+                "sum_net": 155.46218487395,
+                "sum_gross": 185
+            }
+        ]
+    },
+    {
+        "id": "20260129-134726-307602",
+        "created_at": "2026-01-29T13:47:26+01:00",
+        "created_at_local": "29.01.2026 13:47",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-140156-17ebbb",
+        "created_at": "2026-01-29T14:01:56+01:00",
+        "created_at_local": "29.01.2026 14:01",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-140907-a41638",
+        "created_at": "2026-01-29T14:09:07+01:00",
+        "created_at_local": "29.01.2026 14:09",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-142417-d853f4",
+        "created_at": "2026-01-29T14:24:17+01:00",
+        "created_at_local": "29.01.2026 14:24",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "applied": false,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-142857-2121bb",
+        "created_at": "2026-01-29T14:28:57+01:00",
+        "created_at_local": "29.01.2026 14:28",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-143039-72db72",
+        "created_at": "2026-01-29T14:30:39+01:00",
+        "created_at_local": "29.01.2026 14:30",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-143618-25f3f4",
+        "created_at": "2026-01-29T14:36:18+01:00",
+        "created_at_local": "29.01.2026 14:36",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 102.35,
+            "items_gross_after": 121.8,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 102.35,
+            "gross_after": 121.8,
+            "vat_rate": 0.19,
+            "vat_after": 19.450000000000003
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-143913-09aeea",
+        "created_at": "2026-01-29T14:39:13+01:00",
+        "created_at_local": "29.01.2026 14:39",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "STAMMKUNDE_31032",
+            "gross": 1.218,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 101.32647058823528,
+            "items_gross_after": 120.582,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 101.32647058823528,
+            "gross_after": 120.582,
+            "vat_rate": 0.19,
+            "vat_after": 19.255529411764712
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-144428-fca805",
+        "created_at": "2026-01-29T14:44:28+01:00",
+        "created_at_local": "29.01.2026 14:44",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "STAMMKUNDE_31032",
+            "gross": 1.218,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 101.32647058823528,
+            "items_gross_after": 120.582,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 101.32647058823528,
+            "gross_after": 120.582,
+            "vat_rate": 0.19,
+            "vat_after": 19.255529411764712
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-144608-7d33ce",
+        "created_at": "2026-01-29T14:46:08+01:00",
+        "created_at_local": "29.01.2026 14:46",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "STAMMKUNDE_31032",
+            "gross": 1.218,
+            "note": "Stammkunde: Vorkasse (Überweisung) = Versand auf Rechnung !!"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 101.32647058823528,
+            "items_gross_after": 120.582,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 101.32647058823528,
+            "gross_after": 120.582,
+            "vat_rate": 0.19,
+            "vat_after": 19.255529411764712
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Michael",
+            "last_name": "Sprunkel",
+            "name": "Michael Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstr 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260129-145325-24cc57",
+        "created_at": "2026-01-29T14:53:25+01:00",
+        "created_at_local": "29.01.2026 14:53",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "STAMMKUNDE_31032",
+            "gross": 2.17,
+            "note": "Stammkunde: Vorkasse (Überweisung) = Versand auf Rechnung !!"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 182.35,
+            "items_gross_before": 217,
+            "items_net_after": 180.5264705882353,
+            "items_gross_after": 214.83,
+            "net_before": 223.95,
+            "gross_before": 266.5,
+            "net_after": 222.1264705882353,
+            "gross_after": 264.33000000000004,
+            "vat_rate": 0.19,
+            "vat_after": 42.20352941176475
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "johannes_ziegler@yahoo.de",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201560-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 182.35,
+                "price_gross_unit": 217,
+                "sum_net": 182.35,
+                "sum_gross": 217
+            }
+        ]
+    },
+    {
+        "id": "20260129-183314-4b862a",
+        "created_at": "2026-01-29T18:33:14+01:00",
+        "created_at_local": "29.01.2026 18:33",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 59.5,
+            "net": 50,
+            "zone": "Versandzone B"
+        },
+        "totals": {
+            "items_net_before": 239.08,
+            "items_gross_before": 284.5,
+            "items_net_after": 239.08,
+            "items_gross_after": 284.5,
+            "net_before": 289.08000000000004,
+            "gross_before": 344,
+            "net_after": 289.08000000000004,
+            "gross_after": 344,
+            "vat_rate": 0.19,
+            "vat_after": 54.91999999999996
+        },
+        "customer": {
+            "company": "Landwirtschaft",
+            "first_name": "Jürgen",
+            "last_name": "Köhler",
+            "name": "Jürgen Köhler",
+            "email": "koehler.eifel@t-online.de",
+            "street": "Kaspar-Volpert-Str. 16",
+            "zip": "97737",
+            "city": "Gemünden am Main",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241380-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 800 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 239.08,
+                "price_gross_unit": 284.5,
+                "sum_net": 239.08,
+                "sum_gross": 284.5
+            }
+        ]
+    },
+    {
+        "id": "20260202-211722-125208",
+        "created_at": "2026-02-02T21:17:22+01:00",
+        "created_at_local": "02.02.2026 21:17",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 547.9,
+            "items_gross_before": 652,
+            "items_net_after": 547.9,
+            "items_gross_after": 652,
+            "net_before": 589.5,
+            "gross_before": 701.5,
+            "net_after": 589.5,
+            "gross_after": 701.5,
+            "vat_rate": 0.19,
+            "vat_after": 112
+        },
+        "customer": {
+            "company": "Heck GmbH & Co.KG",
+            "first_name": "Birgit",
+            "last_name": "Heck",
+            "name": "Birgit  Heck",
+            "email": "b.heck@sanitaer-heck.de",
+            "street": "Rudolf Diesel Straße 30",
+            "zip": "72414",
+            "city": "Rangendingen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241060-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 2,
+                "price_net_unit": 156.39,
+                "price_gross_unit": 186.1,
+                "sum_net": 312.78,
+                "sum_gross": 372.2
+            },
+            {
+                "article": "ST241061-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 2,
+                "price_net_unit": 117.56,
+                "price_gross_unit": 139.9,
+                "sum_net": 235.12,
+                "sum_gross": 279.8
+            }
+        ]
+    },
+    {
+        "id": "20260203-134339-e741dc",
+        "created_at": "2026-02-03T13:43:39+01:00",
+        "created_at_local": "03.02.2026 13:43",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 69.5,
+            "net": 58.4,
+            "zone": "Versandzone C"
+        },
+        "totals": {
+            "items_net_before": 903.37,
+            "items_gross_before": 1075,
+            "items_net_after": 903.37,
+            "items_gross_after": 1075,
+            "net_before": 961.77,
+            "gross_before": 1144.5,
+            "net_after": 961.77,
+            "gross_after": 1144.5,
+            "vat_rate": 0.19,
+            "vat_after": 182.73000000000002
+        },
+        "customer": {
+            "company": "CD NEW Living GmbH",
+            "first_name": "Cüneyt",
+            "last_name": "Ipek",
+            "name": "Cüneyt Ipek",
+            "email": "info@ch-geruestbau.com",
+            "street": "Obere Ring Str.44",
+            "zip": "32120",
+            "city": "Hiddenhausen",
+            "country": "DE",
+            "note": "Bitte dringend Anrufen bei Lieferung"
+        },
+        "shipping": {
+            "use_alt": true,
+            "company": "CH-Gerüstbau",
+            "phone": "01792222232",
+            "first_name": "Cüneyt",
+            "last_name": "Ipek",
+            "street": "Hubert-Korte-Str. 3",
+            "zip": "49086",
+            "city": "Osnabrück",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST211860-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 1,
+                "price_net_unit": 240.76,
+                "price_gross_unit": 286.5,
+                "sum_net": 240.76,
+                "sum_gross": 286.5
+            },
+            {
+                "article": "ST211560-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 185.21,
+                "price_gross_unit": 220.4,
+                "sum_net": 185.21,
+                "sum_gross": 220.4
+            },
+            {
+                "article": "ST211360-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 2,
+                "price_net_unit": 171.43,
+                "price_gross_unit": 204,
+                "sum_net": 342.86,
+                "sum_gross": 408
+            },
+            {
+                "article": "ST210960-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 134.54,
+                "price_gross_unit": 160.1,
+                "sum_net": 134.54,
+                "sum_gross": 160.1
+            }
+        ]
+    },
+    {
+        "id": "20260217-205646-7ff2fc",
+        "created_at": "2026-02-17T20:56:46+01:00",
+        "created_at_local": "17.02.2026 20:56",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 315.12605042017,
+            "items_gross_before": 375,
+            "items_net_after": 315.12605042017,
+            "items_gross_after": 375,
+            "net_before": 315.12605042017,
+            "gross_before": 375,
+            "net_after": 315.12605042017,
+            "gross_after": 375,
+            "vat_rate": 0.19,
+            "vat_after": 59.873949579830025
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "johannes",
+            "last_name": "ziegler",
+            "name": "johannes ziegler",
+            "email": "ziegler@regatix.com",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "07062239020",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "EC201260-5L",
+                "title": "EC201260-5L",
+                "selection_text": "",
+                "quantity": 1,
+                "price_net_unit": 315.12605042017,
+                "price_gross_unit": 375,
+                "sum_net": 315.12605042017,
+                "sum_gross": 375
+            }
+        ]
+    },
+    {
+        "id": "20260218-104927-6e4229",
+        "created_at": "2026-02-18T10:49:27+01:00",
+        "created_at_local": "18.02.2026 10:49",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 347.98,
+            "items_gross_before": 414.1,
+            "items_net_after": 347.98,
+            "items_gross_after": 414.1,
+            "net_before": 347.98,
+            "gross_before": 414.1,
+            "net_after": 347.98,
+            "gross_after": 414.1,
+            "vat_rate": 0.19,
+            "vat_after": 66.12
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Gerhard",
+            "last_name": "Scheerer",
+            "name": "Gerhard Scheerer",
+            "email": "Gerhard.scheerer@gmx.de",
+            "street": "Steinweg, 6",
+            "zip": "74336",
+            "city": "Brackenheim",
+            "country": "DE",
+            "note": "Abholung vor Ort\r\nWir benötigen für das Fachbodenregal mit 400mm tiefe 2 Stahlfüße extra. Und Zusätzlich bitte 5 Wandhalter um die Regale befestigen zu können\r\nMFG\r\nGerhard Scheerer"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "071357188325",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200960-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 131.68,
+                "price_gross_unit": 156.7,
+                "sum_net": 131.68,
+                "sum_gross": 156.7
+            },
+            {
+                "article": "ST200961-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 98.57,
+                "price_gross_unit": 117.3,
+                "sum_net": 98.57,
+                "sum_gross": 117.3
+            },
+            {
+                "article": "ST200940-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 117.73,
+                "price_gross_unit": 140.1,
+                "sum_net": 117.73,
+                "sum_gross": 140.1
+            }
+        ]
+    },
+    {
+        "id": "20260221-172834-7c20ae",
+        "created_at": "2026-02-21T17:28:34+01:00",
+        "created_at_local": "21.02.2026 17:28",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 85.55,
+            "items_gross_before": 101.8,
+            "items_net_after": 85.55,
+            "items_gross_after": 101.8,
+            "net_before": 85.55,
+            "gross_before": 101.8,
+            "net_after": 85.55,
+            "gross_after": 101.8,
+            "vat_rate": 0.19,
+            "vat_after": 16.25
+        },
+        "customer": {
+            "company": "Obstbau Leutenecker GbR",
+            "first_name": "Jonas",
+            "last_name": "Leutenecker",
+            "name": "Jonas Leutenecker",
+            "email": "j.leutenecker@gmx.de",
+            "street": "Schumannstraße 1",
+            "zip": "71686",
+            "city": "Remseck am Neckar",
+            "country": "DE",
+            "note": "Abholtermin Mo 23.2 oder Di 24.2 \r\nBitte teilen sie mir mit ob eine Abholung an einem der Termine möglich ist"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "015750782596",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200961-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 85.55,
+                "price_gross_unit": 101.8,
+                "sum_net": 85.55,
+                "sum_gross": 101.8
+            }
+        ]
+    },
+    {
+        "id": "20260303-124844-21374a",
+        "created_at": "2026-03-03T12:48:44+01:00",
+        "created_at_local": "03.03.2026 12:48",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 69.5,
+            "net": 58.4,
+            "zone": "Versandzone C"
+        },
+        "totals": {
+            "items_net_before": 345.88,
+            "items_gross_before": 411.6,
+            "items_net_after": 345.88,
+            "items_gross_after": 411.6,
+            "net_before": 404.28,
+            "gross_before": 481.1,
+            "net_after": 404.28,
+            "gross_after": 481.1,
+            "vat_rate": 0.19,
+            "vat_after": 76.82000000000005
+        },
+        "customer": {
+            "company": "Chaix et Morel GmbH",
+            "first_name": "Jan",
+            "last_name": "Horst",
+            "name": "Jan Horst",
+            "email": "jan.horst@chaixetmorel.com",
+            "street": "Zehdenicker Straße 21",
+            "zip": "10119",
+            "city": "Berlin",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "03039725727",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241540-6",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 2,
+                "price_net_unit": 172.94,
+                "price_gross_unit": 205.8,
+                "sum_net": 345.88,
+                "sum_gross": 411.6
+            }
+        ]
+    },
+    {
+        "id": "20260308-152736-ac742c",
+        "created_at": "2026-03-08T15:27:36+01:00",
+        "created_at_local": "08.03.2026 15:27",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 335.3,
+            "items_gross_before": 399.00000000000006,
+            "items_net_after": 335.3,
+            "items_gross_after": 399.00000000000006,
+            "net_before": 376.90000000000003,
+            "gross_before": 448.50000000000006,
+            "net_after": 376.90000000000003,
+            "gross_after": 448.50000000000006,
+            "vat_rate": 0.19,
+            "vat_after": 71.60000000000002
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Mladen",
+            "last_name": "Behtan",
+            "name": "Mladen Behtan",
+            "email": "mladen.behtan@googlemail.com",
+            "street": "Eichgasse 7\/2",
+            "zip": "71522",
+            "city": "Backnang",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "01707724969",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200950-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 107.39,
+                "price_gross_unit": 127.8,
+                "sum_net": 107.39,
+                "sum_gross": 127.8
+            },
+            {
+                "article": "ST200951-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 3,
+                "price_net_unit": 75.97,
+                "price_gross_unit": 90.4,
+                "sum_net": 227.91,
+                "sum_gross": 271.20000000000005
+            }
+        ]
+    },
+    {
+        "id": "20260309-084804-e6d59f",
+        "created_at": "2026-03-09T08:48:04+01:00",
+        "created_at_local": "09.03.2026 08:48",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 130.08,
+            "items_gross_before": 154.8,
+            "items_net_after": 130.08,
+            "items_gross_after": 154.8,
+            "net_before": 171.68,
+            "gross_before": 204.3,
+            "net_after": 171.68,
+            "gross_after": 204.3,
+            "vat_rate": 0.19,
+            "vat_after": 32.620000000000005
+        },
+        "customer": {
+            "company": "Weingut Doppelgarage Varnhalt",
+            "first_name": "Marc",
+            "last_name": "Bürkle",
+            "name": "Marc Bürkle",
+            "email": "buerkle.marc@gmail.com",
+            "street": "Weidenstraße 12",
+            "zip": "76534",
+            "city": "Baden-Baden",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "01727134609",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST211240-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 130.08,
+                "price_gross_unit": 154.8,
+                "sum_net": 130.08,
+                "sum_gross": 154.8
+            }
+        ]
+    },
+    {
+        "id": "20260311-120336-36a767",
+        "created_at": "2026-03-11T12:03:36+01:00",
+        "created_at_local": "11.03.2026 12:03",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 1842.3,
+            "items_gross_before": 2192.4,
+            "items_net_after": 1842.3,
+            "items_gross_after": 2192.4,
+            "net_before": 1883.8999999999999,
+            "gross_before": 2241.9,
+            "net_after": 1883.8999999999999,
+            "gross_after": 2241.9,
+            "vat_rate": 0.19,
+            "vat_after": 358.0000000000002
+        },
+        "customer": {
+            "company": "SPRUNKEL",
+            "first_name": "Mike",
+            "last_name": "Sprunkel",
+            "name": "Mike Sprunkel",
+            "email": "mhs_ffm@icloud.com",
+            "street": "Mühlstraße 6",
+            "zip": "67551",
+            "city": "Worms",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "0176-47817331",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 18,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 1842.3,
+                "sum_gross": 2192.4
+            }
+        ]
+    },
+    {
+        "id": "20260316-114118-c39889",
+        "created_at": "2026-03-16T11:41:18+01:00",
+        "created_at_local": "16.03.2026 11:41",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 211.26,
+            "items_gross_before": 251.4,
+            "items_net_after": 211.26,
+            "items_gross_after": 251.4,
+            "net_before": 252.85999999999999,
+            "gross_before": 300.9,
+            "net_after": 252.85999999999999,
+            "gross_after": 300.9,
+            "vat_rate": 0.19,
+            "vat_after": 48.03999999999999
+        },
+        "customer": {
+            "company": "ECC-Gehrig",
+            "first_name": "Ralf",
+            "last_name": "Gehrig",
+            "name": "Ralf Gehrig",
+            "email": "kontakt@geldzaehlmaschine.de",
+            "street": "Bgm. Theodor Weigand Str. 2A",
+            "zip": "74722",
+            "city": "Buchen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "062812519",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST211230-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 121.01,
+                "price_gross_unit": 144,
+                "sum_net": 121.01,
+                "sum_gross": 144
+            },
+            {
+                "article": "ST211231-5",
+                "title": "Fachbodenregal",
+                "selection_text": "Produktart: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 90.25,
+                "price_gross_unit": 107.4,
+                "sum_net": 90.25,
+                "sum_gross": 107.4
+            }
+        ]
+    },
+    {
+        "id": "20260323-110543-499af6",
+        "created_at": "2026-03-23T11:05:43+01:00",
+        "created_at_local": "23.03.2026 11:05",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 345.21042016807,
+            "items_gross_before": 410.8,
+            "items_net_after": 345.21042016807,
+            "items_gross_after": 410.8,
+            "net_before": 345.21042016807,
+            "gross_before": 410.8,
+            "net_after": 345.21042016807,
+            "gross_after": 410.8,
+            "vat_rate": 0.19,
+            "vat_after": 65.58957983193
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "johannes",
+            "last_name": "ziegler",
+            "name": "johannes ziegler",
+            "email": "ziegler@regatix.com",
+            "phone": "07062239020",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "07062239020",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201361-5",
+                "title": "ST201361-5",
+                "selection_text": "",
+                "quantity": 1,
+                "price_net_unit": 126.05042016807,
+                "price_gross_unit": 150,
+                "sum_net": 126.05042016807,
+                "sum_gross": 150
+            },
+            {
+                "article": "ST240930-4",
+                "title": "ST240930-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            },
+            {
+                "article": "57574-100-050-LBS",
+                "title": "57574-100-050-LBS",
+                "selection_text": "Produkt Art: Sitzbank · Zustand: Lagerware (neu) · Höhe: 420 mm · Tiefe: 370 mm · Länge: 1000 mm",
+                "quantity": 1,
+                "price_net_unit": 116.81,
+                "price_gross_unit": 139,
+                "sum_net": 116.81,
+                "sum_gross": 139
+            }
+        ]
+    },
+    {
+        "id": "20260330-134121-0f44e2",
+        "created_at": "2026-03-30T13:41:21+02:00",
+        "created_at_local": "30.03.2026 13:41",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 165.8,
+            "items_gross_before": 197.3,
+            "items_net_after": 165.8,
+            "items_gross_after": 197.3,
+            "net_before": 207.4,
+            "gross_before": 246.8,
+            "net_after": 207.4,
+            "gross_after": 246.8,
+            "vat_rate": 0.19,
+            "vat_after": 39.400000000000006
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "regatix.ziegler@gmail.com",
+            "phone": "015205435335",
+            "street": "Dresdner Straße, 4",
+            "zip": "74321",
+            "city": "Bietigheim-Bissingen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "015205435335",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "STGF201504",
+                "title": "STGF201504",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 3 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 165.8,
+                "price_gross_unit": 197.3,
+                "sum_net": 165.8,
+                "sum_gross": 197.3
+            }
+        ]
+    },
+    {
+        "id": "20260330-213008-9cad7e",
+        "created_at": "2026-03-30T21:30:08+02:00",
+        "created_at_local": "30.03.2026 21:30",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 407.06,
+            "items_gross_before": 484.4,
+            "items_net_after": 407.06,
+            "items_gross_after": 484.4,
+            "net_before": 448.66,
+            "gross_before": 533.9,
+            "net_after": 448.66,
+            "gross_after": 533.9,
+            "vat_rate": 0.19,
+            "vat_after": 85.23999999999995
+        },
+        "customer": {
+            "company": "AVEL-Elektrotechnik",
+            "first_name": "Alexander",
+            "last_name": "Avramenko",
+            "name": "Alexander Avramenko",
+            "email": "a.avramenko@avel-elektrotechnik.de",
+            "phone": "01738015949",
+            "street": "Hauptstraße 118",
+            "zip": "73061",
+            "city": "Ebersbach an der Fils",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": true,
+            "company": "Elektrotechnik",
+            "phone": "01738015949",
+            "first_name": "Alexander",
+            "last_name": "Avramenko",
+            "street": "Plochinger Strasse 47",
+            "zip": "73257",
+            "city": "Köngen",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201860-4",
+                "title": "ST201860-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 2,
+                "price_net_unit": 203.53,
+                "price_gross_unit": 242.2,
+                "sum_net": 407.06,
+                "sum_gross": 484.4
+            }
+        ]
+    },
+    {
+        "id": "20260408-234436-3b8516",
+        "created_at": "2026-04-08T23:44:36+02:00",
+        "created_at_local": "08.04.2026 23:44",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 59.5,
+            "net": 50,
+            "zone": "Versandzone B"
+        },
+        "totals": {
+            "items_net_before": 287.06,
+            "items_gross_before": 341.6,
+            "items_net_after": 287.06,
+            "items_gross_after": 341.6,
+            "net_before": 337.06,
+            "gross_before": 401.1,
+            "net_after": 337.06,
+            "gross_after": 401.1,
+            "vat_rate": 0.19,
+            "vat_after": 64.04000000000002
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Julius",
+            "last_name": "Gaupp",
+            "name": "Julius Gaupp",
+            "email": "juliusgaupp@gmail.com",
+            "phone": "+4915788143405",
+            "street": "Korbinianstraße 48",
+            "zip": "80807",
+            "city": "München",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "+4915788143405",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200940-5",
+                "title": "ST200940-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 108.32,
+                "price_gross_unit": 128.9,
+                "sum_net": 108.32,
+                "sum_gross": 128.9
+            },
+            {
+                "article": "ST200930-5",
+                "title": "ST200930-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 100.92,
+                "price_gross_unit": 120.1,
+                "sum_net": 100.92,
+                "sum_gross": 120.1
+            },
+            {
+                "article": "ST200941-5",
+                "title": "ST200941-5",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 77.82,
+                "price_gross_unit": 92.6,
+                "sum_net": 77.82,
+                "sum_gross": 92.6
+            }
+        ]
+    },
+    {
+        "id": "20260414-113413-e80855",
+        "created_at": "2026-04-14T11:34:13+02:00",
+        "created_at_local": "14.04.2026 11:34",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 560.51,
+            "items_gross_before": 667,
+            "items_net_after": 560.51,
+            "items_gross_after": 667,
+            "net_before": 560.51,
+            "gross_before": 667,
+            "net_after": 560.51,
+            "gross_after": 667,
+            "vat_rate": 0.19,
+            "vat_after": 106.49000000000001
+        },
+        "customer": {
+            "company": "Scheible & Streicher GbR",
+            "first_name": "Nadine",
+            "last_name": "Scheible",
+            "name": "Nadine Scheible",
+            "email": "hello@orii-matscha.com",
+            "phone": "01738466666",
+            "street": "Turmstraße 63",
+            "zip": "75417",
+            "city": "Mühlacker",
+            "country": "DE",
+            "note": "Abholung, Bezahlung per PayPal"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "01738466666",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241340-6",
+                "title": "ST241340-6",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 161.09,
+                "price_gross_unit": 191.7,
+                "sum_net": 161.09,
+                "sum_gross": 191.7
+            },
+            {
+                "article": "ST241350-6",
+                "title": "ST241350-6",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 168.32,
+                "price_gross_unit": 200.3,
+                "sum_net": 168.32,
+                "sum_gross": 200.3
+            },
+            {
+                "article": "ST241040-6",
+                "title": "ST241040-6",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 1,
+                "price_net_unit": 138.66,
+                "price_gross_unit": 165,
+                "sum_net": 138.66,
+                "sum_gross": 165
+            },
+            {
+                "article": "ST240941-6",
+                "title": "ST240941-6",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 92.44,
+                "price_gross_unit": 110,
+                "sum_net": 92.44,
+                "sum_gross": 110
+            }
+        ]
+    },
+    {
+        "id": "20260414-162323-a8602b",
+        "created_at": "2026-04-14T16:23:23+02:00",
+        "created_at_local": "14.04.2026 16:23",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 563,
+            "items_gross_before": 669.97,
+            "items_net_after": 563,
+            "items_gross_after": 669.97,
+            "net_before": 563,
+            "gross_before": 669.97,
+            "net_after": 563,
+            "gross_after": 669.97,
+            "vat_rate": 0.19,
+            "vat_after": 106.97000000000003
+        },
+        "customer": {
+            "company": "Der Kunde hat sicher keine Firma angegeben",
+            "first_name": "Johannes",
+            "last_name": "Ziegler",
+            "name": "Johannes Ziegler",
+            "email": "regatix.ziegler@gmail.com",
+            "phone": "015205435335",
+            "street": "Dresdner Straße, 4",
+            "zip": "74321",
+            "city": "Bietigheim-Bissingen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "015205435335",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "4251112-A",
+                "title": "4251112-A",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 2 · Nennhöhe (Höhe): 2500 · Nenntiefe (Tiefe Regalfach): 1100 · Nennlänge (Länge Regalfach): 2700",
+                "quantity": 1,
+                "price_net_unit": 563,
+                "price_gross_unit": 669.97,
+                "sum_net": 563,
+                "sum_gross": 669.97
+            }
+        ]
+    },
+    {
+        "id": "20260414-171715-8abde1",
+        "created_at": "2026-04-14T17:17:15+02:00",
+        "created_at_local": "14.04.2026 17:17",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "DERREGATIX",
+            "gross": 30.45,
+            "note": "Der REGATIX Rabatt"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 102.35,
+            "items_gross_before": 121.8,
+            "items_net_after": 76.76176470588234,
+            "items_gross_after": 91.35,
+            "net_before": 102.35,
+            "gross_before": 121.8,
+            "net_after": 76.76176470588234,
+            "gross_after": 91.35,
+            "vat_rate": 0.19,
+            "vat_after": 14.588235294117652
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "Der",
+            "last_name": "REGATIX",
+            "name": "Der REGATIX",
+            "email": "social@regatix.com",
+            "phone": "07062239020",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "07062239020",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-4",
+                "title": "ST240930-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 102.35,
+                "price_gross_unit": 121.8,
+                "sum_net": 102.35,
+                "sum_gross": 121.8
+            }
+        ]
+    },
+    {
+        "id": "20260415-144800-471d19",
+        "created_at": "2026-04-15T14:48:00+02:00",
+        "created_at_local": "15.04.2026 14:48",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 69.5,
+            "net": 58.4,
+            "zone": "Versandzone C"
+        },
+        "totals": {
+            "items_net_before": 680.0899999999999,
+            "items_gross_before": 809.3,
+            "items_net_after": 680.0899999999999,
+            "items_gross_after": 809.3,
+            "net_before": 738.4899999999999,
+            "gross_before": 878.8,
+            "net_after": 738.4899999999999,
+            "gross_after": 878.8,
+            "vat_rate": 0.19,
+            "vat_after": 140.31000000000006
+        },
+        "customer": {
+            "company": "ter Heijne",
+            "first_name": "Mathilde",
+            "last_name": "Ter Heijne",
+            "name": "Mathilde Ter Heijne",
+            "email": "terheijne@gmail.com",
+            "phone": "0170 4815712",
+            "street": "Berlinerstrasse 23",
+            "zip": "13189",
+            "city": "Berlin",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": true,
+            "company": "ter Heijne",
+            "phone": "0170 4815712",
+            "first_name": "Mathilde",
+            "last_name": "ter Heijne",
+            "street": "Heinersdorferstrasse 16",
+            "zip": "13086",
+            "city": "Berlin",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241060-4",
+                "title": "ST241060-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 3,
+                "price_net_unit": 140.59,
+                "price_gross_unit": 167.3,
+                "sum_net": 421.77,
+                "sum_gross": 501.90000000000003
+            },
+            {
+                "article": "ST201060-4",
+                "title": "ST201060-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 2,
+                "price_net_unit": 129.16,
+                "price_gross_unit": 153.7,
+                "sum_net": 258.32,
+                "sum_gross": 307.4
+            }
+        ]
+    },
+    {
+        "id": "20260420-110936-7c497d",
+        "created_at": "2026-04-20T11:09:36+02:00",
+        "created_at_local": "20.04.2026 11:09",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 59.5,
+            "net": 50,
+            "zone": "Versandzone B"
+        },
+        "totals": {
+            "items_net_before": 854.78,
+            "items_gross_before": 1017.1999999999999,
+            "items_net_after": 854.78,
+            "items_gross_after": 1017.1999999999999,
+            "net_before": 904.78,
+            "gross_before": 1076.6999999999998,
+            "net_after": 904.78,
+            "gross_after": 1076.6999999999998,
+            "vat_rate": 0.19,
+            "vat_after": 171.91999999999985
+        },
+        "customer": {
+            "company": "Praxis Dr. Pleyer",
+            "first_name": "Gerd",
+            "last_name": "Pleyer",
+            "name": "Gerd Pleyer",
+            "email": "g.pleyer@gmail.com",
+            "phone": "08031\/268899",
+            "street": "Zellerhornstr. 7",
+            "zip": "83026",
+            "city": "Rosenheim",
+            "country": "DE",
+            "note": "Bitte das gleiche Regelsystem (einschließlich Höhe\/Breite\/Tiefe) wie bei der Bestellung für die Firma Apfeltalk GmbH aus dem Jahr 2013 (Kd-Nr 26656).\r\n\r\nDanke und viele Grüße\r\nDr. Gerd Pleyer"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "08031\/268899",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200960-5",
+                "title": "ST200960-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 2,
+                "price_net_unit": 131.68,
+                "price_gross_unit": 156.7,
+                "sum_net": 263.36,
+                "sum_gross": 313.4
+            },
+            {
+                "article": "ST200961-5",
+                "title": "ST200961-5",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 6,
+                "price_net_unit": 98.57,
+                "price_gross_unit": 117.3,
+                "sum_net": 591.42,
+                "sum_gross": 703.8
+            }
+        ]
+    },
+    {
+        "id": "20260424-141726-03ff66",
+        "created_at": "2026-04-24T14:17:26+02:00",
+        "created_at_local": "24.04.2026 14:17",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 317,
+            "items_gross_before": 377.23,
+            "items_net_after": 317,
+            "items_gross_after": 377.23,
+            "net_before": 317,
+            "gross_before": 377.23,
+            "net_after": 317,
+            "gross_after": 377.23,
+            "vat_rate": 0.19,
+            "vat_after": 60.23000000000002
+        },
+        "customer": {
+            "company": "REGATIX Betriebseinrichtungen GmbH",
+            "first_name": "johannes",
+            "last_name": "Ziegler",
+            "name": "johannes Ziegler",
+            "email": "ziegler@regatix.com",
+            "phone": "07062239020",
+            "street": "Porschestraße 9",
+            "zip": "74360",
+            "city": "Ilsfeld",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "07062239020",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "VA160941-4",
+                "title": "VA160941-4",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 1600 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 317,
+                "price_gross_unit": 377.23,
+                "sum_net": 317,
+                "sum_gross": 377.23
+            }
+        ]
+    },
+    {
+        "id": "20260506-152510-70b6c9",
+        "created_at": "2026-05-06T15:25:10+02:00",
+        "created_at_local": "06.05.2026 15:25",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 1130.94,
+            "items_gross_before": 1345.8,
+            "items_net_after": 1130.94,
+            "items_gross_after": 1345.8,
+            "net_before": 1172.54,
+            "gross_before": 1395.3,
+            "net_after": 1172.54,
+            "gross_after": 1395.3,
+            "vat_rate": 0.19,
+            "vat_after": 222.76
+        },
+        "customer": {
+            "company": "Eckert Bauteam GmbH",
+            "first_name": "Lukas",
+            "last_name": "Eckert",
+            "name": "Lukas Eckert",
+            "email": "lukas.eckert@eckert-bauteam.de",
+            "phone": "0151 21936161",
+            "street": "Lagerweg 22-26",
+            "zip": "74736",
+            "city": "Hardheim",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "0151 21936161",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201060-4",
+                "title": "ST201060-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 4,
+                "price_net_unit": 129.16,
+                "price_gross_unit": 153.7,
+                "sum_net": 516.64,
+                "sum_gross": 614.8
+            },
+            {
+                "article": "ST201360-4",
+                "title": "ST201360-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 2,
+                "price_net_unit": 148.07,
+                "price_gross_unit": 176.2,
+                "sum_net": 296.14,
+                "sum_gross": 352.4
+            },
+            {
+                "article": "ST201560-4",
+                "title": "ST201560-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 2,
+                "price_net_unit": 159.08,
+                "price_gross_unit": 189.3,
+                "sum_net": 318.16,
+                "sum_gross": 378.6
+            }
+        ]
+    },
+    {
+        "id": "20260517-141353-1eab6a",
+        "created_at": "2026-05-17T14:13:53+02:00",
+        "created_at_local": "17.05.2026 14:13",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 491.85,
+            "items_gross_before": 585.3,
+            "items_net_after": 491.85,
+            "items_gross_after": 585.3,
+            "net_before": 533.45,
+            "gross_before": 634.8,
+            "net_after": 533.45,
+            "gross_after": 634.8,
+            "vat_rate": 0.19,
+            "vat_after": 101.34999999999991
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Günter",
+            "last_name": "Holzwarth",
+            "name": "Günter Holzwarth",
+            "email": "guenter.holzwarth@icloud.com",
+            "phone": "01727322935",
+            "street": "Bussardweg 15",
+            "zip": "71334",
+            "city": "Waiblingen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "01727322935",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201670-4",
+                "title": "ST201670-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 700 · Nennlänge (Länge Regalfach): 1650",
+                "quantity": 1,
+                "price_net_unit": 198.49,
+                "price_gross_unit": 236.2,
+                "sum_net": 198.49,
+                "sum_gross": 236.2
+            },
+            {
+                "article": "ST201671-4",
+                "title": "ST201671-4",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 700 · Nennlänge (Länge Regalfach): 1650",
+                "quantity": 1,
+                "price_net_unit": 164.2,
+                "price_gross_unit": 195.4,
+                "sum_net": 164.2,
+                "sum_gross": 195.4
+            },
+            {
+                "article": "ST201060-4",
+                "title": "ST201060-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1050",
+                "quantity": 1,
+                "price_net_unit": 129.16,
+                "price_gross_unit": 153.7,
+                "sum_net": 129.16,
+                "sum_gross": 153.7
+            }
+        ]
+    },
+    {
+        "id": "20260613-110448-804480",
+        "created_at": "2026-06-13T11:04:48+02:00",
+        "created_at_local": "13.06.2026 11:04",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 336.3,
+            "items_gross_before": 400.2,
+            "items_net_after": 336.3,
+            "items_gross_after": 400.2,
+            "net_before": 377.90000000000003,
+            "gross_before": 449.7,
+            "net_after": 377.90000000000003,
+            "gross_after": 449.7,
+            "vat_rate": 0.19,
+            "vat_after": 71.79999999999995
+        },
+        "customer": {
+            "company": "Kusterer Besitz GmbH u. Co. KG",
+            "first_name": "Marco",
+            "last_name": "Kusterer",
+            "name": "Marco Kusterer",
+            "email": "mk@kusterer-fensterbau.de",
+            "phone": "0714727510",
+            "street": "Im Holderbusch, 1",
+            "zip": "74343",
+            "city": "Sachsenheim",
+            "country": "DE",
+            "note": "Abholung"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "0714727510",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241860-4",
+                "title": "ST241860-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 1,
+                "price_net_unit": 185.8,
+                "price_gross_unit": 221.1,
+                "sum_net": 185.8,
+                "sum_gross": 221.1
+            },
+            {
+                "article": "ST241861-4",
+                "title": "ST241861-4",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 1,
+                "price_net_unit": 150.5,
+                "price_gross_unit": 179.1,
+                "sum_net": 150.5,
+                "sum_gross": 179.1
+            }
+        ]
+    },
+    {
+        "id": "20260618-213332-853cae",
+        "created_at": "2026-06-18T21:33:32+02:00",
+        "created_at_local": "18.06.2026 21:33",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 195,
+            "items_gross_before": 232.05,
+            "items_net_after": 195,
+            "items_gross_after": 232.05,
+            "net_before": 236.6,
+            "gross_before": 281.55,
+            "net_after": 236.6,
+            "gross_after": 281.55,
+            "vat_rate": 0.19,
+            "vat_after": 44.95000000000002
+        },
+        "customer": {
+            "company": "design studios begasse",
+            "first_name": "klaus",
+            "last_name": "begasse",
+            "name": "klaus begasse",
+            "email": "info@begasse.de",
+            "phone": "+49 (172) 4049271",
+            "street": "friedrichstr. 14",
+            "zip": "70174",
+            "city": "stuttgart",
+            "country": "DE",
+            "note": "Für die Anlieferung bitte ins Navigationssystem eingeben:\r\nKeplerstr. 10, 70174 Stuttgart\r\n\r\nBitte melden Sie sich vor der Anlieferung bei\r\nFrau Anca Gheorge, Telefon +49 (172) 4049271."
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "+49 (172) 4049271",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST240930-6",
+                "title": "ST240930-6",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 114.6,
+                "price_gross_unit": 136.37,
+                "sum_net": 114.6,
+                "sum_gross": 136.37
+            },
+            {
+                "article": "ST240931-6",
+                "title": "ST240931-6",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 80.4,
+                "price_gross_unit": 95.68,
+                "sum_net": 80.4,
+                "sum_gross": 95.68
+            }
+        ]
+    },
+    {
+        "id": "20260624-062553-6721ee",
+        "created_at": "2026-06-24T06:25:53+02:00",
+        "created_at_local": "24.06.2026 06:25",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 69.5,
+            "net": 58.4,
+            "zone": "Versandzone B"
+        },
+        "totals": {
+            "items_net_before": 609.6,
+            "items_gross_before": 725.44,
+            "items_net_after": 609.6,
+            "items_gross_after": 725.44,
+            "net_before": 668,
+            "gross_before": 794.94,
+            "net_after": 668,
+            "gross_after": 794.94,
+            "vat_rate": 0.19,
+            "vat_after": 126.94000000000005
+        },
+        "customer": {
+            "company": "Polystone Chemical GmbH",
+            "first_name": "Cornel",
+            "last_name": "Bruhin",
+            "name": "Cornel Bruhin",
+            "email": "einkauf@polystone-chemical.de",
+            "phone": "06842960036",
+            "street": "In den Krummenäckern 6",
+            "zip": "66440",
+            "city": "Blieskastel",
+            "country": "DE",
+            "note": "Anlieferung: Mo - Do 7:00 - 15:00 Uhr, Fr 7:00 bis 12:00 Uhr"
+        },
+        "shipping": {
+            "use_alt": true,
+            "company": "Polystone Chemical",
+            "phone": "06842960036",
+            "first_name": "Martin",
+            "last_name": "Schaum",
+            "street": "In den Krummenäckern 6",
+            "zip": "66440",
+            "city": "Blieskastel",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241250-6",
+                "title": "ST241250-6",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 4,
+                "price_net_unit": 152.4,
+                "price_gross_unit": 181.36,
+                "sum_net": 609.6,
+                "sum_gross": 725.44
+            }
+        ]
+    },
+    {
+        "id": "20260625-092802-ae72cc",
+        "created_at": "2026-06-25T09:28:02+02:00",
+        "created_at_local": "25.06.2026 09:28",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 100.6,
+            "items_gross_before": 119.71,
+            "items_net_after": 100.6,
+            "items_gross_after": 119.71,
+            "net_before": 100.6,
+            "gross_before": 119.71,
+            "net_after": 100.6,
+            "gross_after": 119.71,
+            "vat_rate": 0.19,
+            "vat_after": 19.11
+        },
+        "customer": {
+            "company": "2DODESIGN",
+            "first_name": "Dietmar",
+            "last_name": "Fissl",
+            "name": "Dietmar Fissl",
+            "email": "dietmarfissl@googlemail.com",
+            "phone": "017636992527",
+            "street": "Pfarrer Sing Strasse 4",
+            "zip": "86381",
+            "city": "Krumbach (Schwaben)",
+            "country": "DE",
+            "note": "Hallo. Ich will fas Paket in Ilsfeld abholen, also kein Versand bitte.\r\n\r\nEinfach via email Bescheid geben, ich kann es nächste Woche holen, danke.\r\nVG \/\/ Dietmar Fissl"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "017636992527",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201551-4",
+                "title": "ST201551-4",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 100.6,
+                "price_gross_unit": 119.71,
+                "sum_net": 100.6,
+                "sum_gross": 119.71
+            }
+        ]
+    },
+    {
+        "id": "20260630-143646-ee84ab",
+        "created_at": "2026-06-30T14:36:46+02:00",
+        "created_at_local": "30.06.2026 14:36",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 137.8,
+            "items_gross_before": 163.98,
+            "items_net_after": 137.8,
+            "items_gross_after": 163.98,
+            "net_before": 179.4,
+            "gross_before": 213.48,
+            "net_after": 179.4,
+            "gross_after": 213.48,
+            "vat_rate": 0.19,
+            "vat_after": 34.079999999999984
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Patrick",
+            "last_name": "Vollmers",
+            "name": "Patrick Vollmers",
+            "email": "mail@patrickvollmers.com",
+            "phone": "017624295130",
+            "street": "Trilschweg 1a",
+            "zip": "87437",
+            "city": "Kempten",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "017624295130",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241260-4",
+                "title": "ST241260-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 137.8,
+                "price_gross_unit": 163.98,
+                "sum_net": 137.8,
+                "sum_gross": 163.98
+            }
+        ]
+    },
+    {
+        "id": "20260701-082928-798958",
+        "created_at": "2026-07-01T08:29:28+02:00",
+        "created_at_local": "01.07.2026 08:29",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 282,
+            "items_gross_before": 335.58,
+            "items_net_after": 282,
+            "items_gross_after": 335.58,
+            "net_before": 323.6,
+            "gross_before": 385.08,
+            "net_after": 323.6,
+            "gross_after": 385.08,
+            "vat_rate": 0.19,
+            "vat_after": 61.47999999999996
+        },
+        "customer": {
+            "company": "Stiehler GmbH",
+            "first_name": "Sandra",
+            "last_name": "Stiehler",
+            "name": "Sandra Stiehler",
+            "email": "info@stiehler-gmbh.de",
+            "phone": "0176\/62915782",
+            "street": "Am Riedberg 23",
+            "zip": "69234",
+            "city": "Dielheim",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "0176\/62915782",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201830-4",
+                "title": "ST201830-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 2,
+                "price_net_unit": 141,
+                "price_gross_unit": 167.79,
+                "sum_net": 282,
+                "sum_gross": 335.58
+            }
+        ]
+    },
+    {
+        "id": "20260701-110019-d1a1d9",
+        "created_at": "2026-07-01T11:00:19+02:00",
+        "created_at_local": "01.07.2026 11:00",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 445.6,
+            "items_gross_before": 530.26,
+            "items_net_after": 445.6,
+            "items_gross_after": 530.26,
+            "net_before": 487.20000000000005,
+            "gross_before": 579.76,
+            "net_after": 487.20000000000005,
+            "gross_after": 579.76,
+            "vat_rate": 0.19,
+            "vat_after": 92.55999999999995
+        },
+        "customer": {
+            "company": "Stiehler GmbH",
+            "first_name": "Sandra",
+            "last_name": "Stiehler",
+            "name": "Sandra Stiehler",
+            "email": "info@stiehler-gmbh.de",
+            "phone": "017662915782",
+            "street": "Am Riedberg 23",
+            "zip": "69234",
+            "city": "Dielheim",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "017662915782",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201880-4",
+                "title": "ST201880-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 800 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 2,
+                "price_net_unit": 222.8,
+                "price_gross_unit": 265.13,
+                "sum_net": 445.6,
+                "sum_gross": 530.26
+            }
+        ]
+    },
+    {
+        "id": "20260701-113913-9c9569",
+        "created_at": "2026-07-01T11:39:13+02:00",
+        "created_at_local": "01.07.2026 11:39",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 89.5,
+            "net": 75.21,
+            "zone": "Versandzone C"
+        },
+        "totals": {
+            "items_net_before": 255.6,
+            "items_gross_before": 304.16999999999996,
+            "items_net_after": 255.6,
+            "items_gross_after": 304.16999999999996,
+            "net_before": 330.81,
+            "gross_before": 393.66999999999996,
+            "net_after": 330.81,
+            "gross_after": 393.66999999999996,
+            "vat_rate": 0.19,
+            "vat_after": 62.85999999999996
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Felix-Johannes",
+            "last_name": "Visee",
+            "name": "Felix-Johannes Visee",
+            "email": "felix@felixvisee.com",
+            "phone": "01772725200",
+            "street": "Gleditschstr. 31",
+            "zip": "10781",
+            "city": "Berlin",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "01772725200",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201340-6",
+                "title": "ST201340-6",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 143.2,
+                "price_gross_unit": 170.41,
+                "sum_net": 143.2,
+                "sum_gross": 170.41
+            },
+            {
+                "article": "ST201341-6",
+                "title": "ST201341-6",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 6 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 112.4,
+                "price_gross_unit": 133.76,
+                "sum_net": 112.4,
+                "sum_gross": 133.76
+            }
+        ]
+    },
+    {
+        "id": "20260705-132733-d37a55",
+        "created_at": "2026-07-05T13:27:33+02:00",
+        "created_at_local": "05.07.2026 13:27",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 107.8,
+            "items_gross_before": 128.28,
+            "items_net_after": 107.8,
+            "items_gross_after": 128.28,
+            "net_before": 149.4,
+            "gross_before": 177.78,
+            "net_after": 149.4,
+            "gross_after": 177.78,
+            "vat_rate": 0.19,
+            "vat_after": 28.379999999999995
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Stefan",
+            "last_name": "Höringer",
+            "name": "Stefan Höringer",
+            "email": "fliesenleger-hoeringer@gmx.de",
+            "phone": "01772976708",
+            "street": "Odenwaldstr. 2",
+            "zip": "70469",
+            "city": "Stuttgart",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "01772976708",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST200960-4",
+                "title": "ST200960-4",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 4 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 107.8,
+                "price_gross_unit": 128.28,
+                "sum_net": 107.8,
+                "sum_gross": 128.28
+            }
+        ]
+    },
+    {
+        "id": "20260711-090808-5f4725",
+        "created_at": "2026-07-11T09:08:08+02:00",
+        "created_at_local": "11.07.2026 09:08",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 69.5,
+            "net": 58.4,
+            "zone": "Versandzone B"
+        },
+        "totals": {
+            "items_net_before": 609,
+            "items_gross_before": 724.7,
+            "items_net_after": 609,
+            "items_gross_after": 724.7,
+            "net_before": 667.4,
+            "gross_before": 794.2,
+            "net_after": 667.4,
+            "gross_after": 794.2,
+            "vat_rate": 0.19,
+            "vat_after": 126.80000000000007
+        },
+        "customer": {
+            "company": "Seckler Bad-Solar-Heizung GmbH",
+            "first_name": "Daniel",
+            "last_name": "Oster",
+            "name": "Daniel Oster",
+            "email": "info@badvision.de",
+            "phone": "015141940906",
+            "street": "Siemensstraße 1",
+            "zip": "55543",
+            "city": "Bad Kreuznach",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "015141940906",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST211350-6",
+                "title": "ST211350-6",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 6 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 1,
+                "price_net_unit": 145.8,
+                "price_gross_unit": 173.5,
+                "sum_net": 145.8,
+                "sum_gross": 173.5
+            },
+            {
+                "article": "ST211351-6",
+                "title": "ST211351-6",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 6 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1350",
+                "quantity": 4,
+                "price_net_unit": 115.8,
+                "price_gross_unit": 137.8,
+                "sum_net": 463.2,
+                "sum_gross": 551.2
+            }
+        ]
+    },
+    {
+        "id": "20260720-192759-02552e",
+        "created_at": "2026-07-20T19:27:59+02:00",
+        "created_at_local": "20.07.2026 19:27",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 214.6,
+            "items_gross_before": 255.37,
+            "items_net_after": 214.6,
+            "items_gross_after": 255.37,
+            "net_before": 256.2,
+            "gross_before": 304.87,
+            "net_after": 256.2,
+            "gross_after": 304.87,
+            "vat_rate": 0.19,
+            "vat_after": 48.670000000000016
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Claus",
+            "last_name": "Dörzbach",
+            "name": "Claus Dörzbach",
+            "email": "doerzbach@hollerbach-bau.de",
+            "phone": "01722599911",
+            "street": "Dorfstr. 16",
+            "zip": "74906",
+            "city": "Bad Rappenau",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "01722599911",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST241860-5",
+                "title": "ST241860-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2400 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 1,
+                "price_net_unit": 214.6,
+                "price_gross_unit": 255.37,
+                "sum_net": 214.6,
+                "sum_gross": 255.37
+            }
+        ]
+    },
+    {
+        "id": "20260726-171458-23fe9f",
+        "created_at": "2026-07-26T17:14:58+02:00",
+        "created_at_local": "26.07.2026 17:14",
+        "payment": {
+            "key": "bank_transfer",
+            "label": "Vorkasse"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 197.10000000000002,
+            "items_gross_before": 234.54999999999998,
+            "items_net_after": 197.10000000000002,
+            "items_gross_after": 234.54999999999998,
+            "net_before": 238.70000000000002,
+            "gross_before": 284.04999999999995,
+            "net_after": 238.70000000000002,
+            "gross_after": 284.04999999999995,
+            "vat_rate": 0.19,
+            "vat_after": 45.34999999999994
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Daniela",
+            "last_name": "Meschede",
+            "name": "Daniela Meschede",
+            "email": "pannibruno24@gmail.com",
+            "phone": "0171 9578946",
+            "street": "Kirchheimerstr. 21",
+            "zip": "73230",
+            "city": "Kirchheim - Teck",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "0171 9578946",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201230-5",
+                "title": "ST201230-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 113.4,
+                "price_gross_unit": 134.95,
+                "sum_net": 113.4,
+                "sum_gross": 134.95
+            },
+            {
+                "article": "ST201231-5",
+                "title": "ST201231-5",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 320 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 83.7,
+                "price_gross_unit": 99.6,
+                "sum_net": 83.7,
+                "sum_gross": 99.6
+            }
+        ]
+    },
+    {
+        "id": "20260726-210756-bd4e03",
+        "created_at": "2026-07-26T21:07:56+02:00",
+        "created_at_local": "26.07.2026 21:07",
+        "payment": {
+            "key": "cash_pickup",
+            "label": "Barzahlung bei Abholung"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 0,
+            "net": 0,
+            "zone": ""
+        },
+        "totals": {
+            "items_net_before": 355.9,
+            "items_gross_before": 423.53,
+            "items_net_after": 355.9,
+            "items_gross_after": 423.53,
+            "net_before": 355.9,
+            "gross_before": 423.53,
+            "net_after": 355.9,
+            "gross_after": 423.53,
+            "vat_rate": 0.19,
+            "vat_after": 67.63
+        },
+        "customer": {
+            "company": "",
+            "first_name": "Ralf",
+            "last_name": "Boysen",
+            "name": "Ralf Boysen",
+            "email": "r.boysen@gmx.de",
+            "phone": "015254608555",
+            "street": "Altenbergstrasse 27",
+            "zip": "74629",
+            "city": "Pfedelbach",
+            "country": "DE",
+            "note": "Selbstabholer bitte Termin bei Beretstellung telefonisch mitteilen"
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "015254608555",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST210960-5",
+                "title": "ST210960-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 600 · Nennlänge (Länge Regalfach): 900",
+                "quantity": 1,
+                "price_net_unit": 122.3,
+                "price_gross_unit": 145.54,
+                "sum_net": 122.3,
+                "sum_gross": 145.54
+            },
+            {
+                "article": "ST211540-5",
+                "title": "ST211540-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 141.4,
+                "price_gross_unit": 168.27,
+                "sum_net": 141.4,
+                "sum_gross": 168.27
+            },
+            {
+                "article": "ST211241-5",
+                "title": "ST211241-5",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2100 · Nenntiefe (Tiefe Regalfach): 400 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 92.2,
+                "price_gross_unit": 109.72,
+                "sum_net": 92.2,
+                "sum_gross": 109.72
+            }
+        ]
+    },
+    {
+        "id": "20260731-192124-053a4e",
+        "created_at": "2026-07-31T19:21:24+02:00",
+        "created_at_local": "31.07.2026 19:21",
+        "payment": {
+            "key": "paypal",
+            "label": "PayPal"
+        },
+        "discount": {
+            "code": "",
+            "gross": 0,
+            "note": "Rabatt nur auf Artikel, nicht auf Fracht"
+        },
+        "freight": {
+            "gross": 49.5,
+            "net": 41.6,
+            "zone": "Versandzone A"
+        },
+        "totals": {
+            "items_net_before": 548.5999999999999,
+            "items_gross_before": 652.8299999999999,
+            "items_net_after": 548.5999999999999,
+            "items_gross_after": 652.8299999999999,
+            "net_before": 590.1999999999999,
+            "gross_before": 702.3299999999999,
+            "net_after": 590.1999999999999,
+            "gross_after": 702.3299999999999,
+            "vat_rate": 0.19,
+            "vat_after": 112.13
+        },
+        "customer": {
+            "company": "",
+            "first_name": "M.",
+            "last_name": "von Dapper-Saalfels",
+            "name": "M. von Dapper-Saalfels",
+            "email": "von_dapper@web.de",
+            "phone": "0160-5981740",
+            "street": "Keltergasse 8\/1",
+            "zip": "74249",
+            "city": "Jagsthausen",
+            "country": "DE",
+            "note": ""
+        },
+        "shipping": {
+            "use_alt": false,
+            "company": "",
+            "phone": "0160-5981740",
+            "first_name": "",
+            "last_name": "",
+            "street": "",
+            "zip": "",
+            "city": "",
+            "country": "DE"
+        },
+        "items": [
+            {
+                "article": "ST201550-5",
+                "title": "ST201550-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 147.2,
+                "price_gross_unit": 175.17,
+                "sum_net": 147.2,
+                "sum_gross": 175.17
+            },
+            {
+                "article": "ST201551-5",
+                "title": "ST201551-5",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1500",
+                "quantity": 1,
+                "price_net_unit": 118.6,
+                "price_gross_unit": 141.13,
+                "sum_net": 118.6,
+                "sum_gross": 141.13
+            },
+            {
+                "article": "ST201251-5",
+                "title": "ST201251-5",
+                "selection_text": "Produkt Art: Anbauregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1200",
+                "quantity": 1,
+                "price_net_unit": 99.6,
+                "price_gross_unit": 118.52,
+                "sum_net": 99.6,
+                "sum_gross": 118.52
+            },
+            {
+                "article": "ST201850-5",
+                "title": "ST201850-5",
+                "selection_text": "Produkt Art: Grundregal · Ebenen: 5 · Nennhöhe (Höhe): 2000 · Nenntiefe (Tiefe Regalfach): 500 · Nennlänge (Länge Regalfach): 1800",
+                "quantity": 1,
+                "price_net_unit": 183.2,
+                "price_gross_unit": 218.01,
+                "sum_net": 183.2,
+                "sum_gross": 218.01
+            }
+        ]
+    }
+]

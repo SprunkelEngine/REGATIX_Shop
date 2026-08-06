@@ -1,0 +1,28 @@
+{
+  "variant": {
+	"primary_key": "Artiklnummer",
+	"dependency_mode": "auto",
+	"dimensions": [
+	  {
+		"key": "Produkt Art",
+		"label": "Produkt Art"
+	  },
+	  {
+		"key": "Ebenen",
+		"label": "Ebenen"
+	  },
+	  {
+		"key": "Nennhöhe mm",
+		"label": "Nennhöhe (Höhe)"
+	  },
+	  {
+		"key": "Nenntiefe mm",
+		"label": "Nenntiefe (Tiefe Regalfach)"
+	  },
+	  {
+		"key": "Nennlänge mm",
+		"label": "Nennlänge (Länge Regalfach)"
+	  }
+	]
+  }
+}

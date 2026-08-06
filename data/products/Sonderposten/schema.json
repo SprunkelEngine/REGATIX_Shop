@@ -1,0 +1,28 @@
+{
+  "variant": {
+    "primary_key": "Artiklnummer",
+    "dependency_mode": "auto",
+    "dimensions": [
+      {
+        "key": "Produkt Art",
+        "label": "Produkt Art"
+      },
+      {
+        "key": "Ebenen",
+        "label": "Zustand"
+      },
+      {
+        "key": "Nennhöhe mm",
+        "label": "Höhe"
+      },
+      {
+        "key": "Nenntiefe mm",
+        "label": "Tiefe"
+      },
+      {
+        "key": "Nennlänge mm",
+        "label": "Länge"
+      }
+    ]
+  }
+}
